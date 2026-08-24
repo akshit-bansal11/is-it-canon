@@ -13,6 +13,7 @@ Work that was skipped, blocked, or deliberately deferred, with enough context to
 | Pre-hydration dead window | The table is server-rendered and visible before React attaches handlers; a `selectOption` fired in that window is silently dropped. The E2E helper works around it by waiting for the app to react. | Real but low-impact at dev-server scale. If it ever matters, disable the row controls until hydration completes, or render them from a client boundary that shows a pending state. |
 | E2E runs Chromium only | Firefox/WebKit projects would triple the runtime for a personal project with no cross-browser bug history. | Add projects to `playwright.config.ts` when there is a reason to. |
 | No CI | Nothing runs the gate on push yet. | A GitHub Actions workflow running `npm run check` plus `npm run test:e2e` would cover it; the config already gates `forbidOnly`/`retries` on `process.env.CI`. |
+| Auto-refresh has a 30-minute freshness guard | You asked for a refresh on every open. Literally every open re-hammers ITAD and earns a 429 that wipes out the prices you already had, so the open-time refresh skips when the cache is under 30 minutes old. | If you want a true every-open refresh, set `PRICE_TTL_MS` to `0` in `src/utils/canon/price-freshness.ts`. The manual button already bypasses the guard. |
 
 ## Resolved
 

@@ -73,7 +73,9 @@ cp .env.example .env.local   # then fill in ITAD_API_KEY
 
 Without the key the button reports that it is missing rather than failing silently.
 
-Prices are cached in `localStorage` and rendered instantly on load, then refreshed in the background once per page open. `Update prices` forces a refresh of whatever rows are in view.
+Prices are cached in `localStorage` and rendered instantly on load, then refreshed in the background when the site is opened — but only if the cache has aged past `PRICE_TTL_MS` (30 minutes, in `src/utils/canon/price-freshness.ts`). Without that guard every reload fires a burst of lookups and earns a 429, which costs you the prices you already had. `Update prices` ignores the guard and always refetches the rows in view.
+
+The route throttles itself to 4 concurrent lookups and retries once on a 429 before reporting the rate limit to you, rather than returning an empty result that looks like "no prices found".
 
 ## Dataset enrichment
 
