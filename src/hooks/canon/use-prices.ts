@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { Game } from "@/types/canon/canon";
 import type { PriceMap, PriceStatus } from "@/types/canon/price";
+import { shouldAutoRefresh } from "@/utils/canon/price-freshness";
 import {
   getFetchedAt,
   getPricesSnapshot,
@@ -83,6 +84,7 @@ export function usePrices(autoGames: readonly Game[]): UsePrices {
 
   useEffect(() => {
     if (autoStarted.current || autoGames.length === 0) return;
+    if (!shouldAutoRefresh(getFetchedAt(), Date.now())) return;
     autoStarted.current = true;
 
     // Kick the request off first so every state update lands in a promise
