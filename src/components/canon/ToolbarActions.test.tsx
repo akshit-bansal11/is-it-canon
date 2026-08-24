@@ -7,19 +7,21 @@ interface Overrides {
   tracked?: number;
   filtersActive?: boolean;
   onClearEntries?: () => void;
+  onRefreshPrices?: () => void;
 }
 
 function renderToolbar({
   tracked = 0,
   filtersActive = false,
   onClearEntries = vi.fn(),
+  onRefreshPrices = vi.fn(),
 }: Overrides = {}) {
   return render(
     <ToolbarActions
       filtersActive={filtersActive}
       onClearEntries={onClearEntries}
       onCopyCsv={vi.fn(() => Promise.resolve(true))}
-      onRefreshPrices={vi.fn()}
+      onRefreshPrices={onRefreshPrices}
       onResetFilters={vi.fn()}
       priceMessage=""
       priceStatus="idle"
@@ -82,5 +84,37 @@ describe("ToolbarActions", () => {
 
     expect(onClearEntries).toHaveBeenCalledTimes(1);
     expect(button("Clear tracking")).toBeTruthy();
+  });
+  it("labels the refresh button Update data and runs it on click", async () => {
+    const onRefreshPrices = vi.fn();
+    renderToolbar({ onRefreshPrices });
+
+    await userEvent.click(button("Update data"));
+    expect(onRefreshPrices).toHaveBeenCalledTimes(1);
+  });
+
+  it("describes the refresh button with a tooltip that is always resolvable", () => {
+    renderToolbar();
+
+    const target = button("Update data");
+    const tooltip = screen.getByRole("tooltip", { hidden: true });
+    // aria-describedby must resolve even while the tooltip is not on screen,
+    // otherwise screen readers lose the description entirely.
+    expect(target.getAttribute("aria-describedby")).toBe(tooltip.id);
+    expect(tooltip.textContent).toBe("Click to fetch latest accurate data");
+  });
+
+  it("reveals the tooltip on hover and hides it again on leave", async () => {
+    renderToolbar();
+
+    const target = button("Update data");
+    const tooltip = screen.getByRole("tooltip", { hidden: true });
+    expect(tooltip.className).toContain("opacity-0");
+
+    await userEvent.hover(target);
+    expect(tooltip.className).toContain("opacity-100");
+
+    await userEvent.unhover(target);
+    expect(tooltip.className).toContain("opacity-0");
   });
 });

@@ -6,6 +6,8 @@ import { CONTROL_CLASS } from "@/constants/canon/ui";
 import type { PriceStatus } from "@/types/canon/price";
 import { cn } from "@/utils/cn";
 
+const UPDATE_HINT_ID = "update-data-hint";
+
 interface ToolbarActionsProps {
   shown: number;
   total: number;
@@ -33,6 +35,7 @@ export default function ToolbarActions({
 }: ToolbarActionsProps) {
   const [copied, setCopied] = useState(false);
   const [armed, setArmed] = useState(false);
+  const [hint, setHint] = useState<{ top: number; left: number } | null>(null);
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(
@@ -46,6 +49,13 @@ export default function ToolbarActions({
   const later = useCallback((run: () => void, ms: number) => {
     timers.current.push(setTimeout(run, ms));
   }, []);
+
+  const showHint = (event: { currentTarget: HTMLElement }) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    setHint({ top: Math.round(rect.bottom + 6), left: Math.round(rect.left) });
+  };
+
+  const hideHint = () => setHint(null);
 
   const copy = () => {
     void onCopyCsv().then((ok) => {
@@ -75,13 +85,40 @@ export default function ToolbarActions({
       </span>
 
       <button
+        aria-describedby={UPDATE_HINT_ID}
         className={cn(CONTROL_CLASS, "whitespace-nowrap")}
         disabled={priceStatus === "loading"}
+        onBlur={hideHint}
         onClick={onRefreshPrices}
+        onFocus={showHint}
+        onMouseEnter={showHint}
+        onMouseLeave={hideHint}
         type="button"
       >
-        {priceStatus === "loading" ? "Fetching…" : "Update prices"}
+        {priceStatus === "loading" ? "Fetching…" : "Update data"}
       </button>
+
+      {/*
+        The toolbar scrolls horizontally, and `overflow-x: auto` forces
+        `overflow-y: auto` with it — an absolutely positioned tooltip gets
+        clipped by ~23px. `position: fixed` escapes that clip, but then the
+        coordinates have to be measured, which is why they are inline rather
+        than Tailwind classes. Rendered unconditionally so `aria-describedby`
+        always resolves for screen readers, whether or not it is on screen.
+      */}
+      <span
+        className={cn(
+          "pointer-events-none fixed z-50 w-max max-w-64",
+          "rounded-[3px] border border-edge bg-surface px-2 py-1",
+          "text-[11px] text-muted transition-opacity motion-reduce:transition-none",
+          hint === null ? "opacity-0" : "opacity-100",
+        )}
+        id={UPDATE_HINT_ID}
+        role="tooltip"
+        style={hint ?? undefined}
+      >
+        Click to fetch latest accurate data
+      </span>
 
       {priceMessage === "" ? null : (
         <span
