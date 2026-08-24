@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import ThemeToggle from "@/components/canon/ThemeToggle";
 import { CONTROL_CLASS } from "@/constants/canon/ui";
 import type { PriceStatus } from "@/types/canon/price";
@@ -33,18 +33,35 @@ export default function ToolbarActions({
 }: ToolbarActionsProps) {
   const [copied, setCopied] = useState(false);
   const [armed, setArmed] = useState(false);
+  const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  useEffect(
+    () => () => {
+      for (const timer of timers.current) clearTimeout(timer);
+      timers.current = [];
+    },
+    [],
+  );
+
+  const later = useCallback((run: () => void, ms: number) => {
+    timers.current.push(setTimeout(run, ms));
+  }, []);
 
   const copy = () => {
     void onCopyCsv().then((ok) => {
       setCopied(ok);
-      setTimeout(() => setCopied(false), 1600);
+      later(() => setCopied(false), 1600);
     });
   };
 
+  // Armed only counts while there is something to wipe, so the confirm state
+  // can never strand on a button that has gone disabled underneath it.
+  const showArmed = armed && tracked > 0;
+
   const clear = () => {
-    if (!armed) {
+    if (!showArmed) {
       setArmed(true);
-      setTimeout(() => setArmed(false), 3000);
+      later(() => setArmed(false), 3000);
       return;
     }
     setArmed(false);
@@ -97,8 +114,12 @@ export default function ToolbarActions({
         onClick={clear}
         type="button"
       >
-        {armed ? "Confirm wipe" : "Clear tracking"}
+        {showArmed ? "Confirm wipe" : "Clear tracking"}
       </button>
+
+      <span aria-live="polite" className="sr-only">
+        {showArmed ? "Clear tracking armed. Activate again to wipe every tracked game." : ""}
+      </span>
 
       <ThemeToggle />
     </div>
