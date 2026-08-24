@@ -3,12 +3,11 @@
 :root {
   --tone-canvas: #fff;
   --tone-surface: #fafafa;
-  --tone-raised: #f2f2f2;
   --tone-line: #e4e4e4;
   --tone-edge: #cfcfcf;
   --tone-text: #171717;
   --tone-muted: #5b5b5b;
-  --tone-faint: #8c8c8c;
+  --tone-faint: #737373;
   --tone-invert: #fff;
 }
 
@@ -16,12 +15,11 @@
   :root:not([data-theme="light"]) {
     --tone-canvas: #0a0a0a;
     --tone-surface: #111;
-    --tone-raised: #1a1a1a;
     --tone-line: #232323;
     --tone-edge: #3a3a3a;
     --tone-text: #ededed;
     --tone-muted: #a0a0a0;
-    --tone-faint: #6e6e6e;
+    --tone-faint: #808080;
     --tone-invert: #0a0a0a;
   }
 }
@@ -29,19 +27,17 @@
 :root[data-theme="dark"] {
   --tone-canvas: #0a0a0a;
   --tone-surface: #111;
-  --tone-raised: #1a1a1a;
   --tone-line: #232323;
   --tone-edge: #3a3a3a;
   --tone-text: #ededed;
   --tone-muted: #a0a0a0;
-  --tone-faint: #6e6e6e;
+  --tone-faint: #808080;
   --tone-invert: #0a0a0a;
 }
 
 @theme inline {
   --color-canvas: var(--tone-canvas);
   --color-surface: var(--tone-surface);
-  --color-raised: var(--tone-raised);
   --color-line: var(--tone-line);
   --color-edge: var(--tone-edge);
   --color-ink: var(--tone-text);
