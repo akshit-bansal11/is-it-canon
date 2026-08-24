@@ -25,7 +25,10 @@ A canon-order tracker for game franchises. It lists 12 franchises and 72 mainlin
 | `npm run lint:css` | Stylelint over all CSS |
 | `npm run lint:css:fix` | Same, autofixing what it can |
 | `npm run typecheck` | `tsc --noEmit` |
-| `npm run test` | Vitest, single run |
+| `npm run test` | Vitest, single run (unit + component) |
+| `npm run test:e2e` | Playwright end-to-end suite |
+| `npm run test:e2e:ui` | Playwright in UI mode |
+| `npm run data:enrich` | Repopulate the dataset from ITAD + IGDB |
 | `npm run check` | format, lint:js, lint:css, typecheck, test in sequence |
 
 ## Layout
@@ -49,14 +52,16 @@ src/
 ├── types/
 │   └── canon/           # franchise, game, table, user, price, theme types
 └── utils/
-    └── canon/           # pure helpers + the two external stores
+    └── canon/           # pure helpers + the localStorage stores
+e2e/                     # Playwright specs (table, tracking, filters, editions, a11y)
+scripts/                 # enrich-data.mjs + its cache and report
 ```
 
 ## Data
 
 `src/data/franchises.json` is the dataset — franchises, their games in chronological order, and each game's known alternate editions. Add entries by editing that file; it is typed as `Franchise[]` through `src/data/franchises.ts`, so a shape mistake fails `typecheck`. There is no backend and no database.
 
-The only thing written to `localStorage` is your own input — status, device and store per game, under `isitcanon/entries/v1`, plus the theme choice under `isitcanon/theme/v1`. Both stores are exposed through `useSyncExternalStore`, so two open tabs stay in sync. Clearing a game's status clears its device and store with it.
+Three things are written to `localStorage`: your input (status, device and store per game, under `isitcanon/entries/v1`), the fetched price cache (`isitcanon/prices/v1`), and the theme choice (`isitcanon/theme/v1`). All are exposed through `useSyncExternalStore`, so two open tabs stay in sync. Clearing a game's status clears its device and store with it.
 
 ## Prices
 
@@ -66,4 +71,10 @@ The only thing written to `localStorage` is your own input — status, device an
 cp .env.example .env.local   # then fill in ITAD_API_KEY
 ```
 
-Without the key the button reports that it is missing rather than failing silently. Fetched prices live in memory only — they are not cached to `localStorage`, so they clear on reload.
+Without the key the button reports that it is missing rather than failing silently.
+
+Prices are cached in `localStorage` and rendered instantly on load, then refreshed in the background once per page open. `Update prices` forces a refresh of whatever rows are in view.
+
+## Dataset enrichment
+
+`npm run data:enrich` repopulates `src/data/franchises.json` from the live APIs — ITAD for prices and historical lows, IGDB for release years, ratings, genres and time-to-beat. It is idempotent, caches raw responses under `scripts/.cache/`, and writes a reviewable old-to-new diff to `scripts/enrich-report.md`. Hand-authored values are preserved under each game's `authored` block, so a re-run is always comparable. Pass `--refresh` to bypass the cache.
