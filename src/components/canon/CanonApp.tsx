@@ -22,7 +22,6 @@ export default function CanonApp() {
   const [filter, setFilter] = useState<FilterState>(EMPTY_FILTER);
 
   const { entries: userEntries, setField, clearEntries } = useEntries();
-  const { prices, status: priceStatus, message: priceMessage, refresh } = usePrices();
 
   const franchise = useMemo(
     () => FRANCHISES.find((item) => item.id === activeId) ?? null,
@@ -33,6 +32,13 @@ export default function CanonApp() {
     () => (franchise === null ? ALL_ENTRIES : franchise.games.map((game) => ({ game, franchise }))),
     [franchise],
   );
+
+  const autoPriceGames = useMemo(
+    () => scoped.slice(0, PRICE_BATCH).map((entry) => entry.game),
+    [scoped],
+  );
+
+  const { prices, status: priceStatus, message: priceMessage, refresh } = usePrices(autoPriceGames);
 
   const rows = useMemo(
     () => sortEntries(filterEntries(scoped, filter, userEntries), sort, { userEntries, prices }),
