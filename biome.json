@@ -1,7 +1,17 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.5.10/schema.json",
   "files": {
-    "includes": ["**", "!**/node_modules", "!**/.next", "!**/out", "!**/coverage", "!next-env.d.ts"]
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/.next",
+      "!**/out",
+      "!**/coverage",
+      "!next-env.d.ts",
+      "!**/test-results",
+      "!**/playwright-report",
+      "!**/scripts/.cache"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -52,5 +62,17 @@
     "parser": {
       "tailwindDirectives": true
     }
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["scripts/**"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noConsole": "off"
+          }
+        }
+      }
+    }
+  ]
 }

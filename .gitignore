@@ -70,3 +70,6 @@ apps/app/src/assets/original
 .env*
 
 !.env.example
+
+# data enrichment cache
+scripts/.cache/
