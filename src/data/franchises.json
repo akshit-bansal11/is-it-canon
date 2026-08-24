@@ -13,7 +13,7 @@
         "version": "Uncharted: The Nathan Drake Collection",
         "platform": "PS4 / PS5",
         "msrp": "—",
-        "hours": 7,
+        "hours": 11,
         "tier": "core",
         "starter": true,
         "store": "ps",
@@ -35,7 +35,37 @@
             "recommended": true,
             "note": "Bluepoint remaster at 1080p/60; only modern way to play it."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2007,
+          "hours": 7,
+          "msrp": "—",
+          "version": "Uncharted: The Nathan Drake Collection"
+        },
+        "sources": {
+          "itadId": "018d937f-26e8-71e2-b89e-853454780563",
+          "igdbId": 431,
+          "igdbSlug": "uncharted-drake-s-fortune",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:13.628Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2007,
+          "platforms": ["PS3"],
+          "rating": 90,
+          "ratingCount": 4,
+          "genres": ["Shooter", "Platform", "Adventure"],
+          "hoursMain": 11.2,
+          "hoursComplete": 15
+        }
       },
       {
         "id": "uncharted-uncharted-2-among-thieves",
@@ -45,7 +75,7 @@
         "version": "Uncharted: The Nathan Drake Collection",
         "platform": "PS4 / PS5",
         "msrp": "—",
-        "hours": 10,
+        "hours": 14,
         "tier": "core",
         "starter": false,
         "store": "ps",
@@ -74,7 +104,37 @@
             "recommended": true,
             "note": "Remastered 1080p/60 campaign; best and only current-gen version."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2009,
+          "hours": 10,
+          "msrp": "—",
+          "version": "Uncharted: The Nathan Drake Collection"
+        },
+        "sources": {
+          "itadId": "018d937f-1f29-7322-b70f-48f6e747368d",
+          "igdbId": 565,
+          "igdbSlug": "uncharted-2-among-thieves",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2009,
+          "platforms": ["PS3"],
+          "rating": 95,
+          "ratingCount": 8,
+          "genres": ["Shooter", "Platform", "Adventure"],
+          "hoursMain": 14.3,
+          "hoursComplete": null
+        }
       },
       {
         "id": "uncharted-uncharted-3-drakes-deception",
@@ -84,7 +144,7 @@
         "version": "Uncharted: The Nathan Drake Collection",
         "platform": "PS4 / PS5",
         "msrp": "—",
-        "hours": 10,
+        "hours": 13,
         "tier": "core",
         "starter": false,
         "store": "ps",
@@ -113,7 +173,37 @@
             "recommended": true,
             "note": "Remastered campaign at 1080p/60; multiplayer dropped."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2011,
+          "hours": 10,
+          "msrp": "—",
+          "version": "Uncharted: The Nathan Drake Collection"
+        },
+        "sources": {
+          "itadId": null,
+          "igdbId": 512,
+          "igdbSlug": "uncharted-3-drake-s-deception",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:56.269Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2011,
+          "platforms": ["PS3"],
+          "rating": 93,
+          "ratingCount": 8,
+          "genres": ["Shooter", "Platform", "Adventure"],
+          "hoursMain": 12.8,
+          "hoursComplete": 15
+        }
       },
       {
         "id": "uncharted-uncharted-4-a-thiefs-end",
@@ -123,7 +213,7 @@
         "version": "Uncharted: Legacy of Thieves Collection",
         "platform": "PC",
         "msrp": "$49.99",
-        "hours": 15,
+        "hours": 17,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -145,7 +235,37 @@
             "recommended": true,
             "note": "Remaster of 4 plus Lost Legacy; 60/120fps and the only PC version."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2016,
+          "hours": 15,
+          "msrp": "$49.99",
+          "version": "Uncharted: Legacy of Thieves Collection"
+        },
+        "sources": {
+          "itadId": "018d937f-4964-7357-a557-f04daaa823ee",
+          "igdbId": 7331,
+          "igdbSlug": "uncharted-4-a-thief-s-end",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2016,
+          "platforms": ["PS4"],
+          "rating": 93,
+          "ratingCount": 25,
+          "genres": ["Shooter", "Adventure"],
+          "hoursMain": 17,
+          "hoursComplete": 17
+        }
       },
       {
         "id": "uncharted-uncharted-the-lost-legacy",
@@ -155,7 +275,7 @@
         "version": "Uncharted: Legacy of Thieves Collection",
         "platform": "PC",
         "msrp": "Included",
-        "hours": 7,
+        "hours": 9,
         "tier": "opt",
         "starter": false,
         "store": "pc",
@@ -177,7 +297,37 @@
             "recommended": true,
             "note": "Remastered and paired with Uncharted 4; adds PC and 60/120fps modes."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2017,
+          "hours": 7,
+          "msrp": "Included",
+          "version": "Uncharted: Legacy of Thieves Collection"
+        },
+        "sources": {
+          "itadId": "018d937f-4964-7357-a557-f04dacd421c3",
+          "igdbId": 26193,
+          "igdbSlug": "uncharted-the-lost-legacy",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2017,
+          "platforms": ["PS4"],
+          "rating": 87,
+          "ratingCount": 22,
+          "genres": ["Shooter", "Puzzle", "Adventure"],
+          "hoursMain": 8.9,
+          "hoursComplete": 8
+        }
       }
     ]
   },
@@ -195,7 +345,7 @@
         "version": "Assassin's Creed Odyssey Gold Edition",
         "platform": "PC",
         "msrp": "$59.99",
-        "hours": 45,
+        "hours": 77,
         "tier": "opt",
         "starter": false,
         "store": "pc",
@@ -224,7 +374,37 @@
             "recommended": false,
             "note": "Gold plus a cosmetic pack; no extra story over Gold."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2018,
+          "hours": 45,
+          "msrp": "$59.99",
+          "version": "Assassin's Creed Odyssey Gold Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-0184-7248-8d64-3c723c523111",
+          "igdbId": 103054,
+          "igdbSlug": "assassins-creed-odyssey",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": 59.99,
+          "best": 11.99,
+          "shop": "Humble Store",
+          "cut": 80,
+          "historicalLow": 5.99,
+          "url": "https://itad.link/018d9386-2984-7068-b72e-74a0282ea9fb/"
+        },
+        "igdb": {
+          "releaseYear": 2018,
+          "platforms": ["Stadia", "Series X|S", "PS4", "PC", "PS5", "XONE"],
+          "rating": 88,
+          "ratingCount": 14,
+          "genres": ["Role-playing (RPG)", "Adventure"],
+          "hoursMain": 77,
+          "hoursComplete": 142.7
+        }
       },
       {
         "id": "ac-assassins-creed-origins",
@@ -234,7 +414,7 @@
         "version": "Assassin's Creed Origins Gold Edition",
         "platform": "PC",
         "msrp": "$59.99",
-        "hours": 30,
+        "hours": 52,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -256,7 +436,37 @@
             "recommended": true,
             "note": "Adds The Hidden Ones and The Curse of the Pharaohs expansions."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2017,
+          "hours": 30,
+          "msrp": "$59.99",
+          "version": "Assassin's Creed Origins Gold Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-246a-7339-8ccc-7bddae738345",
+          "igdbId": 28540,
+          "igdbSlug": "assassins-creed-origins",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": 59.99,
+          "best": 8.99,
+          "shop": "Humble Store",
+          "cut": 85,
+          "historicalLow": 5,
+          "url": "https://itad.link/018d9386-2988-71b5-a7ff-6d588383341a/"
+        },
+        "igdb": {
+          "releaseYear": 2017,
+          "platforms": ["Stadia", "Series X|S", "PS4", "PC", "PS5", "XONE"],
+          "rating": 86,
+          "ratingCount": 15,
+          "genres": ["Role-playing (RPG)", "Adventure"],
+          "hoursMain": 52,
+          "hoursComplete": 83
+        }
       },
       {
         "id": "ac-assassins-creed-mirage",
@@ -266,14 +476,44 @@
         "version": "Original",
         "platform": "PC",
         "msrp": "$49.99",
-        "hours": 22,
+        "hours": 24,
         "tier": "opt",
         "starter": false,
         "store": "pc",
         "query": "Assassins Creed Mirage",
         "storefront": "Steam / Ubisoft",
         "note": "861 CE Baghdad. Basim’s origin story — a prequel to Valhalla that lands far better if you play Valhalla first.",
-        "editions": []
+        "editions": [],
+        "authored": {
+          "year": 2023,
+          "hours": 22,
+          "msrp": "$49.99",
+          "version": "Original"
+        },
+        "sources": {
+          "itadId": "018d937f-64af-7039-82ae-70ef8087534d",
+          "igdbId": 215060,
+          "igdbSlug": "assassins-creed-mirage",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": 49.99,
+          "best": 20,
+          "shop": "Ubisoft Store",
+          "cut": 60,
+          "historicalLow": 14.99,
+          "url": "https://itad.link/018d9386-2984-7068-b72e-74a0049381d6/"
+        },
+        "igdb": {
+          "releaseYear": 2023,
+          "platforms": ["Series X|S", "PS4", "PC", "iOS", "PS5", "XONE"],
+          "rating": 75,
+          "ratingCount": 9,
+          "genres": ["Adventure"],
+          "hoursMain": 24.3,
+          "hoursComplete": 30.8
+        }
       },
       {
         "id": "ac-assassins-creed-valhalla",
@@ -283,7 +523,7 @@
         "version": "Assassin's Creed Valhalla Complete Edition",
         "platform": "PC",
         "msrp": "$59.99",
-        "hours": 60,
+        "hours": 110,
         "tier": "opt",
         "starter": false,
         "store": "pc",
@@ -312,7 +552,37 @@
             "recommended": true,
             "note": "All expansions plus The Last Chapter; full Eivor story in one buy."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2020,
+          "hours": 60,
+          "msrp": "$59.99",
+          "version": "Assassin's Creed Valhalla Complete Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-4227-700c-9dbe-1190755ac02c",
+          "igdbId": 133004,
+          "igdbSlug": "assassins-creed-valhalla",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": 59.99,
+          "best": 14.99,
+          "shop": "Humble Store",
+          "cut": 75,
+          "historicalLow": 5.4,
+          "url": "https://itad.link/018d9386-299a-73da-ab1d-86b663ebf634/"
+        },
+        "igdb": {
+          "releaseYear": 2020,
+          "platforms": ["Stadia", "Series X|S", "PS4", "PC", "PS5", "XONE"],
+          "rating": 85,
+          "ratingCount": 12,
+          "genres": ["Role-playing (RPG)", "Adventure"],
+          "hoursMain": 110.2,
+          "hoursComplete": 257
+        }
       },
       {
         "id": "ac-assassins-creed",
@@ -344,7 +614,37 @@
             "recommended": true,
             "note": "Adds extra investigation missions; the only version still sold."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2007,
+          "hours": 15,
+          "msrp": "$19.99",
+          "version": "Assassin's Creed: Director's Cut Edition"
+        },
+        "sources": {
+          "itadId": "018d937e-f86e-705e-aba6-db5ac2ba50fb",
+          "igdbId": 128,
+          "igdbSlug": "assassin-s-creed",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": 19.99,
+          "best": 19.99,
+          "shop": "GreenManGaming",
+          "cut": 0,
+          "historicalLow": 3.12,
+          "url": "https://itad.link/018d9386-2972-719a-8ba8-ef65d4819f6f/"
+        },
+        "igdb": {
+          "releaseYear": 2007,
+          "platforms": ["PS3", "X360"],
+          "rating": 81,
+          "ratingCount": 4,
+          "genres": ["Platform", "Adventure"],
+          "hoursMain": 15.2,
+          "hoursComplete": 25.3
+        }
       },
       {
         "id": "ac-assassins-creed-ii",
@@ -354,7 +654,7 @@
         "version": "Assassin's Creed: The Ezio Collection",
         "platform": "PC",
         "msrp": "$19.99",
-        "hours": 20,
+        "hours": 26,
         "tier": "core",
         "starter": true,
         "store": "pc",
@@ -383,7 +683,37 @@
             "recommended": true,
             "note": "Remastered with all story DLC; playable today, no multiplayer."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2009,
+          "hours": 20,
+          "msrp": "$19.99",
+          "version": "Assassin's Creed: The Ezio Collection"
+        },
+        "sources": {
+          "itadId": "018d937f-19a2-72b4-bbf4-f547c032f6f4",
+          "igdbId": 127,
+          "igdbSlug": "assassin-s-creed-ii",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2009,
+          "platforms": ["PS3", "PC", "Mac", "X360"],
+          "rating": 90,
+          "ratingCount": 8,
+          "genres": ["Platform", "Adventure"],
+          "hoursMain": 25.8,
+          "hoursComplete": 37.2
+        }
       },
       {
         "id": "ac-assassins-creed-brotherhood",
@@ -393,7 +723,7 @@
         "version": "Assassin's Creed: The Ezio Collection",
         "platform": "PC",
         "msrp": "$19.99",
-        "hours": 15,
+        "hours": 23,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -422,7 +752,37 @@
             "recommended": true,
             "note": "Remastered with all single-player DLC included."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2010,
+          "hours": 15,
+          "msrp": "$19.99",
+          "version": "Assassin's Creed: The Ezio Collection"
+        },
+        "sources": {
+          "itadId": "018d937f-0e82-70e5-ac00-0d05a4abc342",
+          "igdbId": 113,
+          "igdbSlug": "assassins-creed-brotherhood",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": 19.99,
+          "best": 4.99,
+          "shop": "Humble Store",
+          "cut": 75,
+          "historicalLow": 3.64,
+          "url": "https://itad.link/018d9386-2970-713c-b54b-d45a3cafb4ab/"
+        },
+        "igdb": {
+          "releaseYear": 2010,
+          "platforms": ["PS3", "PC", "Mac", "X360"],
+          "rating": 83,
+          "ratingCount": 9,
+          "genres": ["Puzzle", "Adventure"],
+          "hoursMain": 23.2,
+          "hoursComplete": 43.2
+        }
       },
       {
         "id": "ac-assassins-creed-revelations",
@@ -432,7 +792,7 @@
         "version": "Assassin's Creed: The Ezio Collection",
         "platform": "PC",
         "msrp": "$19.99",
-        "hours": 13,
+        "hours": 18,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -461,7 +821,37 @@
             "recommended": true,
             "note": "Remastered, includes The Lost Archive and the Ezio short films."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2011,
+          "hours": 13,
+          "msrp": "$19.99",
+          "version": "Assassin's Creed: The Ezio Collection"
+        },
+        "sources": {
+          "itadId": "018d937f-0085-7156-93a8-5a7c9a7854cf",
+          "igdbId": 537,
+          "igdbSlug": "assassins-creed-revelations",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": 19.99,
+          "best": 6,
+          "shop": "Ubisoft Store",
+          "cut": 70,
+          "historicalLow": 3.98,
+          "url": "https://itad.link/018d9386-298d-7195-b7f4-0406558e34af/"
+        },
+        "igdb": {
+          "releaseYear": 2011,
+          "platforms": ["PS3", "PC", "X360"],
+          "rating": 82,
+          "ratingCount": 7,
+          "genres": ["Adventure"],
+          "hoursMain": 18,
+          "hoursComplete": 33.2
+        }
       },
       {
         "id": "ac-assassins-creed-shadows",
@@ -493,7 +883,37 @@
             "recommended": true,
             "note": "Includes the expansion pass with the Claws of Awaji story chapter."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2025,
+          "hours": 35,
+          "msrp": "$69.99",
+          "version": "Assassin's Creed Shadows Gold Edition"
+        },
+        "sources": {
+          "itadId": "018f72b7-e912-70c5-8bc1-a493958bb3b6",
+          "igdbId": 300976,
+          "igdbSlug": "assassins-creed-shadows",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": 69.99,
+          "best": 31.5,
+          "shop": "Ubisoft Store",
+          "cut": 55,
+          "historicalLow": 28.35,
+          "url": "https://itad.link/018f72b7-e905-70d8-8bdd-bbba7056bbdb/"
+        },
+        "igdb": {
+          "releaseYear": 2025,
+          "platforms": ["Series X|S", "Switch 2", "PC", "PS5", "Mac"],
+          "rating": 85,
+          "ratingCount": 7,
+          "genres": ["Role-playing (RPG)", "Adventure"],
+          "hoursMain": 35,
+          "hoursComplete": 74
+        }
       },
       {
         "id": "ac-assassins-creed-iv-black-flag",
@@ -503,7 +923,7 @@
         "version": "Assassin's Creed IV: Black Flag Gold Edition",
         "platform": "PC",
         "msrp": "$39.99",
-        "hours": 24,
+        "hours": 36,
         "tier": "opt",
         "starter": false,
         "store": "pc",
@@ -532,7 +952,37 @@
             "recommended": false,
             "note": "Black Flag plus Rogue with DLC; portable but lower fidelity."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2013,
+          "hours": 24,
+          "msrp": "$39.99",
+          "version": "Assassin's Creed IV: Black Flag Gold Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-0602-72cd-b27e-1beaec4b9f6f",
+          "igdbId": 1970,
+          "igdbSlug": "assassins-creed-iv-black-flag",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2013,
+          "platforms": ["Stadia", "PS3", "PS4", "PC", "WiiU", "X360", "XONE", "Switch"],
+          "rating": 85,
+          "ratingCount": 21,
+          "genres": ["Adventure"],
+          "hoursMain": 36,
+          "hoursComplete": 57.3
+        }
       },
       {
         "id": "ac-assassins-creed-rogue",
@@ -542,7 +992,7 @@
         "version": "Assassin's Creed Rogue Remastered",
         "platform": "PC",
         "msrp": "$19.99",
-        "hours": 14,
+        "hours": 28,
         "tier": "opt",
         "starter": false,
         "store": "pc",
@@ -578,7 +1028,37 @@
             "recommended": false,
             "note": "Rogue plus Black Flag with DLC; portable but lower fidelity."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2014,
+          "hours": 14,
+          "msrp": "$19.99",
+          "version": "Assassin's Creed Rogue Remastered"
+        },
+        "sources": {
+          "itadId": "018d937e-f9bd-732a-8129-55703fce0e08",
+          "igdbId": 7570,
+          "igdbSlug": "assassins-creed-rogue",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": 19.99,
+          "best": 5.99,
+          "shop": "Humble Store",
+          "cut": 70,
+          "historicalLow": 2.64,
+          "url": "https://itad.link/018d9386-2990-7259-bbd9-196296ecf336/"
+        },
+        "igdb": {
+          "releaseYear": 2014,
+          "platforms": ["PS3", "PC", "X360", "Switch"],
+          "rating": 71,
+          "ratingCount": 12,
+          "genres": ["Role-playing (RPG)", "Adventure"],
+          "hoursMain": 28.3,
+          "hoursComplete": 40
+        }
       },
       {
         "id": "ac-assassins-creed-iii",
@@ -588,7 +1068,7 @@
         "version": "Assassin's Creed III Remastered",
         "platform": "PC",
         "msrp": "$39.99",
-        "hours": 16,
+        "hours": 22,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -610,7 +1090,37 @@
             "recommended": true,
             "note": "4K remaster with all DLC plus Liberation Remastered bundled in."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2012,
+          "hours": 16,
+          "msrp": "$39.99",
+          "version": "Assassin's Creed III Remastered"
+        },
+        "sources": {
+          "itadId": "018d937e-e9d4-7075-a482-728448f8f0fc",
+          "igdbId": 1266,
+          "igdbSlug": "assassin-s-creed-iii",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2012,
+          "platforms": ["PS3", "PC", "WiiU", "X360"],
+          "rating": 81,
+          "ratingCount": 17,
+          "genres": ["Adventure"],
+          "hoursMain": 22,
+          "hoursComplete": 67.7
+        }
       },
       {
         "id": "ac-assassins-creed-unity",
@@ -620,14 +1130,44 @@
         "version": "Original",
         "platform": "PC",
         "msrp": "$29.99",
-        "hours": 14,
+        "hours": 28,
         "tier": "opt",
         "starter": false,
         "store": "pc",
         "query": "Assassins Creed Unity",
         "storefront": "Steam / Ubisoft",
         "note": "1789 Paris. Disastrous launch, long since patched; now one of the better-looking entries in the series.",
-        "editions": []
+        "editions": [],
+        "authored": {
+          "year": 2014,
+          "hours": 14,
+          "msrp": "$29.99",
+          "version": "Original"
+        },
+        "sources": {
+          "itadId": "018d937e-f54c-7379-a57f-9ab6cdc42d20",
+          "igdbId": 5606,
+          "igdbSlug": "assassins-creed-unity",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": 29.99,
+          "best": 7.49,
+          "shop": "Humble Store",
+          "cut": 75,
+          "historicalLow": 3.69,
+          "url": "https://itad.link/018d9386-2998-7277-af25-b63d3b2c3a2b/"
+        },
+        "igdb": {
+          "releaseYear": 2014,
+          "platforms": ["Stadia", "Series X|S", "PS4", "PC", "PS5", "XONE"],
+          "rating": 71,
+          "ratingCount": 15,
+          "genres": ["Role-playing (RPG)", "Adventure"],
+          "hoursMain": 27.9,
+          "hoursComplete": 69
+        }
       },
       {
         "id": "ac-assassins-creed-syndicate",
@@ -637,7 +1177,7 @@
         "version": "Assassin's Creed Syndicate Gold Edition",
         "platform": "PC",
         "msrp": "$29.99",
-        "hours": 16,
+        "hours": 19,
         "tier": "opt",
         "starter": false,
         "store": "pc",
@@ -659,7 +1199,37 @@
             "recommended": true,
             "note": "Season pass included: Jack the Ripper and The Last Maharaja stories."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2015,
+          "hours": 16,
+          "msrp": "$29.99",
+          "version": "Assassin's Creed Syndicate Gold Edition"
+        },
+        "sources": {
+          "itadId": "018d937e-fdd8-73fc-b6f2-669d6969f960",
+          "igdbId": 8263,
+          "igdbSlug": "assassins-creed-syndicate",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": 29.99,
+          "best": 7.49,
+          "shop": "Humble Store",
+          "cut": 75,
+          "historicalLow": 3.96,
+          "url": "https://itad.link/018d9386-2993-7289-9dc4-7f5ec769cb67/"
+        },
+        "igdb": {
+          "releaseYear": 2015,
+          "platforms": ["Stadia", "Series X|S", "PS4", "PC", "PS5", "XONE"],
+          "rating": 72,
+          "ratingCount": 19,
+          "genres": ["Adventure"],
+          "hoursMain": 18.5,
+          "hoursComplete": 53.5
+        }
       }
     ]
   },
@@ -677,7 +1247,7 @@
         "version": "Remastered",
         "platform": "PC",
         "msrp": "$49.99",
-        "hours": 22,
+        "hours": 58,
         "tier": "core",
         "starter": true,
         "store": "pc",
@@ -713,7 +1283,37 @@
             "recommended": true,
             "note": "Rebuilt visuals and Forbidden West systems, with The Frozen Wilds."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2017,
+          "hours": 22,
+          "msrp": "$49.99",
+          "version": "Remastered"
+        },
+        "sources": {
+          "itadId": "018d937f-4964-7357-a557-f04dab5f7f1e",
+          "igdbId": 11156,
+          "igdbSlug": "horizon-zero-dawn",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2017,
+          "platforms": ["PS4", "PC", "PS5"],
+          "rating": 89,
+          "ratingCount": 26,
+          "genres": ["Shooter", "Role-playing (RPG)", "Adventure"],
+          "hoursMain": 58.4,
+          "hoursComplete": 83.6
+        }
       },
       {
         "id": "horizon-horizon-zero-dawn-the-frozen-wilds",
@@ -752,7 +1352,37 @@
             "recommended": true,
             "note": "Expansion included and rebuilt alongside the base game."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2017,
+          "hours": 7,
+          "msrp": "Included",
+          "version": "Horizon Zero Dawn Remastered"
+        },
+        "sources": {
+          "itadId": null,
+          "igdbId": 37083,
+          "igdbSlug": "horizon-zero-dawn-the-frozen-wilds",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:48:53.350Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2017,
+          "platforms": ["PS4", "PC"],
+          "rating": 85,
+          "ratingCount": 12,
+          "genres": ["Role-playing (RPG)", "Adventure"],
+          "hoursMain": 6.5,
+          "hoursComplete": 24.1
+        }
       },
       {
         "id": "horizon-horizon-forbidden-west",
@@ -762,7 +1392,7 @@
         "version": "Complete Edition",
         "platform": "PC",
         "msrp": "$59.99",
-        "hours": 30,
+        "hours": 43,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -784,7 +1414,37 @@
             "recommended": true,
             "note": "Bundles the Burning Shores expansion; PC version followed in 2024."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2022,
+          "hours": 30,
+          "msrp": "$59.99",
+          "version": "Complete Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-6812-72a8-b5a4-3169d18ec316",
+          "igdbId": 112874,
+          "igdbSlug": "horizon-forbidden-west",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2022,
+          "platforms": ["PS4", "PC", "PS5"],
+          "rating": 92,
+          "ratingCount": 10,
+          "genres": ["Role-playing (RPG)", "Adventure"],
+          "hoursMain": 43.4,
+          "hoursComplete": 85.6
+        }
       },
       {
         "id": "horizon-horizon-forbidden-west-burning-shores",
@@ -794,7 +1454,7 @@
         "version": "Horizon Forbidden West Complete Edition",
         "platform": "PC",
         "msrp": "Included",
-        "hours": 5,
+        "hours": 8,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -816,7 +1476,37 @@
             "recommended": true,
             "note": "Bundles the expansion with the base game; PC version followed in 2024."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2023,
+          "hours": 5,
+          "msrp": "Included",
+          "version": "Horizon Forbidden West Complete Edition"
+        },
+        "sources": {
+          "itadId": null,
+          "igdbId": 228533,
+          "igdbSlug": "horizon-forbidden-west-burning-shores",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:48:53.350Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2023,
+          "platforms": ["PC", "PS5"],
+          "rating": 81,
+          "ratingCount": 6,
+          "genres": ["Role-playing (RPG)", "Adventure"],
+          "hoursMain": 7.7,
+          "hoursComplete": 10.2
+        }
       }
     ]
   },
@@ -863,7 +1553,37 @@
             "recommended": true,
             "note": "HD rework plus optional modern controls and Wesker Mode."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2002,
+          "hours": 9,
+          "msrp": "$19.99",
+          "version": "HD Remaster"
+        },
+        "sources": {
+          "itadId": "018d937e-f498-7162-b880-06f24ec77cf3",
+          "igdbId": null,
+          "igdbSlug": null,
+          "matchConfidence": "none",
+          "fetchedAt": "2026-08-24T19:51:58.409Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": null,
+          "platforms": [],
+          "rating": null,
+          "ratingCount": null,
+          "genres": [],
+          "hoursMain": null,
+          "hoursComplete": null
+        }
       },
       {
         "id": "re-resident-evil",
@@ -873,7 +1593,7 @@
         "version": "HD Remaster",
         "platform": "PC",
         "msrp": "$19.99",
-        "hours": 12,
+        "hours": 9,
         "tier": "core",
         "starter": true,
         "store": "pc",
@@ -916,7 +1636,37 @@
             "recommended": true,
             "note": "REmake in HD with modern controls; the definitive way to play."
           }
-        ]
+        ],
+        "authored": {
+          "year": 1996,
+          "hours": 12,
+          "msrp": "$19.99",
+          "version": "HD Remaster"
+        },
+        "sources": {
+          "itadId": "018d937f-13de-72c9-914f-805be5dfb7c5",
+          "igdbId": 424,
+          "igdbSlug": "resident-evil",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 1996,
+          "platforms": ["PS1"],
+          "rating": 79,
+          "ratingCount": 3,
+          "genres": ["Shooter", "Puzzle", "Adventure"],
+          "hoursMain": 9.2,
+          "hoursComplete": null
+        }
       },
       {
         "id": "re-resident-evil-3",
@@ -926,7 +1676,7 @@
         "version": "Next-gen update",
         "platform": "PC",
         "msrp": "$39.99",
-        "hours": 6,
+        "hours": 5,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -962,7 +1712,37 @@
             "recommended": true,
             "note": "Free upgrade to the remake; best-looking version of the story."
           }
-        ]
+        ],
+        "authored": {
+          "year": 1999,
+          "hours": 6,
+          "msrp": "$39.99",
+          "version": "Next-gen update"
+        },
+        "sources": {
+          "itadId": "018d937f-3cd7-718f-bf63-190fd7499310",
+          "igdbId": 966,
+          "igdbSlug": "resident-evil-3-nemesis",
+          "matchConfidence": "fuzzy",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 1999,
+          "platforms": ["PS3", "NGC", "PC", "PS1", "PSP", "DC"],
+          "rating": null,
+          "ratingCount": null,
+          "genres": ["Shooter", "Adventure"],
+          "hoursMain": 5.1,
+          "hoursComplete": null
+        }
       },
       {
         "id": "re-resident-evil-2",
@@ -972,7 +1752,7 @@
         "version": "Next-gen update",
         "platform": "PC",
         "msrp": "$39.99",
-        "hours": 9,
+        "hours": 7,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -1008,13 +1788,43 @@
             "recommended": true,
             "note": "Free upgrade to the remake with ray tracing and 4K/high frame rate."
           }
-        ]
+        ],
+        "authored": {
+          "year": 1998,
+          "hours": 9,
+          "msrp": "$39.99",
+          "version": "Next-gen update"
+        },
+        "sources": {
+          "itadId": "018d937f-0e9d-7249-929a-f288c12eafbb",
+          "igdbId": 880,
+          "igdbSlug": "resident-evil-2",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 1998,
+          "platforms": ["PS3", "NGC", "PC", "PS1", "PSP", "DC"],
+          "rating": 55,
+          "ratingCount": 2,
+          "genres": ["Shooter", "Puzzle", "Adventure"],
+          "hoursMain": 7.2,
+          "hoursComplete": 9
+        }
       },
       {
         "id": "re-resident-evil-code-veronica-x",
         "order": 5,
         "title": "Resident Evil – Code: Veronica X",
-        "year": 2000,
+        "year": 2001,
         "version": "Code: Veronica X HD",
         "platform": "Xbox 360 / Series",
         "msrp": "—",
@@ -1054,7 +1864,37 @@
             "recommended": true,
             "note": "Widescreen HD version of Veronica X; the best available today."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2000,
+          "hours": 12,
+          "msrp": "—",
+          "version": "Code: Veronica X HD"
+        },
+        "sources": {
+          "itadId": "018d937f-5dbf-705c-b6b1-19bd7298c9e4",
+          "igdbId": 24369,
+          "igdbSlug": "resident-evil-code-veronica-x",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2001,
+          "platforms": ["PS3", "PS4", "NGC", "DC", "PS2"],
+          "rating": null,
+          "ratingCount": null,
+          "genres": ["Shooter", "Puzzle", "Adventure"],
+          "hoursMain": null,
+          "hoursComplete": null
+        }
       },
       {
         "id": "re-resident-evil-4",
@@ -1064,7 +1904,7 @@
         "version": "Gold Edition",
         "platform": "PC",
         "msrp": "$39.99",
-        "hours": 16,
+        "hours": 24,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -1107,7 +1947,37 @@
             "recommended": true,
             "note": "Remake plus the Separate Ways DLC; the complete story package."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2005,
+          "hours": 16,
+          "msrp": "$39.99",
+          "version": "Gold Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-2eee-702c-853a-490e8f910db7",
+          "igdbId": 974,
+          "igdbSlug": "resident-evil-4",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2005,
+          "platforms": ["NGC"],
+          "rating": 82,
+          "ratingCount": 5,
+          "genres": ["Shooter", "Adventure"],
+          "hoursMain": 24,
+          "hoursComplete": null
+        }
       },
       {
         "id": "re-resident-evil-5",
@@ -1117,7 +1987,7 @@
         "version": "Gold Edition",
         "platform": "PC",
         "msrp": "$19.99",
-        "hours": 13,
+        "hours": 36,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -1153,7 +2023,37 @@
             "recommended": false,
             "note": "Gold Edition content, lowest-fidelity version."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2009,
+          "hours": 13,
+          "msrp": "$19.99",
+          "version": "Gold Edition"
+        },
+        "sources": {
+          "itadId": "018d937e-feb8-71a3-8819-21b3f9d400b8",
+          "igdbId": 847,
+          "igdbSlug": "resident-evil-5",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": 19.99,
+          "best": 19.99,
+          "shop": "Gamesload",
+          "cut": 0,
+          "historicalLow": 3.13,
+          "url": "https://itad.link/018d9386-b8e3-73db-92f7-a19ff19ad458/"
+        },
+        "igdb": {
+          "releaseYear": 2009,
+          "platforms": ["PS3", "PC", "X360"],
+          "rating": 78,
+          "ratingCount": 15,
+          "genres": ["Shooter", "Adventure"],
+          "hoursMain": 35.7,
+          "hoursComplete": 53.5
+        }
       },
       {
         "id": "re-resident-evil-6",
@@ -1199,7 +2099,37 @@
             "recommended": false,
             "note": "Same all-DLC content, weakest performance."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2012,
+          "hours": 22,
+          "msrp": "$19.99",
+          "version": "PS4 / Xbox One release"
+        },
+        "sources": {
+          "itadId": "018d937e-fd75-7351-be7d-a0be822b98a1",
+          "igdbId": 1082,
+          "igdbSlug": "resident-evil-6",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2012,
+          "platforms": ["PS3", "PC", "X360"],
+          "rating": 64,
+          "ratingCount": 12,
+          "genres": ["Shooter", "Adventure"],
+          "hoursMain": 21.7,
+          "hoursComplete": 297.4
+        }
       },
       {
         "id": "re-resident-evil-7-biohazard",
@@ -1209,7 +2139,7 @@
         "version": "Gold Edition",
         "platform": "PC",
         "msrp": "$19.99",
-        "hours": 9,
+        "hours": 11,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -1238,7 +2168,48 @@
             "recommended": false,
             "note": "Free visual upgrade; content identical to Gold Edition."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2017,
+          "hours": 9,
+          "msrp": "$19.99",
+          "version": "Gold Edition"
+        },
+        "sources": {
+          "itadId": "018d937e-fa07-73ce-a8ee-b9fa1e674392",
+          "igdbId": 19562,
+          "igdbSlug": "resident-evil-7-biohazard",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": 19.99,
+          "best": 7.44,
+          "shop": "GamesPlanet US",
+          "cut": 63,
+          "historicalLow": 3.99,
+          "url": "https://itad.link/018d9386-b8e5-72be-b5ca-ed21cbbbe320/"
+        },
+        "igdb": {
+          "releaseYear": 2017,
+          "platforms": [
+            "Stadia",
+            "Series X|S",
+            "PS4",
+            "Switch 2",
+            "PSVR",
+            "PC",
+            "iOS",
+            "PS5",
+            "Mac",
+            "XONE"
+          ],
+          "rating": 85,
+          "ratingCount": 27,
+          "genres": ["Shooter", "Puzzle", "Adventure"],
+          "hoursMain": 10.9,
+          "hoursComplete": 26
+        }
       },
       {
         "id": "re-resident-evil-village",
@@ -1248,7 +2219,7 @@
         "version": "Gold Edition",
         "platform": "PC",
         "msrp": "$39.99",
-        "hours": 11,
+        "hours": 13,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -1270,7 +2241,47 @@
             "recommended": true,
             "note": "Bundles Winters' Expansion with the Shadows of Rose story DLC."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2021,
+          "hours": 11,
+          "msrp": "$39.99",
+          "version": "Gold Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-437a-728f-aa59-d868be98fb65",
+          "igdbId": 55163,
+          "igdbSlug": "resident-evil-village",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": 39.99,
+          "best": 9.24,
+          "shop": "GamesPlanet US",
+          "cut": 77,
+          "historicalLow": 6.79,
+          "url": "https://itad.link/018d9386-b8e8-70d4-a6da-d1c7664f324a/"
+        },
+        "igdb": {
+          "releaseYear": 2021,
+          "platforms": [
+            "Stadia",
+            "Series X|S",
+            "PS4",
+            "Switch 2",
+            "PC",
+            "iOS",
+            "PS5",
+            "Mac",
+            "XONE"
+          ],
+          "rating": 87,
+          "ratingCount": 15,
+          "genres": ["Shooter", "Adventure"],
+          "hoursMain": 12.5,
+          "hoursComplete": 22.3
+        }
       },
       {
         "id": "re-resident-evil-requiem",
@@ -1280,14 +2291,44 @@
         "version": "Original",
         "platform": "PC",
         "msrp": "$69.99",
-        "hours": 0,
+        "hours": 13,
         "tier": "core",
         "starter": false,
         "store": "pc",
         "query": "Resident Evil Requiem",
         "storefront": "Steam",
         "note": "Ninth mainline entry, released 27 February 2026. Returns to Raccoon City with a new protagonist. Runtime left blank — the figures are still settling.",
-        "editions": []
+        "editions": [],
+        "authored": {
+          "year": 2026,
+          "hours": 0,
+          "msrp": "$69.99",
+          "version": "Original"
+        },
+        "sources": {
+          "itadId": "01974812-da2a-7344-86a1-3fe329430a3a",
+          "igdbId": 347668,
+          "igdbSlug": "resident-evil-requiem",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": 69.99,
+          "best": 50.72,
+          "shop": "GamesPlanet US",
+          "cut": 28,
+          "historicalLow": 46.18,
+          "url": "https://itad.link/019a34b4-d4cf-72e9-aa2b-77c434aaf742/"
+        },
+        "igdb": {
+          "releaseYear": 2026,
+          "platforms": ["Series X|S", "Switch 2", "PC", "PS5"],
+          "rating": 91,
+          "ratingCount": 6,
+          "genres": ["Shooter", "Puzzle", "Adventure"],
+          "hoursMain": 13.3,
+          "hoursComplete": 29.8
+        }
       }
     ]
   },
@@ -1341,7 +2382,37 @@
             "recommended": true,
             "note": "Free Steam update: bundles Uplink, restores maps, adds widescreen."
           }
-        ]
+        ],
+        "authored": {
+          "year": 1998,
+          "hours": 12,
+          "msrp": "$9.99",
+          "version": "25th Anniversary Update"
+        },
+        "sources": {
+          "itadId": "018d937f-0bc2-7120-8fb2-a469fde4fcbf",
+          "igdbId": 231,
+          "igdbSlug": "half-life",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": 9.99,
+          "best": 9.99,
+          "shop": "Steam",
+          "cut": 0,
+          "historicalLow": 0.99,
+          "url": "https://itad.link/018d9386-7131-70e0-80fb-26f7e14640a6/"
+        },
+        "igdb": {
+          "releaseYear": 1998,
+          "platforms": ["Linux", "PC", "Mac"],
+          "rating": 80,
+          "ratingCount": 1,
+          "genres": ["Shooter", "Puzzle", "Adventure"],
+          "hoursMain": 12.1,
+          "hoursComplete": 18.7
+        }
       },
       {
         "id": "hl-half-life-blue-shift",
@@ -1351,7 +2422,7 @@
         "version": "Steam release",
         "platform": "PC",
         "msrp": "$4.99",
-        "hours": 3,
+        "hours": 4,
         "tier": "skip",
         "starter": false,
         "store": "pc",
@@ -1380,7 +2451,37 @@
             "recommended": false,
             "note": "Bundle with Half-Life, Opposing Force and Team Fortress Classic."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2001,
+          "hours": 3,
+          "msrp": "$4.99",
+          "version": "Steam release"
+        },
+        "sources": {
+          "itadId": "018d937f-1cf6-731e-a164-8875b0de891a",
+          "igdbId": 2549,
+          "igdbSlug": "half-life-blue-shift",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": 4.99,
+          "best": 4.99,
+          "shop": "Steam",
+          "cut": 0,
+          "historicalLow": 0.49,
+          "url": "https://itad.link/018d9386-7132-719b-89e1-e11b7e01e01e/"
+        },
+        "igdb": {
+          "releaseYear": 2001,
+          "platforms": ["Linux", "PC", "Mac"],
+          "rating": 60,
+          "ratingCount": 1,
+          "genres": ["Shooter", "Platform", "Puzzle"],
+          "hoursMain": 4,
+          "hoursComplete": 3.5
+        }
       },
       {
         "id": "hl-half-life-opposing-force",
@@ -1390,7 +2491,7 @@
         "version": "Steam release",
         "platform": "PC",
         "msrp": "$4.99",
-        "hours": 5,
+        "hours": 6,
         "tier": "opt",
         "starter": false,
         "store": "pc",
@@ -1419,7 +2520,37 @@
             "recommended": false,
             "note": "Bundle with Half-Life, Blue Shift and Team Fortress Classic."
           }
-        ]
+        ],
+        "authored": {
+          "year": 1999,
+          "hours": 5,
+          "msrp": "$4.99",
+          "version": "Steam release"
+        },
+        "sources": {
+          "itadId": "018d937f-15ba-71c9-9ddb-b2609937358f",
+          "igdbId": 232,
+          "igdbSlug": "half-life-opposing-force",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": 4.99,
+          "best": 4.99,
+          "shop": "Steam",
+          "cut": 0,
+          "historicalLow": 0.49,
+          "url": "https://itad.link/018d9386-a706-7212-8fad-b2afbafda530/"
+        },
+        "igdb": {
+          "releaseYear": 1999,
+          "platforms": ["Linux", "PC", "Mac"],
+          "rating": 70,
+          "ratingCount": 1,
+          "genres": ["Shooter", "Platform", "Puzzle"],
+          "hoursMain": 6.1,
+          "hoursComplete": 5.4
+        }
       },
       {
         "id": "hl-half-life-alyx",
@@ -1429,14 +2560,44 @@
         "version": "Original",
         "platform": "PC · VR only",
         "msrp": "$59.99",
-        "hours": 12,
+        "hours": 14,
         "tier": "core",
         "starter": false,
         "store": "pc",
         "query": "Half-Life Alyx",
         "storefront": "Steam",
         "note": "Requires a VR headset — there is no flat-screen mode. Chronologically here, but play it after Episode Two or you spoil the single biggest moment in the series.",
-        "editions": []
+        "editions": [],
+        "authored": {
+          "year": 2020,
+          "hours": 12,
+          "msrp": "$59.99",
+          "version": "Original"
+        },
+        "sources": {
+          "itadId": "018d937f-3ac1-7228-87f4-1233cb94b630",
+          "igdbId": 126098,
+          "igdbSlug": "half-life-alyx",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": 59.99,
+          "best": 59.99,
+          "shop": "Steam",
+          "cut": 0,
+          "historicalLow": 14.99,
+          "url": "https://itad.link/018d9386-7131-70e0-80fb-26f7e3697e2d/"
+        },
+        "igdb": {
+          "releaseYear": 2020,
+          "platforms": ["Steam VR"],
+          "rating": 93,
+          "ratingCount": 9,
+          "genres": ["Shooter", "Puzzle", "Adventure"],
+          "hoursMain": 14,
+          "hoursComplete": 17.7
+        }
       },
       {
         "id": "hl-half-life-2",
@@ -1446,7 +2607,7 @@
         "version": "20th Anniversary Update",
         "platform": "PC",
         "msrp": "$9.99",
-        "hours": 13,
+        "hours": 14,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -1482,7 +2643,37 @@
             "recommended": true,
             "note": "Free update folding Episode One, Episode Two and Lost Coast into the base."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2004,
+          "hours": 13,
+          "msrp": "$9.99",
+          "version": "20th Anniversary Update"
+        },
+        "sources": {
+          "itadId": "018d937f-012f-73b8-ab2c-898516969e6a",
+          "igdbId": 233,
+          "igdbSlug": "half-life-2",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": 9.99,
+          "best": 9.99,
+          "shop": "Steam",
+          "cut": 0,
+          "historicalLow": 0.99,
+          "url": "https://itad.link/018d9386-7132-719b-89e1-e11b8c591ee7/"
+        },
+        "igdb": {
+          "releaseYear": 2004,
+          "platforms": ["XBOX", "PS3", "Linux", "Android", "PC", "Mac", "X360"],
+          "rating": 79,
+          "ratingCount": 7,
+          "genres": ["Shooter"],
+          "hoursMain": 13.5,
+          "hoursComplete": 20.4
+        }
       },
       {
         "id": "hl-half-life-2-episode-one",
@@ -1492,7 +2683,7 @@
         "version": "Half-Life 2: 20th Anniversary Update",
         "platform": "PC",
         "msrp": "Included",
-        "hours": 4,
+        "hours": 5,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -1521,7 +2712,37 @@
             "recommended": true,
             "note": "Folded into Half-Life 2 itself on Steam; no separate purchase."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2006,
+          "hours": 4,
+          "msrp": "Included",
+          "version": "Half-Life 2: 20th Anniversary Update"
+        },
+        "sources": {
+          "itadId": "018d937f-088b-7364-941d-be6b308787b1",
+          "igdbId": 338,
+          "igdbSlug": "half-life-2-episode-one",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2006,
+          "platforms": ["PS3", "Linux", "PC", "Mac", "X360"],
+          "rating": 87,
+          "ratingCount": 2,
+          "genres": ["Shooter"],
+          "hoursMain": 5.1,
+          "hoursComplete": 8.7
+        }
       },
       {
         "id": "hl-half-life-2-episode-two",
@@ -1531,7 +2752,7 @@
         "version": "Half-Life 2: 20th Anniversary Update",
         "platform": "PC",
         "msrp": "Included",
-        "hours": 5,
+        "hours": 6,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -1560,7 +2781,37 @@
             "recommended": true,
             "note": "Folded into Half-Life 2 itself on Steam; no separate purchase."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2007,
+          "hours": 5,
+          "msrp": "Included",
+          "version": "Half-Life 2: 20th Anniversary Update"
+        },
+        "sources": {
+          "itadId": "018d937f-33d5-73be-87f4-56da2c86efa5",
+          "igdbId": 247,
+          "igdbSlug": "half-life-2-episode-two",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2007,
+          "platforms": ["PS3", "Linux", "PC", "Mac", "X360"],
+          "rating": 70,
+          "ratingCount": 1,
+          "genres": ["Shooter", "Puzzle"],
+          "hoursMain": 6.3,
+          "hoursComplete": 9
+        }
       }
     ]
   },
@@ -1578,7 +2829,7 @@
         "version": "Standard Edition",
         "platform": "PC",
         "msrp": "$59.99",
-        "hours": 50,
+        "hours": 88,
         "tier": "core",
         "starter": true,
         "store": "pc",
@@ -1614,7 +2865,37 @@
             "recommended": false,
             "note": "Same story with extra bounties, weapons and photo mode; best fidelity."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2018,
+          "hours": 50,
+          "msrp": "$59.99",
+          "version": "Standard Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-3a3b-7210-bd2d-0d1dfb1d84c0",
+          "igdbId": 25076,
+          "igdbSlug": "red-dead-redemption-2",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": 59.99,
+          "best": 14.95,
+          "shop": "GameBillet",
+          "cut": 75,
+          "historicalLow": 12.29,
+          "url": "https://itad.link/018d9386-b704-7355-a550-d9e4443e046e/"
+        },
+        "igdb": {
+          "releaseYear": 2018,
+          "platforms": ["Stadia", "PS4", "PC", "XONE"],
+          "rating": 94,
+          "ratingCount": 17,
+          "genres": ["Shooter", "Role-playing (RPG)", "Adventure"],
+          "hoursMain": 88.4,
+          "hoursComplete": 208.3
+        }
       },
       {
         "id": "rdr-red-dead-redemption",
@@ -1624,7 +2905,7 @@
         "version": "Red Dead Redemption (current-gen version)",
         "platform": "PC",
         "msrp": "$49.99",
-        "hours": 20,
+        "hours": 25,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -1674,7 +2955,37 @@
             "recommended": true,
             "note": "Native 4K60 with Undead Nightmare included; free upgrade from PS4 and Switch."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2010,
+          "hours": 20,
+          "msrp": "$49.99",
+          "version": "Red Dead Redemption (current-gen version)"
+        },
+        "sources": {
+          "itadId": "018d937e-ff79-7006-af68-00a54e69236d",
+          "igdbId": 434,
+          "igdbSlug": "red-dead-redemption",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": 49.99,
+          "best": 49.99,
+          "shop": "Microsoft Store",
+          "cut": 0,
+          "historicalLow": 21.5,
+          "url": "https://itad.link/019af4e0-b22c-717c-8906-5f0f8bc4b52e/"
+        },
+        "igdb": {
+          "releaseYear": 2010,
+          "platforms": ["PS3", "PC", "X360"],
+          "rating": 92,
+          "ratingCount": 8,
+          "genres": ["Shooter", "Role-playing (RPG)", "Adventure"],
+          "hoursMain": 25.4,
+          "hoursComplete": 45.8
+        }
       }
     ]
   },
@@ -1692,7 +3003,7 @@
         "version": "Max Payne",
         "platform": "PC",
         "msrp": "$9.99",
-        "hours": 9,
+        "hours": 11,
         "tier": "core",
         "starter": true,
         "store": "pc",
@@ -1714,7 +3025,37 @@
             "recommended": false,
             "note": "Touch port of the full game; controls are the obvious compromise."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2001,
+          "hours": 9,
+          "msrp": "$9.99",
+          "version": "Max Payne"
+        },
+        "sources": {
+          "itadId": "018d937f-0650-7041-83bd-528b3190f299",
+          "igdbId": 18,
+          "igdbSlug": "max-payne",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:51:59.246Z"
+        },
+        "market": {
+          "regular": 9.99,
+          "best": 3.49,
+          "shop": "Humble Store",
+          "cut": 65,
+          "historicalLow": 0.91,
+          "url": "https://itad.link/018d9386-93f6-713e-90a6-7a746a8cf5ca/"
+        },
+        "igdb": {
+          "releaseYear": 2001,
+          "platforms": ["XBOX", "PS3", "PS4", "Android", "PC", "iOS", "Mac", "X360", "XONE", "PS2"],
+          "rating": 74,
+          "ratingCount": 2,
+          "genres": ["Shooter"],
+          "hoursMain": 10.9,
+          "hoursComplete": null
+        }
       },
       {
         "id": "maxpayne-max-payne-2-the-fall-of-max-payne",
@@ -1731,7 +3072,37 @@
         "query": "Max Payne 2",
         "storefront": "Steam",
         "note": "Shorter and tighter than the first. Same caveats about modern displays.",
-        "editions": []
+        "editions": [],
+        "authored": {
+          "year": 2003,
+          "hours": 7,
+          "msrp": "$9.99",
+          "version": "Original"
+        },
+        "sources": {
+          "itadId": "018d937f-26e9-7058-9337-3957883a16b7",
+          "igdbId": 19,
+          "igdbSlug": "max-payne-2-the-fall-of-max-payne",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": 9.99,
+          "best": 2.49,
+          "shop": "Humble Store",
+          "cut": 75,
+          "historicalLow": 0.91,
+          "url": "https://itad.link/018d9386-93f8-7068-8373-4d389c1dee41/"
+        },
+        "igdb": {
+          "releaseYear": 2003,
+          "platforms": ["XBOX", "PS3", "PC", "X360", "PS2"],
+          "rating": 84,
+          "ratingCount": 6,
+          "genres": ["Shooter"],
+          "hoursMain": 7.4,
+          "hoursComplete": 8.3
+        }
       },
       {
         "id": "maxpayne-max-payne-3",
@@ -1741,7 +3112,7 @@
         "version": "Complete Edition",
         "platform": "PC",
         "msrp": "$19.99",
-        "hours": 11,
+        "hours": 12,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -1763,7 +3134,37 @@
             "recommended": true,
             "note": "Bundles every DLC pack; the single-player story itself is unchanged."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2012,
+          "hours": 11,
+          "msrp": "$19.99",
+          "version": "Complete Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-1624-7008-a279-b8bfb6e55610",
+          "igdbId": 960,
+          "igdbSlug": "max-payne-3",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": 19.99,
+          "best": 5.99,
+          "shop": "Humble Store",
+          "cut": 70,
+          "historicalLow": 1.98,
+          "url": "https://itad.link/018d9386-93f9-7234-89bd-17874a9499c2/"
+        },
+        "igdb": {
+          "releaseYear": 2012,
+          "platforms": ["PS3", "PC", "Mac", "X360"],
+          "rating": 89,
+          "ratingCount": 12,
+          "genres": ["Shooter"],
+          "hoursMain": 11.6,
+          "hoursComplete": 22
+        }
       }
     ]
   },
@@ -1781,7 +3182,7 @@
         "version": "God of War: Ascension",
         "platform": "PS3",
         "msrp": "—",
-        "hours": 10,
+        "hours": 7,
         "tier": "skip",
         "starter": false,
         "store": "ps",
@@ -1803,7 +3204,37 @@
             "recommended": false,
             "note": "Statue and art extras; identical game content."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2013,
+          "hours": 10,
+          "msrp": "—",
+          "version": "God of War: Ascension"
+        },
+        "sources": {
+          "itadId": "018d937f-37a1-71d2-bb29-b19f8972d69a",
+          "igdbId": 1291,
+          "igdbSlug": "god-of-war-ascension",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2013,
+          "platforms": ["PS3"],
+          "rating": 76,
+          "ratingCount": 11,
+          "genres": ["Hack and slash/Beat 'em up", "Adventure"],
+          "hoursMain": 7.4,
+          "hoursComplete": null
+        }
       },
       {
         "id": "gow-god-of-war-chains-of-olympus",
@@ -1813,7 +3244,7 @@
         "version": "God of War Saga",
         "platform": "PSP / PS3",
         "msrp": "—",
-        "hours": 5,
+        "hours": 3,
         "tier": "opt",
         "starter": false,
         "store": "ps",
@@ -1842,7 +3273,37 @@
             "recommended": true,
             "note": "Includes the Origins HD ports alongside the console trilogy."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2008,
+          "hours": 5,
+          "msrp": "—",
+          "version": "God of War Saga"
+        },
+        "sources": {
+          "itadId": "018d937f-4964-7357-a557-f04db139c555",
+          "igdbId": 552,
+          "igdbSlug": "god-of-war-chains-of-olympus",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2008,
+          "platforms": ["PSP"],
+          "rating": 88,
+          "ratingCount": 4,
+          "genres": ["Hack and slash/Beat 'em up", "Adventure"],
+          "hoursMain": 3.4,
+          "hoursComplete": null
+        }
       },
       {
         "id": "gow-god-of-war",
@@ -1852,7 +3313,7 @@
         "version": "God of War Saga",
         "platform": "PS3 / PS Plus",
         "msrp": "—",
-        "hours": 10,
+        "hours": 9,
         "tier": "core",
         "starter": true,
         "store": "ps",
@@ -1888,7 +3349,37 @@
             "recommended": false,
             "note": "Portable port of the HD collection; weaker performance."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2005,
+          "hours": 10,
+          "msrp": "—",
+          "version": "God of War Saga"
+        },
+        "sources": {
+          "itadId": "018d937f-4964-7357-a557-f04dac608915",
+          "igdbId": 549,
+          "igdbSlug": "god-of-war",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2005,
+          "platforms": ["PS2"],
+          "rating": 93,
+          "ratingCount": 3,
+          "genres": ["Puzzle", "Hack and slash/Beat 'em up", "Adventure"],
+          "hoursMain": 9.2,
+          "hoursComplete": null
+        }
       },
       {
         "id": "gow-god-of-war-ghost-of-sparta",
@@ -1927,7 +3418,37 @@
             "recommended": true,
             "note": "Includes the Origins HD ports plus the main trilogy."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2010,
+          "hours": 6,
+          "msrp": "—",
+          "version": "God of War Saga"
+        },
+        "sources": {
+          "itadId": "018d937f-64ee-733a-b35e-47259cb6076d",
+          "igdbId": 550,
+          "igdbSlug": "god-of-war-ghost-of-sparta",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2010,
+          "platforms": ["PSP"],
+          "rating": 91,
+          "ratingCount": 4,
+          "genres": ["Hack and slash/Beat 'em up", "Adventure"],
+          "hoursMain": 5.6,
+          "hoursComplete": null
+        }
       },
       {
         "id": "gow-god-of-war-ii",
@@ -1937,7 +3458,7 @@
         "version": "God of War Saga",
         "platform": "PS3 / PS Plus",
         "msrp": "—",
-        "hours": 12,
+        "hours": 10,
         "tier": "core",
         "starter": false,
         "store": "ps",
@@ -1980,7 +3501,37 @@
             "recommended": false,
             "note": "Handheld version of the HD collection."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2007,
+          "hours": 12,
+          "msrp": "—",
+          "version": "God of War Saga"
+        },
+        "sources": {
+          "itadId": "018d937f-4b7e-7321-bea0-0a3d6c782b81",
+          "igdbId": 551,
+          "igdbSlug": "god-of-war-ii",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2007,
+          "platforms": ["PS2"],
+          "rating": 93,
+          "ratingCount": 4,
+          "genres": ["Platform", "Hack and slash/Beat 'em up", "Adventure"],
+          "hoursMain": 9.7,
+          "hoursComplete": 14
+        }
       },
       {
         "id": "gow-god-of-war-iii",
@@ -1990,7 +3541,7 @@
         "version": "God of War III Remastered",
         "platform": "PS4 / PS5",
         "msrp": "—",
-        "hours": 10,
+        "hours": 19,
         "tier": "core",
         "starter": false,
         "store": "ps",
@@ -2026,7 +3577,37 @@
             "recommended": true,
             "note": "1080p/60fps remaster; best way to play today."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2010,
+          "hours": 10,
+          "msrp": "—",
+          "version": "God of War III Remastered"
+        },
+        "sources": {
+          "itadId": "018d937f-348b-7072-a4d9-9cf493fe8f3f",
+          "igdbId": 499,
+          "igdbSlug": "god-of-war-iii",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2010,
+          "platforms": ["PS3"],
+          "rating": 96,
+          "ratingCount": 6,
+          "genres": ["Hack and slash/Beat 'em up", "Adventure"],
+          "hoursMain": 18.5,
+          "hoursComplete": 36
+        }
       },
       {
         "id": "gow-god-of-war-2",
@@ -2036,7 +3617,7 @@
         "version": "God of War PC",
         "platform": "PC",
         "msrp": "$49.99",
-        "hours": 21,
+        "hours": 33,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -2065,7 +3646,37 @@
             "recommended": true,
             "note": "Highest fidelity port with unlocked framerate and ultrawide."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2018,
+          "hours": 21,
+          "msrp": "$49.99",
+          "version": "God of War PC"
+        },
+        "sources": {
+          "itadId": "018d937f-4964-7357-a557-f04dac608915",
+          "igdbId": 19560,
+          "igdbSlug": "god-of-war--1",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": 49.99,
+          "best": 44.99,
+          "shop": "GamesPlanet US",
+          "cut": 10,
+          "historicalLow": 6.83,
+          "url": "https://itad.link/018d9386-6c96-73a3-8151-d9e68913c06f/"
+        },
+        "igdb": {
+          "releaseYear": 2018,
+          "platforms": ["PS4", "PC", "PS5"],
+          "rating": 96,
+          "ratingCount": 26,
+          "genres": ["Role-playing (RPG)", "Hack and slash/Beat 'em up", "Adventure"],
+          "hoursMain": 32.6,
+          "hoursComplete": 47.8
+        }
       },
       {
         "id": "gow-god-of-war-ragnarok",
@@ -2075,7 +3686,7 @@
         "version": "God of War Ragnarok PC",
         "platform": "PC",
         "msrp": "$59.99",
-        "hours": 26,
+        "hours": 38,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -2097,7 +3708,37 @@
             "recommended": true,
             "note": "Includes Valhalla; best performance and visual options."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2022,
+          "hours": 26,
+          "msrp": "$59.99",
+          "version": "God of War Ragnarok PC"
+        },
+        "sources": {
+          "itadId": "018d937f-6bca-706d-9e69-8316170c379b",
+          "igdbId": 112875,
+          "igdbSlug": "god-of-war-ragnarok",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": 59.99,
+          "best": 38.99,
+          "shop": "GameBillet",
+          "cut": 35,
+          "historicalLow": 32.95,
+          "url": "https://itad.link/01920b3f-4c00-7257-96f9-0fbdace8329d/"
+        },
+        "igdb": {
+          "releaseYear": 2022,
+          "platforms": ["PS4", "PC", "PS5"],
+          "rating": 95,
+          "ratingCount": 13,
+          "genres": ["Role-playing (RPG)", "Hack and slash/Beat 'em up", "Adventure"],
+          "hoursMain": 37.5,
+          "hoursComplete": 58.7
+        }
       },
       {
         "id": "gow-god-of-war-ragnarok-valhalla",
@@ -2114,7 +3755,37 @@
         "query": "God of War Ragnarok",
         "storefront": "Steam / Epic",
         "note": "Free roguelite epilogue included with Ragnarök. Optional mechanically, but it is the emotional close of the arc.",
-        "editions": []
+        "editions": [],
+        "authored": {
+          "year": 2023,
+          "hours": 6,
+          "msrp": "Included",
+          "version": "Original"
+        },
+        "sources": {
+          "itadId": "0190378e-1ac3-703f-91fa-d36366143e60",
+          "igdbId": null,
+          "igdbSlug": null,
+          "matchConfidence": "none",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": null,
+          "platforms": [],
+          "rating": null,
+          "ratingCount": null,
+          "genres": [],
+          "hoursMain": null,
+          "hoursComplete": null
+        }
       }
     ]
   },
@@ -2161,7 +3832,37 @@
             "recommended": true,
             "note": "Full remake including Left Behind; best way to play."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2013,
+          "hours": 15,
+          "msrp": "$59.99",
+          "version": "The Last of Us Part I"
+        },
+        "sources": {
+          "itadId": "018d937f-679e-7276-b6f1-e59da609dd4b",
+          "igdbId": null,
+          "igdbSlug": null,
+          "matchConfidence": "none",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": 59.99,
+          "best": 29.99,
+          "shop": "GameBillet",
+          "cut": 50,
+          "historicalLow": 22.94,
+          "url": "https://itad.link/018d9386-89c4-71dd-b17f-8af97521c6eb/"
+        },
+        "igdb": {
+          "releaseYear": null,
+          "platforms": [],
+          "rating": null,
+          "ratingCount": null,
+          "genres": [],
+          "hoursMain": null,
+          "hoursComplete": null
+        }
       },
       {
         "id": "tlou-the-last-of-us-left-behind",
@@ -2171,7 +3872,7 @@
         "version": "The Last of Us Part I",
         "platform": "PC",
         "msrp": "Included",
-        "hours": 2,
+        "hours": 3,
         "tier": "opt",
         "starter": false,
         "store": "pc",
@@ -2200,7 +3901,37 @@
             "recommended": true,
             "note": "Left Behind fully remade and bundled in."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2014,
+          "hours": 2,
+          "msrp": "Included",
+          "version": "The Last of Us Part I"
+        },
+        "sources": {
+          "itadId": "018d937f-555a-732e-991d-8a70e7626d00",
+          "igdbId": 11790,
+          "igdbSlug": "the-last-of-us-left-behind",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2014,
+          "platforms": ["PS3"],
+          "rating": 87,
+          "ratingCount": 9,
+          "genres": ["Shooter", "Adventure"],
+          "hoursMain": 2.5,
+          "hoursComplete": 3.3
+        }
       },
       {
         "id": "tlou-the-last-of-us-part-ii",
@@ -2210,7 +3941,7 @@
         "version": "The Last of Us Part II Remastered",
         "platform": "PC",
         "msrp": "$49.99",
-        "hours": 24,
+        "hours": 31,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -2232,7 +3963,37 @@
             "recommended": true,
             "note": "Adds No Return roguelike and cut Lost Levels."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2020,
+          "hours": 24,
+          "msrp": "$49.99",
+          "version": "The Last of Us Part II Remastered"
+        },
+        "sources": {
+          "itadId": "018d937f-4964-7357-a557-f04dac173a0a",
+          "igdbId": 26192,
+          "igdbSlug": "the-last-of-us-part-ii",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2020,
+          "platforms": ["PS4", "PS5"],
+          "rating": 95,
+          "ratingCount": 11,
+          "genres": ["Shooter", "Adventure"],
+          "hoursMain": 30.8,
+          "hoursComplete": 43
+        }
       }
     ]
   },
@@ -2249,7 +4010,7 @@
         "year": 2010,
         "version": "The Master Chief Collection",
         "platform": "PC",
-        "msrp": "$39.99",
+        "msrp": "$9.99",
         "hours": 10,
         "tier": "core",
         "starter": true,
@@ -2279,7 +4040,37 @@
             "recommended": true,
             "note": "Added to MCC in 2019 with Firefight and full multiplayer."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2010,
+          "hours": 10,
+          "msrp": "$39.99",
+          "version": "The Master Chief Collection"
+        },
+        "sources": {
+          "itadId": "018d937f-3aa4-70ce-a7f8-f766d6f6a9c1",
+          "igdbId": 990,
+          "igdbSlug": "halo-reach",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": 9.99,
+          "best": 9.99,
+          "shop": "Steam",
+          "cut": 0,
+          "historicalLow": 2.49,
+          "url": "https://itad.link/018d9386-7138-733e-bf5f-7fa399389b63/"
+        },
+        "igdb": {
+          "releaseYear": 2010,
+          "platforms": ["PC", "X360", "XONE"],
+          "rating": 89,
+          "ratingCount": 9,
+          "genres": ["Shooter"],
+          "hoursMain": null,
+          "hoursComplete": 25
+        }
       },
       {
         "id": "halo-halo-combat-evolved",
@@ -2325,7 +4116,37 @@
             "recommended": true,
             "note": "Anniversary remaster, campaign and multiplayer; best modern way."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2001,
+          "hours": 10,
+          "msrp": "$49.99",
+          "version": "The Master Chief Collection"
+        },
+        "sources": {
+          "itadId": "018d937f-3eaf-716d-81db-7097ccc0f43c",
+          "igdbId": 740,
+          "igdbSlug": "halo-combat-evolved",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2001,
+          "platforms": ["XBOX", "PC", "Mac", "X360"],
+          "rating": 87,
+          "ratingCount": 3,
+          "genres": ["Shooter"],
+          "hoursMain": 10.3,
+          "hoursComplete": 12.5
+        }
       },
       {
         "id": "halo-halo-2",
@@ -2335,7 +4156,7 @@
         "version": "The Master Chief Collection",
         "platform": "PC",
         "msrp": "Included",
-        "hours": 9,
+        "hours": 11,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -2371,7 +4192,37 @@
             "recommended": true,
             "note": "Halo 2 Anniversary remaster with remade cutscenes."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2004,
+          "hours": 9,
+          "msrp": "Included",
+          "version": "The Master Chief Collection"
+        },
+        "sources": {
+          "itadId": "018d937f-555b-71b8-bd4b-bba457021c16",
+          "igdbId": 986,
+          "igdbSlug": "halo-2",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2004,
+          "platforms": ["XBOX", "PC", "XONE"],
+          "rating": 81,
+          "ratingCount": 6,
+          "genres": ["Shooter"],
+          "hoursMain": 11,
+          "hoursComplete": 17.5
+        }
       },
       {
         "id": "halo-halo-3-odst",
@@ -2380,8 +4231,8 @@
         "year": 2009,
         "version": "The Master Chief Collection",
         "platform": "PC",
-        "msrp": "Included",
-        "hours": 6,
+        "msrp": "$4.99",
+        "hours": 15,
         "tier": "opt",
         "starter": false,
         "store": "pc",
@@ -2403,7 +4254,37 @@
             "recommended": true,
             "note": "Added as campaign DLC in 2015; includes Firefight."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2009,
+          "hours": 6,
+          "msrp": "Included",
+          "version": "The Master Chief Collection"
+        },
+        "sources": {
+          "itadId": "018d937f-3aa4-70ce-a7f8-f766d7b56a5a",
+          "igdbId": 989,
+          "igdbSlug": "halo-3-odst",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": 4.99,
+          "best": 4.99,
+          "shop": "Steam",
+          "cut": 0,
+          "historicalLow": 1.24,
+          "url": "https://itad.link/018d9386-7137-72ce-9851-00c29e9d38a3/"
+        },
+        "igdb": {
+          "releaseYear": 2009,
+          "platforms": ["PC", "X360", "XONE"],
+          "rating": 78,
+          "ratingCount": 6,
+          "genres": ["Shooter"],
+          "hoursMain": 15,
+          "hoursComplete": null
+        }
       },
       {
         "id": "halo-halo-3",
@@ -2412,7 +4293,7 @@
         "year": 2007,
         "version": "The Master Chief Collection",
         "platform": "PC",
-        "msrp": "Included",
+        "msrp": "$9.99",
         "hours": 9,
         "tier": "core",
         "starter": false,
@@ -2442,7 +4323,37 @@
             "recommended": true,
             "note": "60fps, live multiplayer, whole trilogy in one install."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2007,
+          "hours": 9,
+          "msrp": "Included",
+          "version": "The Master Chief Collection"
+        },
+        "sources": {
+          "itadId": "018d937f-0e31-7291-90f7-030a63192a6f",
+          "igdbId": 987,
+          "igdbSlug": "halo-3",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": 9.99,
+          "best": 9.99,
+          "shop": "Microsoft Store",
+          "cut": 0,
+          "historicalLow": 2.49,
+          "url": "https://itad.link/018d9386-7137-72ce-9851-00c29c027874/"
+        },
+        "igdb": {
+          "releaseYear": 2007,
+          "platforms": ["PC", "X360", "XONE"],
+          "rating": 91,
+          "ratingCount": 4,
+          "genres": ["Shooter"],
+          "hoursMain": null,
+          "hoursComplete": null
+        }
       },
       {
         "id": "halo-halo-4",
@@ -2451,7 +4362,7 @@
         "year": 2012,
         "version": "The Master Chief Collection",
         "platform": "PC",
-        "msrp": "Included",
+        "msrp": "$9.99",
         "hours": 9,
         "tier": "core",
         "starter": false,
@@ -2474,7 +4385,37 @@
             "recommended": true,
             "note": "Remastered cutscenes plus Spartan Ops; best version."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2012,
+          "hours": 9,
+          "msrp": "Included",
+          "version": "The Master Chief Collection"
+        },
+        "sources": {
+          "itadId": "018d937f-2bee-71d8-97b2-18b2eb954af6",
+          "igdbId": 991,
+          "igdbSlug": "halo-4",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.115Z"
+        },
+        "market": {
+          "regular": 9.99,
+          "best": 9.99,
+          "shop": "Microsoft Store",
+          "cut": 0,
+          "historicalLow": 2.49,
+          "url": "https://itad.link/018d9386-7138-733e-bf5f-7fa3920a3066/"
+        },
+        "igdb": {
+          "releaseYear": 2012,
+          "platforms": ["PC", "X360", "XONE"],
+          "rating": 88,
+          "ratingCount": 12,
+          "genres": ["Shooter"],
+          "hoursMain": null,
+          "hoursComplete": null
+        }
       },
       {
         "id": "halo-halo-5-guardians",
@@ -2484,7 +4425,7 @@
         "version": "Halo 5: Guardians",
         "platform": "Xbox One / Series",
         "msrp": "—",
-        "hours": 9,
+        "hours": 10,
         "tier": "core",
         "starter": false,
         "store": "xb",
@@ -2506,7 +4447,37 @@
             "recommended": false,
             "note": "Statue and cosmetic packs; identical campaign."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2015,
+          "hours": 9,
+          "msrp": "—",
+          "version": "Halo 5: Guardians"
+        },
+        "sources": {
+          "itadId": "018d937f-4b7f-70b0-a622-687606e30c9d",
+          "igdbId": 6803,
+          "igdbSlug": "halo-5-guardians",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.875Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2015,
+          "platforms": ["XONE"],
+          "rating": 84,
+          "ratingCount": 19,
+          "genres": ["Shooter"],
+          "hoursMain": 10.4,
+          "hoursComplete": 65
+        }
       },
       {
         "id": "halo-halo-infinite",
@@ -2516,7 +4487,7 @@
         "version": "Halo Infinite",
         "platform": "PC",
         "msrp": "—",
-        "hours": 12,
+        "hours": 16,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -2531,7 +4502,37 @@
             "recommended": true,
             "note": "Single release; campaign paid, multiplayer free-to-play."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2021,
+          "hours": 12,
+          "msrp": "—",
+          "version": "Halo Infinite"
+        },
+        "sources": {
+          "itadId": "018d937f-4443-7255-babb-a2a153173131",
+          "igdbId": 103281,
+          "igdbSlug": "halo-infinite",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.875Z"
+        },
+        "market": {
+          "regular": 0,
+          "best": 0,
+          "shop": "Steam",
+          "cut": 0,
+          "historicalLow": 19.79,
+          "url": "https://itad.link/018d9386-7138-733e-bf5f-7fa37e1adddd/"
+        },
+        "igdb": {
+          "releaseYear": 2021,
+          "platforms": ["Series X|S", "PC", "XONE"],
+          "rating": 88,
+          "ratingCount": 9,
+          "genres": ["Shooter", "Adventure"],
+          "hoursMain": 15.7,
+          "hoursComplete": 23.3
+        }
       }
     ]
   },
@@ -2549,7 +4550,7 @@
         "version": "Complete Edition",
         "platform": "PC",
         "msrp": "$19.99",
-        "hours": 12,
+        "hours": 21,
         "tier": "opt",
         "starter": false,
         "store": "pc",
@@ -2571,7 +4572,37 @@
             "recommended": true,
             "note": "Adds the Cold, Cold Heart story DLC and all season pass content."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2013,
+          "hours": 12,
+          "msrp": "$19.99",
+          "version": "Complete Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-1161-71bd-a3ba-b5f30a4b963b",
+          "igdbId": 2003,
+          "igdbSlug": "batman-arkham-origins",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.875Z"
+        },
+        "market": {
+          "regular": 19.99,
+          "best": 3.57,
+          "shop": "GameBillet",
+          "cut": 82,
+          "historicalLow": 1.41,
+          "url": "https://itad.link/018d9386-2da0-7255-a469-63e37a25b5f9/"
+        },
+        "igdb": {
+          "releaseYear": 2013,
+          "platforms": ["PS3", "PC", "WiiU", "X360"],
+          "rating": 71,
+          "ratingCount": 17,
+          "genres": ["Hack and slash/Beat 'em up", "Adventure"],
+          "hoursMain": 21.2,
+          "hoursComplete": 42.5
+        }
       },
       {
         "id": "arkham-batman-arkham-asylum",
@@ -2581,7 +4612,7 @@
         "version": "Game of the Year Edition",
         "platform": "PC",
         "msrp": "$19.99",
-        "hours": 11,
+        "hours": 14,
         "tier": "core",
         "starter": true,
         "store": "pc",
@@ -2610,7 +4641,37 @@
             "recommended": false,
             "note": "Unreal 4 remaster of Asylum and City with DLC; uneven performance."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2009,
+          "hours": 11,
+          "msrp": "$19.99",
+          "version": "Game of the Year Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-21ee-71f2-aa66-fe39c68e846a",
+          "igdbId": 500,
+          "igdbSlug": "batman-arkham-asylum",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.875Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2009,
+          "platforms": ["PS3", "Ouya", "PC", "Mac", "X360", "Switch"],
+          "rating": 89,
+          "ratingCount": 5,
+          "genres": ["Hack and slash/Beat 'em up", "Adventure"],
+          "hoursMain": 14.4,
+          "hoursComplete": 20.3
+        }
       },
       {
         "id": "arkham-batman-arkham-city",
@@ -2620,7 +4681,7 @@
         "version": "Game of the Year Edition",
         "platform": "PC",
         "msrp": "$19.99",
-        "hours": 13,
+        "hours": 25,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -2656,7 +4717,37 @@
             "recommended": false,
             "note": "Remaster bundling Asylum and City with all DLC; performance is uneven."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2011,
+          "hours": 13,
+          "msrp": "$19.99",
+          "version": "Game of the Year Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-067b-70c3-901d-b3e01fb740ec",
+          "igdbId": 501,
+          "igdbSlug": "batman-arkham-city",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.875Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2011,
+          "platforms": ["OnLive", "PS3", "PC", "X360", "Switch"],
+          "rating": 91,
+          "ratingCount": 10,
+          "genres": ["Hack and slash/Beat 'em up", "Adventure"],
+          "hoursMain": 24.5,
+          "hoursComplete": 50.4
+        }
       },
       {
         "id": "arkham-batman-arkham-knight",
@@ -2666,7 +4757,7 @@
         "version": "Game of the Year Edition",
         "platform": "PC",
         "msrp": "$19.99",
-        "hours": 16,
+        "hours": 39,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -2702,7 +4793,37 @@
             "recommended": false,
             "note": "Trilogy bundle; console version uses the weaker Return to Arkham ports."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2015,
+          "hours": 16,
+          "msrp": "$19.99",
+          "version": "Game of the Year Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-0e0c-70be-91d5-75e399e6b4e3",
+          "igdbId": 5503,
+          "igdbSlug": "batman-arkham-knight",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.875Z"
+        },
+        "market": {
+          "regular": 19.99,
+          "best": 3.57,
+          "shop": "GameBillet",
+          "cut": 82,
+          "historicalLow": 1.99,
+          "url": "https://itad.link/018d9386-2d9d-72df-8f7a-fd6277033b27/"
+        },
+        "igdb": {
+          "releaseYear": 2015,
+          "platforms": ["PS4", "PC", "XONE", "Switch"],
+          "rating": 92,
+          "ratingCount": 16,
+          "genres": ["Hack and slash/Beat 'em up", "Adventure"],
+          "hoursMain": 39.4,
+          "hoursComplete": 57.7
+        }
       }
     ]
   },
@@ -2720,7 +4841,7 @@
         "version": "Game of the Year Edition",
         "platform": "PC",
         "msrp": "$19.99",
-        "hours": 15,
+        "hours": 18,
         "tier": "core",
         "starter": true,
         "store": "pc",
@@ -2742,7 +4863,37 @@
             "recommended": true,
             "note": "Adds The Bright Lord and Lord of the Hunt story DLC and all extras."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2014,
+          "hours": 15,
+          "msrp": "$19.99",
+          "version": "Game of the Year Edition"
+        },
+        "sources": {
+          "itadId": "018d937f-0a89-7069-a869-1ade408b2d54",
+          "igdbId": 3025,
+          "igdbSlug": "middle-earth-shadow-of-mordor",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.875Z"
+        },
+        "market": {
+          "regular": null,
+          "best": null,
+          "shop": null,
+          "cut": null,
+          "historicalLow": null,
+          "url": null
+        },
+        "igdb": {
+          "releaseYear": 2014,
+          "platforms": ["PS3", "PS4", "Linux", "PC", "Mac", "X360", "XONE"],
+          "rating": 84,
+          "ratingCount": 18,
+          "genres": ["Role-playing (RPG)", "Hack and slash/Beat 'em up", "Adventure"],
+          "hoursMain": 17.9,
+          "hoursComplete": 56.7
+        }
       },
       {
         "id": "middleearth-middle-earth-shadow-of-war",
@@ -2752,7 +4903,7 @@
         "version": "Definitive Edition",
         "platform": "PC",
         "msrp": "$49.99",
-        "hours": 25,
+        "hours": 36,
         "tier": "core",
         "starter": false,
         "store": "pc",
@@ -2781,7 +4932,37 @@
             "recommended": true,
             "note": "No loot boxes or market, and bundles both story expansions and all DLC."
           }
-        ]
+        ],
+        "authored": {
+          "year": 2017,
+          "hours": 25,
+          "msrp": "$49.99",
+          "version": "Definitive Edition"
+        },
+        "sources": {
+          "itadId": "018d937e-f835-710c-b95b-928e2f1d4da8",
+          "igdbId": 27421,
+          "igdbSlug": "middle-earth-shadow-of-war",
+          "matchConfidence": "exact",
+          "fetchedAt": "2026-08-24T19:52:00.875Z"
+        },
+        "market": {
+          "regular": 49.99,
+          "best": 4.46,
+          "shop": "GameBillet",
+          "cut": 91,
+          "historicalLow": 2.49,
+          "url": "https://itad.link/018d9386-9813-7155-87e2-9eb284188c13/"
+        },
+        "igdb": {
+          "releaseYear": 2017,
+          "platforms": ["PS4", "PC", "XONE"],
+          "rating": 84,
+          "ratingCount": 19,
+          "genres": ["Role-playing (RPG)", "Adventure"],
+          "hoursMain": 36.4,
+          "hoursComplete": 55
+        }
       }
     ]
   }
