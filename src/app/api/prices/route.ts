@@ -4,6 +4,18 @@ import type { PriceMap, PriceQuote } from "@/types/canon/price";
 const LOOKUP_URL = "https://api.isthereanydeal.com/games/lookup/v1";
 const PRICES_URL = "https://api.isthereanydeal.com/games/prices/v3";
 const MAX_GAMES = 60;
+/** ITAD throttles aggressively; 60 lookups fired at once reliably earns a 429. */
+const LOOKUP_CONCURRENCY = 4;
+const RETRY_DELAY_MS = 1200;
+
+class RateLimited extends Error {
+  constructor() {
+    super("IsThereAnyDeal is rate limiting this key. Wait a minute and try again.");
+    this.name = "RateLimited";
+  }
+}
+
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 interface RequestedGame {
   id: string;
@@ -27,11 +39,47 @@ function parseBody(body: unknown): RequestedGame[] | null {
 
 async function lookupId(title: string, key: string): Promise<string | null> {
   const url = `${LOOKUP_URL}?key=${key}&title=${encodeURIComponent(title)}`;
-  const response = await fetch(url, { cache: "no-store" });
-  if (!response.ok) return null;
-  const payload: unknown = await response.json();
-  const game = (payload as { game?: { id?: unknown } }).game;
-  return typeof game?.id === "string" ? game.id : null;
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const response = await fetch(url, { cache: "no-store" });
+
+    // A throttled lookup is not "this game has no price" — reporting it as such
+    // turns a fixable rate limit into a silent empty result. Retry once, then
+    // surface it so the caller can tell the user what actually happened.
+    if (response.status === 429) {
+      if (attempt === 0) {
+        await sleep(RETRY_DELAY_MS);
+        continue;
+      }
+      throw new RateLimited();
+    }
+
+    if (!response.ok) return null;
+    const payload: unknown = await response.json();
+    const game = (payload as { game?: { id?: unknown } }).game;
+    return typeof game?.id === "string" ? game.id : null;
+  }
+  return null;
+}
+
+/** Resolve `items` through `worker`, at most `LOOKUP_CONCURRENCY` in flight. */
+async function mapLimited<In, Out>(
+  items: readonly In[],
+  worker: (item: In) => Promise<Out>,
+): Promise<Out[]> {
+  const results: Out[] = new Array<Out>(items.length);
+  let cursor = 0;
+
+  const runners = Array.from({ length: Math.min(LOOKUP_CONCURRENCY, items.length) }, async () => {
+    while (cursor < items.length) {
+      const index = cursor;
+      cursor += 1;
+      const item = items[index];
+      if (item !== undefined) results[index] = await worker(item);
+    }
+  });
+
+  await Promise.all(runners);
+  return results;
 }
 
 function readQuote(entry: unknown): { id: string; quote: PriceQuote } | null {
@@ -85,9 +133,10 @@ export async function POST(request: Request): Promise<NextResponse> {
   }
 
   try {
-    const looked = await Promise.all(
-      games.map(async (game) => ({ game, itadId: await lookupId(game.query, key) })),
-    );
+    const looked = await mapLimited(games, async (game) => ({
+      game,
+      itadId: await lookupId(game.query, key),
+    }));
     const byItadId = new Map<string, string>();
     for (const { game, itadId } of looked) {
       if (itadId !== null && !byItadId.has(itadId)) byItadId.set(itadId, game.id);
@@ -100,6 +149,7 @@ export async function POST(request: Request): Promise<NextResponse> {
       body: JSON.stringify([...byItadId.keys()]),
       cache: "no-store",
     });
+    if (response.status === 429) throw new RateLimited();
     if (!response.ok) {
       return NextResponse.json(
         { error: `IsThereAnyDeal responded ${response.status}.` },
@@ -118,6 +168,9 @@ export async function POST(request: Request): Promise<NextResponse> {
     }
     return NextResponse.json({ prices });
   } catch (error) {
+    if (error instanceof RateLimited) {
+      return NextResponse.json({ error: error.message }, { status: 429 });
+    }
     console.error("price refresh failed", error);
     return NextResponse.json({ error: "Price lookup failed." }, { status: 502 });
   }
