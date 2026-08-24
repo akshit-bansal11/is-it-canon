@@ -1,0 +1,2788 @@
+[
+  {
+    "id": "uncharted",
+    "name": "Uncharted",
+    "scope": "Drake tetralogy plus The Lost Legacy. Golden Abyss (Vita) and the Fight for Fortune spin-offs are out of scope.",
+    "caveat": "Present-day chronology matches release order. The flashbacks in Uncharted 3 (young Drake in Cartagena) and Uncharted 4 (the orphanage, Panama) are the earliest events in the series, but they sit inside games that come later, so the games stay in this order. Play order and chronology agree here.",
+    "games": [
+      {
+        "id": "uncharted-uncharted-drakes-fortune",
+        "order": 1,
+        "title": "Uncharted: Drake’s Fortune",
+        "year": 2007,
+        "version": "Uncharted: The Nathan Drake Collection",
+        "platform": "PS4 / PS5",
+        "msrp": "—",
+        "hours": 7,
+        "tier": "core",
+        "starter": true,
+        "store": "ps",
+        "query": "Uncharted The Nathan Drake Collection",
+        "storefront": "PS Store",
+        "note": "Never released on PC. Sold only inside The Nathan Drake Collection (2015), which runs the three PS3 games at 1080p/60.",
+        "editions": [
+          {
+            "name": "Uncharted: Drake's Fortune",
+            "year": 2007,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "Original release; stuck on PS3 hardware."
+          },
+          {
+            "name": "Uncharted: The Nathan Drake Collection",
+            "year": 2015,
+            "platforms": "PS4 / PS5",
+            "recommended": true,
+            "note": "Bluepoint remaster at 1080p/60; only modern way to play it."
+          }
+        ]
+      },
+      {
+        "id": "uncharted-uncharted-2-among-thieves",
+        "order": 2,
+        "title": "Uncharted 2: Among Thieves",
+        "year": 2009,
+        "version": "Uncharted: The Nathan Drake Collection",
+        "platform": "PS4 / PS5",
+        "msrp": "—",
+        "hours": 10,
+        "tier": "core",
+        "starter": false,
+        "store": "ps",
+        "query": "Uncharted The Nathan Drake Collection",
+        "storefront": "PS Store",
+        "note": "Still the high point of the series. Collection only; no PC release has ever happened.",
+        "editions": [
+          {
+            "name": "Uncharted 2: Among Thieves",
+            "year": 2009,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "Original release; PS3 only."
+          },
+          {
+            "name": "Uncharted 2: Among Thieves - Game of the Year Edition",
+            "year": 2010,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "Adds multiplayer map and skin DLC; single-player story unchanged."
+          },
+          {
+            "name": "Uncharted: The Nathan Drake Collection",
+            "year": 2015,
+            "platforms": "PS4 / PS5",
+            "recommended": true,
+            "note": "Remastered 1080p/60 campaign; best and only current-gen version."
+          }
+        ]
+      },
+      {
+        "id": "uncharted-uncharted-3-drakes-deception",
+        "order": 3,
+        "title": "Uncharted 3: Drake’s Deception",
+        "year": 2011,
+        "version": "Uncharted: The Nathan Drake Collection",
+        "platform": "PS4 / PS5",
+        "msrp": "—",
+        "hours": 10,
+        "tier": "core",
+        "starter": false,
+        "store": "ps",
+        "query": "Uncharted The Nathan Drake Collection",
+        "storefront": "PS Store",
+        "note": "Chronology: opens on the earliest material in the franchise — a teenage Drake in Cartagena — but the present-day thread follows Uncharted 2 directly.",
+        "editions": [
+          {
+            "name": "Uncharted 3: Drake's Deception",
+            "year": 2011,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "Original release; PS3 only."
+          },
+          {
+            "name": "Uncharted 3: Drake's Deception - Game of the Year Edition",
+            "year": 2012,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "Bundles multiplayer DLC; campaign identical to launch."
+          },
+          {
+            "name": "Uncharted: The Nathan Drake Collection",
+            "year": 2015,
+            "platforms": "PS4 / PS5",
+            "recommended": true,
+            "note": "Remastered campaign at 1080p/60; multiplayer dropped."
+          }
+        ]
+      },
+      {
+        "id": "uncharted-uncharted-4-a-thiefs-end",
+        "order": 4,
+        "title": "Uncharted 4: A Thief’s End",
+        "year": 2016,
+        "version": "Uncharted: Legacy of Thieves Collection",
+        "platform": "PC",
+        "msrp": "$49.99",
+        "hours": 15,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Uncharted Legacy of Thieves Collection",
+        "storefront": "Steam / Epic",
+        "note": "On PC via the Legacy of Thieves Collection — a solid port. The MSRP covers this and Lost Legacy together. Multiplayer is cut from the PC version.",
+        "editions": [
+          {
+            "name": "Uncharted 4: A Thief's End",
+            "year": 2016,
+            "platforms": "PS4",
+            "recommended": false,
+            "note": "Original release; 30fps on base PS4."
+          },
+          {
+            "name": "Uncharted: Legacy of Thieves Collection",
+            "year": 2022,
+            "platforms": "PS5 / PC",
+            "recommended": true,
+            "note": "Remaster of 4 plus Lost Legacy; 60/120fps and the only PC version."
+          }
+        ]
+      },
+      {
+        "id": "uncharted-uncharted-the-lost-legacy",
+        "order": 5,
+        "title": "Uncharted: The Lost Legacy",
+        "year": 2017,
+        "version": "Uncharted: Legacy of Thieves Collection",
+        "platform": "PC",
+        "msrp": "Included",
+        "hours": 7,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "Uncharted Legacy of Thieves Collection",
+        "storefront": "Steam / Epic",
+        "note": "Chloe and Nadine, set shortly after Uncharted 4. Bundled into Legacy of Thieves, never sold alone. Skippable without losing the Drake story.",
+        "editions": [
+          {
+            "name": "Uncharted: The Lost Legacy",
+            "year": 2017,
+            "platforms": "PS4",
+            "recommended": false,
+            "note": "Original standalone release."
+          },
+          {
+            "name": "Uncharted: Legacy of Thieves Collection",
+            "year": 2022,
+            "platforms": "PS5 / PC",
+            "recommended": true,
+            "note": "Remastered and paired with Uncharted 4; adds PC and 60/120fps modes."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ac",
+    "name": "Assassin’s Creed",
+    "scope": "Mainline only. No Chronicles, no mobile entries, no Liberation or Freedom Cry standalones.",
+    "caveat": "This is the tab where chronology and play order pull hardest in opposite directions. Rows are sorted by historical setting. The modern-day frame — Desmond across AC1–III, Layla across Origins–Valhalla — runs in release order and is a continuous story of its own. Recommended play order is therefore release order: AC1 → II → Brotherhood → Revelations → III → Black Flag → Rogue → Unity → Syndicate → Origins → Odyssey → Valhalla → Mirage → Shadows.",
+    "games": [
+      {
+        "id": "ac-assassins-creed-odyssey",
+        "order": 1,
+        "title": "Assassin’s Creed Odyssey",
+        "year": 2018,
+        "version": "Assassin's Creed Odyssey Gold Edition",
+        "platform": "PC",
+        "msrp": "$59.99",
+        "hours": 45,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "Assassins Creed Odyssey",
+        "storefront": "Steam / Ubisoft",
+        "note": "431 BCE, Peloponnesian War. Earliest setting in the series. Its modern-day half belongs to the Layla arc that starts in Origins — play it after. MSRP is the standard edition; Ultimate bundles the expansions.",
+        "editions": [
+          {
+            "name": "Assassin's Creed Odyssey",
+            "year": 2018,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": false,
+            "note": "Base game; both story arcs sold separately."
+          },
+          {
+            "name": "Assassin's Creed Odyssey Gold Edition",
+            "year": 2018,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": true,
+            "note": "Adds Legacy of the First Blade and The Fate of Atlantis arcs."
+          },
+          {
+            "name": "Assassin's Creed Odyssey Ultimate Edition",
+            "year": 2018,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": false,
+            "note": "Gold plus a cosmetic pack; no extra story over Gold."
+          }
+        ]
+      },
+      {
+        "id": "ac-assassins-creed-origins",
+        "order": 2,
+        "title": "Assassin’s Creed Origins",
+        "year": 2017,
+        "version": "Assassin's Creed Origins Gold Edition",
+        "platform": "PC",
+        "msrp": "$59.99",
+        "hours": 30,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Assassins Creed Origins",
+        "storefront": "Steam / Ubisoft",
+        "note": "49–43 BCE Egypt. Founding of the Hidden Ones and the start of the Layla modern-day arc.",
+        "editions": [
+          {
+            "name": "Assassin's Creed Origins",
+            "year": 2017,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": false,
+            "note": "Base game only; both expansions sold separately."
+          },
+          {
+            "name": "Assassin's Creed Origins Gold Edition",
+            "year": 2017,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": true,
+            "note": "Adds The Hidden Ones and The Curse of the Pharaohs expansions."
+          }
+        ]
+      },
+      {
+        "id": "ac-assassins-creed-mirage",
+        "order": 3,
+        "title": "Assassin’s Creed Mirage",
+        "year": 2023,
+        "version": "Original",
+        "platform": "PC",
+        "msrp": "$49.99",
+        "hours": 22,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "Assassins Creed Mirage",
+        "storefront": "Steam / Ubisoft",
+        "note": "861 CE Baghdad. Basim’s origin story — a prequel to Valhalla that lands far better if you play Valhalla first.",
+        "editions": []
+      },
+      {
+        "id": "ac-assassins-creed-valhalla",
+        "order": 4,
+        "title": "Assassin’s Creed Valhalla",
+        "year": 2020,
+        "version": "Assassin's Creed Valhalla Complete Edition",
+        "platform": "PC",
+        "msrp": "$59.99",
+        "hours": 60,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "Assassins Creed Valhalla",
+        "storefront": "Steam / Ubisoft",
+        "note": "873 CE England. Longest game in the series by a wide margin and closes the Layla arc. MSRP is standard edition; the Complete Edition folds in the three expansions.",
+        "editions": [
+          {
+            "name": "Assassin's Creed Valhalla",
+            "year": 2020,
+            "platforms": "PC / PS4 / PS5 / Xbox One / Xbox Series",
+            "recommended": false,
+            "note": "Base game only; every expansion sold separately."
+          },
+          {
+            "name": "Assassin's Creed Valhalla Ragnarok Edition",
+            "year": 2022,
+            "platforms": "PC / PS4 / PS5 / Xbox One / Xbox Series",
+            "recommended": false,
+            "note": "Base game plus Dawn of Ragnarok only."
+          },
+          {
+            "name": "Assassin's Creed Valhalla Complete Edition",
+            "year": 2023,
+            "platforms": "PC / PS4 / PS5 / Xbox One / Xbox Series",
+            "recommended": true,
+            "note": "All expansions plus The Last Chapter; full Eivor story in one buy."
+          }
+        ]
+      },
+      {
+        "id": "ac-assassins-creed",
+        "order": 5,
+        "title": "Assassin’s Creed",
+        "year": 2007,
+        "version": "Assassin's Creed: Director's Cut Edition",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 15,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Assassins Creed Directors Cut",
+        "storefront": "Steam / Ubisoft",
+        "note": "1191, Third Crusade. Repetitive by modern standards, but it opens the Desmond frame that AC III pays off.",
+        "editions": [
+          {
+            "name": "Assassin's Creed",
+            "year": 2007,
+            "platforms": "PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Original console release; fewer mission types."
+          },
+          {
+            "name": "Assassin's Creed: Director's Cut Edition",
+            "year": 2008,
+            "platforms": "PC",
+            "recommended": true,
+            "note": "Adds extra investigation missions; the only version still sold."
+          }
+        ]
+      },
+      {
+        "id": "ac-assassins-creed-ii",
+        "order": 6,
+        "title": "Assassin’s Creed II",
+        "year": 2009,
+        "version": "Assassin's Creed: The Ezio Collection",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 20,
+        "tier": "core",
+        "starter": true,
+        "store": "pc",
+        "query": "Assassins Creed II",
+        "storefront": "Steam / Ubisoft",
+        "note": "1476–1499 Italy. The usual recommended entry point despite AC1 preceding it — its opening recaps enough. The Ezio Collection remaster is console-only; PC gets the 2009 build.",
+        "editions": [
+          {
+            "name": "Assassin's Creed II",
+            "year": 2009,
+            "platforms": "PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Original release; missing story sequences 12 and 13."
+          },
+          {
+            "name": "Assassin's Creed II: Game of the Year Edition",
+            "year": 2010,
+            "platforms": "PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Adds Battle of Forli and Bonfire of the Vanities story DLC."
+          },
+          {
+            "name": "Assassin's Creed: The Ezio Collection",
+            "year": 2016,
+            "platforms": "PS4 / Xbox One / Switch",
+            "recommended": true,
+            "note": "Remastered with all story DLC; playable today, no multiplayer."
+          }
+        ]
+      },
+      {
+        "id": "ac-assassins-creed-brotherhood",
+        "order": 7,
+        "title": "Assassin’s Creed Brotherhood",
+        "year": 2010,
+        "version": "Assassin's Creed: The Ezio Collection",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 15,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Assassins Creed Brotherhood",
+        "storefront": "Steam / Ubisoft",
+        "note": "1499–1507 Rome. Direct continuation of AC II, same protagonist, no gap.",
+        "editions": [
+          {
+            "name": "Assassin's Creed Brotherhood",
+            "year": 2010,
+            "platforms": "PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Original release, DLC sold separately."
+          },
+          {
+            "name": "Assassin's Creed Brotherhood: Complete Edition",
+            "year": 2011,
+            "platforms": "PC / PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Bundles The Da Vinci Disappearance and bonus content."
+          },
+          {
+            "name": "Assassin's Creed: The Ezio Collection",
+            "year": 2016,
+            "platforms": "PS4 / Xbox One / Switch",
+            "recommended": true,
+            "note": "Remastered with all single-player DLC included."
+          }
+        ]
+      },
+      {
+        "id": "ac-assassins-creed-revelations",
+        "order": 8,
+        "title": "Assassin’s Creed Revelations",
+        "year": 2011,
+        "version": "Assassin's Creed: The Ezio Collection",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 13,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Assassins Creed Revelations",
+        "storefront": "Steam / Ubisoft",
+        "note": "1511 Constantinople. Closes out Ezio and Altaïr both.",
+        "editions": [
+          {
+            "name": "Assassin's Creed Revelations",
+            "year": 2011,
+            "platforms": "PS3 / Xbox 360 / PC",
+            "recommended": false,
+            "note": "Original release; The Lost Archive sold separately."
+          },
+          {
+            "name": "Assassin's Creed Revelations Gold Edition",
+            "year": 2012,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Base game plus The Lost Archive and bonus packs."
+          },
+          {
+            "name": "Assassin's Creed: The Ezio Collection",
+            "year": 2016,
+            "platforms": "PS4 / Xbox One / Switch",
+            "recommended": true,
+            "note": "Remastered, includes The Lost Archive and the Ezio short films."
+          }
+        ]
+      },
+      {
+        "id": "ac-assassins-creed-shadows",
+        "order": 9,
+        "title": "Assassin’s Creed Shadows",
+        "year": 2025,
+        "version": "Assassin's Creed Shadows Gold Edition",
+        "platform": "PC",
+        "msrp": "$69.99",
+        "hours": 35,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "Assassins Creed Shadows",
+        "storefront": "Steam / Ubisoft",
+        "note": "1579 Japan. Close to self-contained; its links to the wider story are light.",
+        "editions": [
+          {
+            "name": "Assassin's Creed Shadows",
+            "year": 2025,
+            "platforms": "PC / PS5 / Xbox Series",
+            "recommended": false,
+            "note": "Base game; the Claws of Awaji expansion is not included."
+          },
+          {
+            "name": "Assassin's Creed Shadows Gold Edition",
+            "year": 2025,
+            "platforms": "PC / PS5 / Xbox Series",
+            "recommended": true,
+            "note": "Includes the expansion pass with the Claws of Awaji story chapter."
+          }
+        ]
+      },
+      {
+        "id": "ac-assassins-creed-iv-black-flag",
+        "order": 10,
+        "title": "Assassin’s Creed IV: Black Flag",
+        "year": 2013,
+        "version": "Assassin's Creed IV: Black Flag Gold Edition",
+        "platform": "PC",
+        "msrp": "$39.99",
+        "hours": 24,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "Assassins Creed IV Black Flag",
+        "storefront": "Steam / Ubisoft",
+        "note": "1715–1722 Caribbean. Best-liked entry and a fine standalone, but Edward’s story is a side branch. Its modern-day sections are set at Abstergo, after AC III.",
+        "editions": [
+          {
+            "name": "Assassin's Creed IV: Black Flag",
+            "year": 2013,
+            "platforms": "PS3 / PS4 / Xbox 360 / Xbox One / PC",
+            "recommended": false,
+            "note": "Original release; Freedom Cry sold separately."
+          },
+          {
+            "name": "Assassin's Creed IV: Black Flag Gold Edition",
+            "year": 2013,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": true,
+            "note": "Season pass included, so Freedom Cry and all extra content ship with it."
+          },
+          {
+            "name": "Assassin's Creed: The Rebel Collection",
+            "year": 2019,
+            "platforms": "Switch",
+            "recommended": false,
+            "note": "Black Flag plus Rogue with DLC; portable but lower fidelity."
+          }
+        ]
+      },
+      {
+        "id": "ac-assassins-creed-rogue",
+        "order": 11,
+        "title": "Assassin’s Creed Rogue",
+        "year": 2014,
+        "version": "Assassin's Creed Rogue Remastered",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 14,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "Assassins Creed Rogue",
+        "storefront": "Steam / Ubisoft",
+        "note": "1752–1760 North Atlantic. Bridges Black Flag to AC III from the Templar side. The 2018 Remastered edition is console-only; PC has the 2015 original.",
+        "editions": [
+          {
+            "name": "Assassin's Creed Rogue",
+            "year": 2014,
+            "platforms": "PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Original last-gen release."
+          },
+          {
+            "name": "Assassin's Creed Rogue",
+            "year": 2015,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "PC port carrying the console special-edition bonus missions."
+          },
+          {
+            "name": "Assassin's Creed Rogue Remastered",
+            "year": 2018,
+            "platforms": "PS4 / Xbox One",
+            "recommended": true,
+            "note": "4K remaster with all bonus missions; best-looking version."
+          },
+          {
+            "name": "Assassin's Creed: The Rebel Collection",
+            "year": 2019,
+            "platforms": "Switch",
+            "recommended": false,
+            "note": "Rogue plus Black Flag with DLC; portable but lower fidelity."
+          }
+        ]
+      },
+      {
+        "id": "ac-assassins-creed-iii",
+        "order": 12,
+        "title": "Assassin’s Creed III",
+        "year": 2012,
+        "version": "Assassin's Creed III Remastered",
+        "platform": "PC",
+        "msrp": "$39.99",
+        "hours": 16,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Assassins Creed III Remastered",
+        "storefront": "Steam / Ubisoft",
+        "note": "1754–1783 American Revolution. Ends the Desmond arc — the payoff for AC1 through Revelations. The 2019 Remaster changed lighting and character models and is divisive; the 2012 original is also on PC.",
+        "editions": [
+          {
+            "name": "Assassin's Creed III",
+            "year": 2012,
+            "platforms": "PS3 / Xbox 360 / Wii U / PC",
+            "recommended": false,
+            "note": "Original release; Tyranny of King Washington sold separately."
+          },
+          {
+            "name": "Assassin's Creed III Remastered",
+            "year": 2019,
+            "platforms": "PC / PS4 / Xbox One / Switch",
+            "recommended": true,
+            "note": "4K remaster with all DLC plus Liberation Remastered bundled in."
+          }
+        ]
+      },
+      {
+        "id": "ac-assassins-creed-unity",
+        "order": 13,
+        "title": "Assassin’s Creed Unity",
+        "year": 2014,
+        "version": "Original",
+        "platform": "PC",
+        "msrp": "$29.99",
+        "hours": 14,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "Assassins Creed Unity",
+        "storefront": "Steam / Ubisoft",
+        "note": "1789 Paris. Disastrous launch, long since patched; now one of the better-looking entries in the series.",
+        "editions": []
+      },
+      {
+        "id": "ac-assassins-creed-syndicate",
+        "order": 14,
+        "title": "Assassin’s Creed Syndicate",
+        "year": 2015,
+        "version": "Assassin's Creed Syndicate Gold Edition",
+        "platform": "PC",
+        "msrp": "$29.99",
+        "hours": 16,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "Assassins Creed Syndicate",
+        "storefront": "Steam / Ubisoft",
+        "note": "1868 London. The last game before the series turned into an RPG.",
+        "editions": [
+          {
+            "name": "Assassin's Creed Syndicate",
+            "year": 2015,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": false,
+            "note": "Base game; Jack the Ripper story DLC sold separately."
+          },
+          {
+            "name": "Assassin's Creed Syndicate Gold Edition",
+            "year": 2015,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": true,
+            "note": "Season pass included: Jack the Ripper and The Last Maharaja stories."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "horizon",
+    "name": "Horizon",
+    "scope": "Zero Dawn and Forbidden West, both expansions included. Lego Horizon Adventures and Call of the Mountain (VR) are out of scope.",
+    "caveat": "Chronology and play order agree. Both expansions sit after their base game’s main story rather than alongside it.",
+    "games": [
+      {
+        "id": "horizon-horizon-zero-dawn",
+        "order": 1,
+        "title": "Horizon Zero Dawn",
+        "year": 2017,
+        "version": "Remastered",
+        "platform": "PC",
+        "msrp": "$49.99",
+        "hours": 22,
+        "tier": "core",
+        "starter": true,
+        "store": "pc",
+        "query": "Horizon Zero Dawn Remastered",
+        "storefront": "Steam / Epic",
+        "note": "The 2024 Remastered edition replaced the Complete Edition, which is now delisted on Steam. Existing owners were offered a paid upgrade rather than a free one.",
+        "editions": [
+          {
+            "name": "Horizon Zero Dawn",
+            "year": 2017,
+            "platforms": "PS4",
+            "recommended": false,
+            "note": "Original release; The Frozen Wilds sold separately."
+          },
+          {
+            "name": "Complete Edition",
+            "year": 2017,
+            "platforms": "PS4",
+            "recommended": false,
+            "note": "Adds The Frozen Wilds expansion and bonus gear."
+          },
+          {
+            "name": "Complete Edition (PC)",
+            "year": 2020,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "First PC release; same content as the PS4 Complete Edition."
+          },
+          {
+            "name": "Remastered",
+            "year": 2024,
+            "platforms": "PS5 / PC",
+            "recommended": true,
+            "note": "Rebuilt visuals and Forbidden West systems, with The Frozen Wilds."
+          }
+        ]
+      },
+      {
+        "id": "horizon-horizon-zero-dawn-the-frozen-wilds",
+        "order": 2,
+        "title": "Horizon Zero Dawn: The Frozen Wilds",
+        "year": 2017,
+        "version": "Horizon Zero Dawn Remastered",
+        "platform": "PC",
+        "msrp": "Included",
+        "hours": 7,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "Horizon Zero Dawn Remastered",
+        "storefront": "Steam / Epic",
+        "note": "Bundled with the Remastered edition. Optional on paper, but it introduces hardware and characters Forbidden West assumes you have met.",
+        "editions": [
+          {
+            "name": "The Frozen Wilds",
+            "year": 2017,
+            "platforms": "PS4",
+            "recommended": false,
+            "note": "Standalone expansion purchase; requires the base game."
+          },
+          {
+            "name": "Horizon Zero Dawn Complete Edition",
+            "year": 2017,
+            "platforms": "PS4 / PC",
+            "recommended": false,
+            "note": "Bundles the expansion with the base game; PC version in 2020."
+          },
+          {
+            "name": "Horizon Zero Dawn Remastered",
+            "year": 2024,
+            "platforms": "PS5 / PC",
+            "recommended": true,
+            "note": "Expansion included and rebuilt alongside the base game."
+          }
+        ]
+      },
+      {
+        "id": "horizon-horizon-forbidden-west",
+        "order": 3,
+        "title": "Horizon Forbidden West",
+        "year": 2022,
+        "version": "Complete Edition",
+        "platform": "PC",
+        "msrp": "$59.99",
+        "hours": 30,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Horizon Forbidden West Complete Edition",
+        "storefront": "Steam / Epic",
+        "note": "The PC release (2024) is the Complete Edition and a good port. Picks up directly from Zero Dawn’s ending.",
+        "editions": [
+          {
+            "name": "Horizon Forbidden West",
+            "year": 2022,
+            "platforms": "PS4 / PS5",
+            "recommended": false,
+            "note": "Original release; Burning Shores was not yet out."
+          },
+          {
+            "name": "Complete Edition",
+            "year": 2023,
+            "platforms": "PS5 / PC",
+            "recommended": true,
+            "note": "Bundles the Burning Shores expansion; PC version followed in 2024."
+          }
+        ]
+      },
+      {
+        "id": "horizon-horizon-forbidden-west-burning-shores",
+        "order": 4,
+        "title": "Horizon Forbidden West: Burning Shores",
+        "year": 2023,
+        "version": "Horizon Forbidden West Complete Edition",
+        "platform": "PC",
+        "msrp": "Included",
+        "hours": 5,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Horizon Forbidden West Complete Edition",
+        "storefront": "Steam / Epic",
+        "note": "Bundled with the Complete Edition. Not optional in practice — its ending is the clearest setup for whatever comes third.",
+        "editions": [
+          {
+            "name": "Burning Shores",
+            "year": 2023,
+            "platforms": "PS5",
+            "recommended": false,
+            "note": "Standalone expansion purchase; PS5 only, no PS4 version."
+          },
+          {
+            "name": "Horizon Forbidden West Complete Edition",
+            "year": 2023,
+            "platforms": "PS5 / PC",
+            "recommended": true,
+            "note": "Bundles the expansion with the base game; PC version followed in 2024."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "re",
+    "name": "Resident Evil",
+    "scope": "Mainline numbered entries plus RE0, Code: Veronica, RE7 and Village. No Revelations, Outbreak, Umbrella Corps or spin-off shooters.",
+    "caveat": "RE3 and RE2 overlap. Nemesis begins 28 September 1998, a day before RE2, and ends after it — so RE3 sorts first by chronological start. Recommended play order is the reverse: RE2 then RE3, because RE3 assumes you have already seen the Raccoon City outbreak from Leon and Claire’s side.",
+    "games": [
+      {
+        "id": "re-resident-evil-0",
+        "order": 1,
+        "title": "Resident Evil 0",
+        "year": 2002,
+        "version": "HD Remaster",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 9,
+        "tier": "skip",
+        "starter": false,
+        "store": "pc",
+        "query": "Resident Evil 0 HD Remaster",
+        "storefront": "Steam",
+        "note": "23 July 1998, hours before RE1. HD Remaster (2016) on PC. A prequel written long after the fact and the easiest mainline entry to drop.",
+        "editions": [
+          {
+            "name": "Resident Evil Zero",
+            "year": 2002,
+            "platforms": "GameCube",
+            "recommended": false,
+            "note": "Original release, GameCube exclusive."
+          },
+          {
+            "name": "Wii port",
+            "year": 2008,
+            "platforms": "Wii",
+            "recommended": false,
+            "note": "Straight port with Wii controls; no added content."
+          },
+          {
+            "name": "HD Remaster",
+            "year": 2016,
+            "platforms": "PC / PS4 / Xbox One / Switch",
+            "recommended": true,
+            "note": "HD rework plus optional modern controls and Wesker Mode."
+          }
+        ]
+      },
+      {
+        "id": "re-resident-evil",
+        "order": 2,
+        "title": "Resident Evil",
+        "year": 1996,
+        "version": "HD Remaster",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 12,
+        "tier": "core",
+        "starter": true,
+        "store": "pc",
+        "query": "Resident Evil HD Remaster",
+        "storefront": "Steam",
+        "note": "Play the 2002 GameCube remake, sold on PC as the HD Remaster (2015) — not the 1996 original. Tank controls are optional in this version.",
+        "editions": [
+          {
+            "name": "Resident Evil",
+            "year": 1996,
+            "platforms": "PS1",
+            "recommended": false,
+            "note": "Original release; tank controls and dated FMV."
+          },
+          {
+            "name": "Director's Cut",
+            "year": 1997,
+            "platforms": "PS1",
+            "recommended": false,
+            "note": "Adds Arrange mode, new camera angles and an auto-aim option."
+          },
+          {
+            "name": "Resident Evil (REmake)",
+            "year": 2002,
+            "platforms": "GameCube",
+            "recommended": false,
+            "note": "Ground-up remake; adds the Lisa Trevor subplot."
+          },
+          {
+            "name": "Wii Edition",
+            "year": 2008,
+            "platforms": "Wii",
+            "recommended": false,
+            "note": "REmake with pointer aiming; no other content changes."
+          },
+          {
+            "name": "HD Remaster",
+            "year": 2015,
+            "platforms": "PC / PS4 / Xbox One / Switch",
+            "recommended": true,
+            "note": "REmake in HD with modern controls; the definitive way to play."
+          }
+        ]
+      },
+      {
+        "id": "re-resident-evil-3",
+        "order": 3,
+        "title": "Resident Evil 3",
+        "year": 1999,
+        "version": "Next-gen update",
+        "platform": "PC",
+        "msrp": "$39.99",
+        "hours": 6,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Resident Evil 3",
+        "storefront": "Steam",
+        "note": "Starts a day before RE2 and ends after it. The 2020 remake cuts large parts of the 1999 original — the clock tower, the park, most of the Nemesis encounters. Six hours, and the one remake with a real asterisk.",
+        "editions": [
+          {
+            "name": "Resident Evil 3: Nemesis",
+            "year": 1999,
+            "platforms": "PS1",
+            "recommended": false,
+            "note": "Original release; adds the live-selection choice system."
+          },
+          {
+            "name": "GameCube port",
+            "year": 2003,
+            "platforms": "GameCube",
+            "recommended": false,
+            "note": "Straight port of the 1999 game."
+          },
+          {
+            "name": "Resident Evil 3 (remake)",
+            "year": 2020,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": false,
+            "note": "RE Engine remake bundled with Resistance; cuts some 1999 content."
+          },
+          {
+            "name": "Next-gen update",
+            "year": 2022,
+            "platforms": "PS5 / Xbox Series / PC",
+            "recommended": true,
+            "note": "Free upgrade to the remake; best-looking version of the story."
+          }
+        ]
+      },
+      {
+        "id": "re-resident-evil-2",
+        "order": 4,
+        "title": "Resident Evil 2",
+        "year": 1998,
+        "version": "Next-gen update",
+        "platform": "PC",
+        "msrp": "$39.99",
+        "hours": 9,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Resident Evil 2",
+        "storefront": "Steam",
+        "note": "29 September 1998, mid-way through RE3’s timeline. The 2019 remake is the series benchmark. Two campaigns; the second run is a variant, not a sequel.",
+        "editions": [
+          {
+            "name": "Resident Evil 2",
+            "year": 1998,
+            "platforms": "PS1",
+            "recommended": false,
+            "note": "Original two-disc release with the A/B scenario structure."
+          },
+          {
+            "name": "GameCube port",
+            "year": 2003,
+            "platforms": "GameCube",
+            "recommended": false,
+            "note": "Late console port of the 1998 game; no new content."
+          },
+          {
+            "name": "Resident Evil 2 (remake)",
+            "year": 2019,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": false,
+            "note": "RE Engine remake; superseded by the free next-gen update."
+          },
+          {
+            "name": "Next-gen update",
+            "year": 2022,
+            "platforms": "PS5 / Xbox Series / PC",
+            "recommended": true,
+            "note": "Free upgrade to the remake with ray tracing and 4K/high frame rate."
+          }
+        ]
+      },
+      {
+        "id": "re-resident-evil-code-veronica-x",
+        "order": 5,
+        "title": "Resident Evil – Code: Veronica X",
+        "year": 2000,
+        "version": "Code: Veronica X HD",
+        "platform": "Xbox 360 / Series",
+        "msrp": "—",
+        "hours": 12,
+        "tier": "core",
+        "starter": false,
+        "store": "xb",
+        "query": "Resident Evil Code Veronica X",
+        "storefront": "Xbox Store",
+        "note": "Never released on PC. The 2011 HD version is Xbox 360, playable on Xbox One and Series via backward compatibility — the cleanest way to play it today. Closes the Wesker and Redfield threads the earlier games open.",
+        "editions": [
+          {
+            "name": "Code: Veronica",
+            "year": 2000,
+            "platforms": "Dreamcast",
+            "recommended": false,
+            "note": "Original release; lacks the added Wesker cutscenes."
+          },
+          {
+            "name": "Code: Veronica X",
+            "year": 2001,
+            "platforms": "PS2 / Dreamcast",
+            "recommended": false,
+            "note": "Adds roughly ten minutes of new Wesker cutscenes."
+          },
+          {
+            "name": "GameCube port",
+            "year": 2003,
+            "platforms": "GameCube",
+            "recommended": false,
+            "note": "Port of Code: Veronica X; no further content changes."
+          },
+          {
+            "name": "Code: Veronica X HD",
+            "year": 2011,
+            "platforms": "PS3 / Xbox 360",
+            "recommended": true,
+            "note": "Widescreen HD version of Veronica X; the best available today."
+          }
+        ]
+      },
+      {
+        "id": "re-resident-evil-4",
+        "order": 6,
+        "title": "Resident Evil 4",
+        "year": 2005,
+        "version": "Gold Edition",
+        "platform": "PC",
+        "msrp": "$39.99",
+        "hours": 16,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Resident Evil 4",
+        "storefront": "Steam",
+        "note": "The 2023 remake is definitive. Separate Ways (paid DLC) runs Ada’s parallel route through the same events and is worth the add-on.",
+        "editions": [
+          {
+            "name": "Resident Evil 4",
+            "year": 2005,
+            "platforms": "GameCube",
+            "recommended": false,
+            "note": "Original release; no Separate Ways side campaign."
+          },
+          {
+            "name": "PS2 version",
+            "year": 2005,
+            "platforms": "PS2",
+            "recommended": false,
+            "note": "Adds the Separate Ways side campaign; visually downgraded."
+          },
+          {
+            "name": "Ultimate HD Edition",
+            "year": 2014,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Proper HD rework of the 2005 game with all bonus content."
+          },
+          {
+            "name": "Resident Evil 4 (remake)",
+            "year": 2023,
+            "platforms": "PC / PS4 / PS5 / Xbox Series",
+            "recommended": false,
+            "note": "RE Engine remake; Separate Ways sold separately."
+          },
+          {
+            "name": "Gold Edition",
+            "year": 2024,
+            "platforms": "PC / PS4 / PS5 / Xbox Series",
+            "recommended": true,
+            "note": "Remake plus the Separate Ways DLC; the complete story package."
+          }
+        ]
+      },
+      {
+        "id": "re-resident-evil-5",
+        "order": 7,
+        "title": "Resident Evil 5",
+        "year": 2009,
+        "version": "Gold Edition",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 13,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Resident Evil 5",
+        "storefront": "Steam",
+        "note": "Gold Edition on PC. Built around co-op; the solo AI partner is genuinely bad. Pays off the Wesker arc.",
+        "editions": [
+          {
+            "name": "Resident Evil 5",
+            "year": 2009,
+            "platforms": "PS3 / Xbox 360 / PC",
+            "recommended": false,
+            "note": "Original release; missing both story episodes."
+          },
+          {
+            "name": "Gold Edition",
+            "year": 2010,
+            "platforms": "PS3 / Xbox 360 / PC",
+            "recommended": true,
+            "note": "Adds Lost in Nightmares and Desperate Escape; the full story."
+          },
+          {
+            "name": "PS4 / Xbox One release",
+            "year": 2016,
+            "platforms": "PS4 / Xbox One",
+            "recommended": false,
+            "note": "Gold Edition content at 1080p60; no extra story."
+          },
+          {
+            "name": "Switch port",
+            "year": 2019,
+            "platforms": "Switch",
+            "recommended": false,
+            "note": "Gold Edition content, lowest-fidelity version."
+          }
+        ]
+      },
+      {
+        "id": "re-resident-evil-6",
+        "order": 8,
+        "title": "Resident Evil 6",
+        "year": 2012,
+        "version": "PS4 / Xbox One release",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 22,
+        "tier": "skip",
+        "starter": false,
+        "store": "pc",
+        "query": "Resident Evil 6",
+        "storefront": "Steam",
+        "note": "Four interlocking campaigns and the series’ low point. Nothing after it depends on it.",
+        "editions": [
+          {
+            "name": "Resident Evil 6",
+            "year": 2012,
+            "platforms": "PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Original release; extra modes arrived later as paid DLC."
+          },
+          {
+            "name": "PC release",
+            "year": 2013,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Later PC port with improved visuals and mouse aiming."
+          },
+          {
+            "name": "PS4 / Xbox One release",
+            "year": 2016,
+            "platforms": "PS4 / Xbox One",
+            "recommended": true,
+            "note": "Bundles every DLC mode at 1080p60; no story is left out."
+          },
+          {
+            "name": "Switch port",
+            "year": 2019,
+            "platforms": "Switch",
+            "recommended": false,
+            "note": "Same all-DLC content, weakest performance."
+          }
+        ]
+      },
+      {
+        "id": "re-resident-evil-7-biohazard",
+        "order": 9,
+        "title": "Resident Evil 7: Biohazard",
+        "year": 2017,
+        "version": "Gold Edition",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 9,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Resident Evil 7 Biohazard",
+        "storefront": "Steam",
+        "note": "Soft reboot, first-person, mostly self-contained. A legitimate alternative starting point if the 90s entries put you off.",
+        "editions": [
+          {
+            "name": "Resident Evil 7: Biohazard",
+            "year": 2017,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": false,
+            "note": "Original release; End of Zoe and Banned Footage sold separately."
+          },
+          {
+            "name": "Gold Edition",
+            "year": 2017,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": true,
+            "note": "Adds Banned Footage Vol. 1-2, Not a Hero and End of Zoe."
+          },
+          {
+            "name": "Next-gen update",
+            "year": 2022,
+            "platforms": "PS5 / Xbox Series / PC",
+            "recommended": false,
+            "note": "Free visual upgrade; content identical to Gold Edition."
+          }
+        ]
+      },
+      {
+        "id": "re-resident-evil-village",
+        "order": 10,
+        "title": "Resident Evil Village",
+        "year": 2021,
+        "version": "Gold Edition",
+        "platform": "PC",
+        "msrp": "$39.99",
+        "hours": 11,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Resident Evil Village",
+        "storefront": "Steam",
+        "note": "Direct sequel to RE7. The Gold Edition adds the Shadows of Rose epilogue, which later material builds on.",
+        "editions": [
+          {
+            "name": "Resident Evil Village",
+            "year": 2021,
+            "platforms": "PC / PS4 / PS5 / Xbox One / Xbox Series",
+            "recommended": false,
+            "note": "Original release; ends before the Rose epilogue chapter."
+          },
+          {
+            "name": "Gold Edition",
+            "year": 2022,
+            "platforms": "PC / PS4 / PS5 / Xbox One / Xbox Series",
+            "recommended": true,
+            "note": "Bundles Winters' Expansion with the Shadows of Rose story DLC."
+          }
+        ]
+      },
+      {
+        "id": "re-resident-evil-requiem",
+        "order": 11,
+        "title": "Resident Evil Requiem",
+        "year": 2026,
+        "version": "Original",
+        "platform": "PC",
+        "msrp": "$69.99",
+        "hours": 0,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Resident Evil Requiem",
+        "storefront": "Steam",
+        "note": "Ninth mainline entry, released 27 February 2026. Returns to Raccoon City with a new protagonist. Runtime left blank — the figures are still settling.",
+        "editions": []
+      }
+    ]
+  },
+  {
+    "id": "hl",
+    "name": "Half-Life",
+    "scope": "Mainline plus the two Gearbox expansions and Alyx. Black Mesa is a fan remake and is not counted here.",
+    "caveat": "Alyx is the trap. It is set roughly five years before Half-Life 2, so it sorts here — but its final scene is a direct continuation of Episode Two’s cliffhanger and spoils it outright. Play it last. There is still no Half-Life 3 as of August 2026.",
+    "games": [
+      {
+        "id": "hl-half-life",
+        "order": 1,
+        "title": "Half-Life",
+        "year": 1998,
+        "version": "25th Anniversary Update",
+        "platform": "PC",
+        "msrp": "$9.99",
+        "hours": 12,
+        "tier": "core",
+        "starter": true,
+        "store": "pc",
+        "query": "Half-Life",
+        "storefront": "Steam",
+        "note": "Holds up. Black Mesa (2020, sold separately) is a well-regarded fan remake if the 1998 visuals are a barrier — it is not official and is not counted in this tab.",
+        "editions": [
+          {
+            "name": "Half-Life",
+            "year": 1998,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Original retail release."
+          },
+          {
+            "name": "Game of the Year Edition",
+            "year": 1999,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Same campaign plus Team Fortress Classic and extras."
+          },
+          {
+            "name": "Half-Life: Source",
+            "year": 2004,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Source port with water and physics only; buggier than the original."
+          },
+          {
+            "name": "25th Anniversary Update",
+            "year": 2023,
+            "platforms": "PC",
+            "recommended": true,
+            "note": "Free Steam update: bundles Uplink, restores maps, adds widescreen."
+          }
+        ]
+      },
+      {
+        "id": "hl-half-life-blue-shift",
+        "order": 2,
+        "title": "Half-Life: Blue Shift",
+        "year": 2001,
+        "version": "Steam release",
+        "platform": "PC",
+        "msrp": "$4.99",
+        "hours": 3,
+        "tier": "skip",
+        "starter": false,
+        "store": "pc",
+        "query": "Half-Life Blue Shift",
+        "storefront": "Steam",
+        "note": "Runs in parallel with Half-Life from Barney Calhoun’s side. Three hours, low stakes — though Barney matters in HL2.",
+        "editions": [
+          {
+            "name": "Half-Life: Blue Shift",
+            "year": 2001,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Original retail release, shipped with the High Definition Pack."
+          },
+          {
+            "name": "Steam release",
+            "year": 2005,
+            "platforms": "PC",
+            "recommended": true,
+            "note": "Standalone on Steam with the HD pack; easiest version to run today."
+          },
+          {
+            "name": "Half-Life 1 Anthology",
+            "year": 2005,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Bundle with Half-Life, Opposing Force and Team Fortress Classic."
+          }
+        ]
+      },
+      {
+        "id": "hl-half-life-opposing-force",
+        "order": 3,
+        "title": "Half-Life: Opposing Force",
+        "year": 1999,
+        "version": "Steam release",
+        "platform": "PC",
+        "msrp": "$4.99",
+        "hours": 5,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "Half-Life Opposing Force",
+        "storefront": "Steam",
+        "note": "Begins hours after the resonance cascade and ends after Gordon leaves Black Mesa. The stronger of the two expansions.",
+        "editions": [
+          {
+            "name": "Half-Life: Opposing Force",
+            "year": 1999,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Original retail expansion; requires Half-Life installed."
+          },
+          {
+            "name": "Steam release",
+            "year": 2005,
+            "platforms": "PC",
+            "recommended": true,
+            "note": "Standalone on Steam; no anniversary update, but the maintained version."
+          },
+          {
+            "name": "Half-Life 1 Anthology",
+            "year": 2005,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Bundle with Half-Life, Blue Shift and Team Fortress Classic."
+          }
+        ]
+      },
+      {
+        "id": "hl-half-life-alyx",
+        "order": 4,
+        "title": "Half-Life: Alyx",
+        "year": 2020,
+        "version": "Original",
+        "platform": "PC · VR only",
+        "msrp": "$59.99",
+        "hours": 12,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Half-Life Alyx",
+        "storefront": "Steam",
+        "note": "Requires a VR headset — there is no flat-screen mode. Chronologically here, but play it after Episode Two or you spoil the single biggest moment in the series.",
+        "editions": []
+      },
+      {
+        "id": "hl-half-life-2",
+        "order": 5,
+        "title": "Half-Life 2",
+        "year": 2004,
+        "version": "20th Anniversary Update",
+        "platform": "PC",
+        "msrp": "$9.99",
+        "hours": 13,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Half-Life 2",
+        "storefront": "Steam",
+        "note": "The 20th-anniversary build is the current version and now ships Episode One and Episode Two inside the base app.",
+        "editions": [
+          {
+            "name": "Half-Life 2",
+            "year": 2004,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Original release; ends on the Citadel cliffhanger."
+          },
+          {
+            "name": "Xbox port",
+            "year": 2005,
+            "platforms": "Xbox",
+            "recommended": false,
+            "note": "Cut-down original-Xbox conversion with heavy compromises."
+          },
+          {
+            "name": "The Orange Box",
+            "year": 2007,
+            "platforms": "PC / PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Bundles both episodes plus Portal and Team Fortress 2."
+          },
+          {
+            "name": "20th Anniversary Update",
+            "year": 2024,
+            "platforms": "PC",
+            "recommended": true,
+            "note": "Free update folding Episode One, Episode Two and Lost Coast into the base."
+          }
+        ]
+      },
+      {
+        "id": "hl-half-life-2-episode-one",
+        "order": 6,
+        "title": "Half-Life 2: Episode One",
+        "year": 2006,
+        "version": "Half-Life 2: 20th Anniversary Update",
+        "platform": "PC",
+        "msrp": "Included",
+        "hours": 4,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Half-Life 2",
+        "storefront": "Steam",
+        "note": "No longer sold separately — launched from the Half-Life 2 main menu.",
+        "editions": [
+          {
+            "name": "Half-Life 2: Episode One",
+            "year": 2006,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Original standalone episode purchase."
+          },
+          {
+            "name": "The Orange Box",
+            "year": 2007,
+            "platforms": "PC / PS3 / Xbox 360",
+            "recommended": false,
+            "note": "First console release, bundled with Episode Two and Portal."
+          },
+          {
+            "name": "Half-Life 2: 20th Anniversary Update",
+            "year": 2024,
+            "platforms": "PC",
+            "recommended": true,
+            "note": "Folded into Half-Life 2 itself on Steam; no separate purchase."
+          }
+        ]
+      },
+      {
+        "id": "hl-half-life-2-episode-two",
+        "order": 7,
+        "title": "Half-Life 2: Episode Two",
+        "year": 2007,
+        "version": "Half-Life 2: 20th Anniversary Update",
+        "platform": "PC",
+        "msrp": "Included",
+        "hours": 5,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Half-Life 2",
+        "storefront": "Steam",
+        "note": "Ends on the cliffhanger the series has never resolved. Alyx picks the thread up; nothing else does.",
+        "editions": [
+          {
+            "name": "Half-Life 2: Episode Two",
+            "year": 2007,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Released standalone and inside The Orange Box."
+          },
+          {
+            "name": "The Orange Box",
+            "year": 2007,
+            "platforms": "PC / PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Console release bundled with Episode One and Portal."
+          },
+          {
+            "name": "Half-Life 2: 20th Anniversary Update",
+            "year": 2024,
+            "platforms": "PC",
+            "recommended": true,
+            "note": "Folded into Half-Life 2 itself on Steam; no separate purchase."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rdr",
+    "name": "Red Dead",
+    "scope": "Red Dead Redemption 2 then Red Dead Redemption. Red Dead Revolver shares a name and nothing else.",
+    "caveat": "Chronology and play order agree, and both run backwards from release order: RDR2 (1899) precedes RDR (1911). RDR2’s epilogue hands you straight to RDR’s opening situation.",
+    "games": [
+      {
+        "id": "rdr-red-dead-redemption-2",
+        "order": 1,
+        "title": "Red Dead Redemption 2",
+        "year": 2018,
+        "version": "Standard Edition",
+        "platform": "PC",
+        "msrp": "$59.99",
+        "hours": 50,
+        "tier": "core",
+        "starter": true,
+        "store": "pc",
+        "query": "Red Dead Redemption 2",
+        "storefront": "Steam / Epic",
+        "note": "1899. Excellent PC version. The epilogue is effectively RDR1’s prologue — do not stop at the credits.",
+        "editions": [
+          {
+            "name": "Standard Edition",
+            "year": 2018,
+            "platforms": "PS4 / Xbox One",
+            "recommended": true,
+            "note": "Complete single-player story; the pricier editions add no story content."
+          },
+          {
+            "name": "Special Edition",
+            "year": 2018,
+            "platforms": "PS4 / Xbox One",
+            "recommended": false,
+            "note": "Bank robbery mission and gameplay bonuses, not a real story expansion."
+          },
+          {
+            "name": "Ultimate Edition",
+            "year": 2018,
+            "platforms": "PS4 / Xbox One",
+            "recommended": false,
+            "note": "Special Edition extras plus Online cosmetics and bonuses; no added story."
+          },
+          {
+            "name": "Red Dead Redemption 2 (PC)",
+            "year": 2019,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Same story with extra bounties, weapons and photo mode; best fidelity."
+          }
+        ]
+      },
+      {
+        "id": "rdr-red-dead-redemption",
+        "order": 2,
+        "title": "Red Dead Redemption",
+        "year": 2010,
+        "version": "Red Dead Redemption (current-gen version)",
+        "platform": "PC",
+        "msrp": "$49.99",
+        "hours": 20,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Red Dead Redemption",
+        "storefront": "Steam / Epic",
+        "note": "1911. The 2024 PC release is a port of the 2023 console conversion, not a remaster — 4K and uncapped frame rate over 2010 assets, and widely criticised for the price. Undead Nightmare is included and is non-canon.",
+        "editions": [
+          {
+            "name": "Red Dead Redemption",
+            "year": 2010,
+            "platforms": "PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Original release; Undead Nightmare arrived later as paid DLC."
+          },
+          {
+            "name": "Undead Nightmare Collection",
+            "year": 2010,
+            "platforms": "PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Standalone disc of the DLC packs; does not include the main story."
+          },
+          {
+            "name": "Game of the Year Edition",
+            "year": 2011,
+            "platforms": "PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Base game plus Undead Nightmare and the multiplayer packs on one disc."
+          },
+          {
+            "name": "Red Dead Redemption (2023 port)",
+            "year": 2023,
+            "platforms": "PS4 / Switch",
+            "recommended": false,
+            "note": "Straight port with Undead Nightmare; 30fps, no online, criticised as minimal."
+          },
+          {
+            "name": "Red Dead Redemption (PC)",
+            "year": 2024,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "First PC version; includes Undead Nightmare, high framerates and resolutions."
+          },
+          {
+            "name": "Red Dead Redemption (current-gen version)",
+            "year": 2025,
+            "platforms": "PS5 / Xbox Series / Switch 2",
+            "recommended": true,
+            "note": "Native 4K60 with Undead Nightmare included; free upgrade from PS4 and Switch."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "maxpayne",
+    "name": "Max Payne",
+    "scope": "All three. Nothing else in the series exists.",
+    "caveat": "Chronology and play order agree — three games, in order, no branches, no flashback structure that moves anything.",
+    "games": [
+      {
+        "id": "maxpayne-max-payne",
+        "order": 1,
+        "title": "Max Payne",
+        "year": 2001,
+        "version": "Max Payne",
+        "platform": "PC",
+        "msrp": "$9.99",
+        "hours": 9,
+        "tier": "core",
+        "starter": true,
+        "store": "pc",
+        "query": "Max Payne",
+        "storefront": "Steam",
+        "note": "Needs community patches for widescreen and frame pacing on modern displays. Remedy is remaking 1 and 2 as a single title — announced 2022, still unreleased as of August 2026.",
+        "editions": [
+          {
+            "name": "Max Payne",
+            "year": 2001,
+            "platforms": "PC",
+            "recommended": true,
+            "note": "Original release and still the most complete, easiest version to run."
+          },
+          {
+            "name": "Max Payne Mobile",
+            "year": 2012,
+            "platforms": "iOS / Android",
+            "recommended": false,
+            "note": "Touch port of the full game; controls are the obvious compromise."
+          }
+        ]
+      },
+      {
+        "id": "maxpayne-max-payne-2-the-fall-of-max-payne",
+        "order": 2,
+        "title": "Max Payne 2: The Fall of Max Payne",
+        "year": 2003,
+        "version": "Original",
+        "platform": "PC",
+        "msrp": "$9.99",
+        "hours": 7,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Max Payne 2",
+        "storefront": "Steam",
+        "note": "Shorter and tighter than the first. Same caveats about modern displays.",
+        "editions": []
+      },
+      {
+        "id": "maxpayne-max-payne-3",
+        "order": 3,
+        "title": "Max Payne 3",
+        "year": 2012,
+        "version": "Complete Edition",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 11,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Max Payne 3",
+        "storefront": "Steam",
+        "note": "Rockstar-developed, nine years later, São Paulo instead of New York. Requires the Rockstar launcher. Tonally a different game; still the same man.",
+        "editions": [
+          {
+            "name": "Max Payne 3",
+            "year": 2012,
+            "platforms": "PC / PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Base game; DLC packs sold separately through the Rockstar Pass."
+          },
+          {
+            "name": "Complete Edition",
+            "year": 2013,
+            "platforms": "PC / PS3 / Xbox 360",
+            "recommended": true,
+            "note": "Bundles every DLC pack; the single-player story itself is unchanged."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gow",
+    "name": "God of War",
+    "scope": "Greek saga through Norse saga, handhelds included. Betrayal (2007, mobile) is excluded.",
+    "caveat": "Ascension is chronologically first and was released second-to-last — it is also the weakest entry, and starting there is the standard mistake. Recommended play order is God of War (2005) → II → III, with the handhelds slotted where they sit, then the 2018 reboot. On PC only the two Norse games exist, and the 2018 game is written to work cold.",
+    "games": [
+      {
+        "id": "gow-god-of-war-ascension",
+        "order": 1,
+        "title": "God of War: Ascension",
+        "year": 2013,
+        "version": "God of War: Ascension",
+        "platform": "PS3",
+        "msrp": "—",
+        "hours": 10,
+        "tier": "skip",
+        "starter": false,
+        "store": "ps",
+        "query": "God of War Ascension",
+        "storefront": "PS Store",
+        "note": "Set shortly after Kratos breaks his oath to Ares. Prequel, weakest entry, and the wrong place to start. PS3 only — no PS4 or PS5 re-release.",
+        "editions": [
+          {
+            "name": "God of War: Ascension",
+            "year": 2013,
+            "platforms": "PS3",
+            "recommended": true,
+            "note": "Only release; never remastered or collected."
+          },
+          {
+            "name": "God of War: Ascension Collector's Edition",
+            "year": 2013,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "Statue and art extras; identical game content."
+          }
+        ]
+      },
+      {
+        "id": "gow-god-of-war-chains-of-olympus",
+        "order": 2,
+        "title": "God of War: Chains of Olympus",
+        "year": 2008,
+        "version": "God of War Saga",
+        "platform": "PSP / PS3",
+        "msrp": "—",
+        "hours": 5,
+        "tier": "opt",
+        "starter": false,
+        "store": "ps",
+        "query": "God of War Origins Collection",
+        "storefront": "PS Store",
+        "note": "PSP entry, remastered in the PS3 Origins Collection. Sits directly before the 2005 game.",
+        "editions": [
+          {
+            "name": "God of War: Chains of Olympus",
+            "year": 2008,
+            "platforms": "PSP",
+            "recommended": false,
+            "note": "Original handheld release."
+          },
+          {
+            "name": "God of War: Origins Collection",
+            "year": 2011,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "HD remaster with Ghost of Sparta, trophies and 3D."
+          },
+          {
+            "name": "God of War Saga",
+            "year": 2012,
+            "platforms": "PS3",
+            "recommended": true,
+            "note": "Includes the Origins HD ports alongside the console trilogy."
+          }
+        ]
+      },
+      {
+        "id": "gow-god-of-war",
+        "order": 3,
+        "title": "God of War",
+        "year": 2005,
+        "version": "God of War Saga",
+        "platform": "PS3 / PS Plus",
+        "msrp": "—",
+        "hours": 10,
+        "tier": "core",
+        "starter": true,
+        "store": "ps",
+        "query": "God of War Collection",
+        "storefront": "PS Store",
+        "note": "The actual beginning. Never on PC. PS3 HD Collection, or the PS2 original through PS Plus Premium.",
+        "editions": [
+          {
+            "name": "God of War",
+            "year": 2005,
+            "platforms": "PS2",
+            "recommended": false,
+            "note": "Original PS2 release; hard to play on modern hardware."
+          },
+          {
+            "name": "God of War Collection",
+            "year": 2009,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "HD remaster of GoW I and II on one disc."
+          },
+          {
+            "name": "God of War Saga",
+            "year": 2012,
+            "platforms": "PS3",
+            "recommended": true,
+            "note": "Bundles I, II, III and the PSP HD ports; most complete."
+          },
+          {
+            "name": "God of War Collection",
+            "year": 2014,
+            "platforms": "PS Vita",
+            "recommended": false,
+            "note": "Portable port of the HD collection; weaker performance."
+          }
+        ]
+      },
+      {
+        "id": "gow-god-of-war-ghost-of-sparta",
+        "order": 4,
+        "title": "God of War: Ghost of Sparta",
+        "year": 2010,
+        "version": "God of War Saga",
+        "platform": "PSP / PS3",
+        "msrp": "—",
+        "hours": 6,
+        "tier": "opt",
+        "starter": false,
+        "store": "ps",
+        "query": "God of War Origins Collection",
+        "storefront": "PS Store",
+        "note": "Between the first and second games. Deimos, and the best-written of the two handhelds.",
+        "editions": [
+          {
+            "name": "God of War: Ghost of Sparta",
+            "year": 2010,
+            "platforms": "PSP",
+            "recommended": false,
+            "note": "Original handheld release."
+          },
+          {
+            "name": "God of War: Origins Collection",
+            "year": 2011,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "HD remaster paired with Chains of Olympus."
+          },
+          {
+            "name": "God of War Saga",
+            "year": 2012,
+            "platforms": "PS3",
+            "recommended": true,
+            "note": "Includes the Origins HD ports plus the main trilogy."
+          }
+        ]
+      },
+      {
+        "id": "gow-god-of-war-ii",
+        "order": 5,
+        "title": "God of War II",
+        "year": 2007,
+        "version": "God of War Saga",
+        "platform": "PS3 / PS Plus",
+        "msrp": "—",
+        "hours": 12,
+        "tier": "core",
+        "starter": false,
+        "store": "ps",
+        "query": "God of War Collection",
+        "storefront": "PS Store",
+        "note": "Ends on a cliffhanger that III opens on directly. Never on PC.",
+        "editions": [
+          {
+            "name": "God of War II",
+            "year": 2007,
+            "platforms": "PS2",
+            "recommended": false,
+            "note": "Original PS2 release."
+          },
+          {
+            "name": "God of War II (Bonus Two-Disc Edition)",
+            "year": 2007,
+            "platforms": "PS2",
+            "recommended": false,
+            "note": "Launch edition adding a bonus making-of disc."
+          },
+          {
+            "name": "God of War Collection",
+            "year": 2009,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "HD remaster paired with the first game."
+          },
+          {
+            "name": "God of War Saga",
+            "year": 2012,
+            "platforms": "PS3",
+            "recommended": true,
+            "note": "All five PS2/PSP-era games in one box."
+          },
+          {
+            "name": "God of War Collection",
+            "year": 2014,
+            "platforms": "PS Vita",
+            "recommended": false,
+            "note": "Handheld version of the HD collection."
+          }
+        ]
+      },
+      {
+        "id": "gow-god-of-war-iii",
+        "order": 6,
+        "title": "God of War III",
+        "year": 2010,
+        "version": "God of War III Remastered",
+        "platform": "PS4 / PS5",
+        "msrp": "—",
+        "hours": 10,
+        "tier": "core",
+        "starter": false,
+        "store": "ps",
+        "query": "God of War III Remastered",
+        "storefront": "PS Store",
+        "note": "Closes the Greek saga. The 2015 PS4 Remastered version is the one to play. Never on PC.",
+        "editions": [
+          {
+            "name": "God of War III",
+            "year": 2010,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "Original release."
+          },
+          {
+            "name": "God of War III Ultimate Edition",
+            "year": 2010,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "Collector's box with art book and extras, same game."
+          },
+          {
+            "name": "God of War Saga",
+            "year": 2012,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "Bundles III with the earlier games."
+          },
+          {
+            "name": "God of War III Remastered",
+            "year": 2015,
+            "platforms": "PS4",
+            "recommended": true,
+            "note": "1080p/60fps remaster; best way to play today."
+          }
+        ]
+      },
+      {
+        "id": "gow-god-of-war-2",
+        "order": 7,
+        "title": "God of War",
+        "year": 2018,
+        "version": "God of War PC",
+        "platform": "PC",
+        "msrp": "$49.99",
+        "hours": 21,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "God of War",
+        "storefront": "Steam / Epic",
+        "note": "Norse reboot, strong PC port (2022). Written as an entry point — it recaps what Kratos did in Greece, so a PC-only player can legitimately start here.",
+        "editions": [
+          {
+            "name": "God of War",
+            "year": 2018,
+            "platforms": "PS4",
+            "recommended": false,
+            "note": "Original PS4 release of the Norse reboot."
+          },
+          {
+            "name": "PS5 free upgrade patch",
+            "year": 2021,
+            "platforms": "PS5",
+            "recommended": false,
+            "note": "Adds 60fps at 4K; no extra content."
+          },
+          {
+            "name": "God of War PC",
+            "year": 2022,
+            "platforms": "PC",
+            "recommended": true,
+            "note": "Highest fidelity port with unlocked framerate and ultrawide."
+          }
+        ]
+      },
+      {
+        "id": "gow-god-of-war-ragnarok",
+        "order": 8,
+        "title": "God of War Ragnarök",
+        "year": 2022,
+        "version": "God of War Ragnarok PC",
+        "platform": "PC",
+        "msrp": "$59.99",
+        "hours": 26,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "God of War Ragnarok",
+        "storefront": "Steam / Epic",
+        "note": "PC port 2024. Direct sequel; assumes the 2018 game and nothing before it.",
+        "editions": [
+          {
+            "name": "God of War Ragnarok",
+            "year": 2022,
+            "platforms": "PS4 / PS5",
+            "recommended": false,
+            "note": "Original release; Valhalla added free in 2023."
+          },
+          {
+            "name": "God of War Ragnarok PC",
+            "year": 2024,
+            "platforms": "PC",
+            "recommended": true,
+            "note": "Includes Valhalla; best performance and visual options."
+          }
+        ]
+      },
+      {
+        "id": "gow-god-of-war-ragnarok-valhalla",
+        "order": 9,
+        "title": "God of War Ragnarök: Valhalla",
+        "year": 2023,
+        "version": "Original",
+        "platform": "PC",
+        "msrp": "Included",
+        "hours": 6,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "God of War Ragnarok",
+        "storefront": "Steam / Epic",
+        "note": "Free roguelite epilogue included with Ragnarök. Optional mechanically, but it is the emotional close of the arc.",
+        "editions": []
+      }
+    ]
+  },
+  {
+    "id": "tlou",
+    "name": "The Last of Us",
+    "scope": "Part I, Left Behind, Part II. The HBO series is not a game and is not tracked.",
+    "caveat": "Left Behind splits across the timeline — its Riley chapters precede Part I, its Ellie chapters sit inside Part I’s winter section. It is listed after Part I because that is where its framing puts you, and because playing it first spoils Part I’s third act.",
+    "games": [
+      {
+        "id": "tlou-the-last-of-us-part-i",
+        "order": 1,
+        "title": "The Last of Us Part I",
+        "year": 2013,
+        "version": "The Last of Us Part I",
+        "platform": "PC",
+        "msrp": "$59.99",
+        "hours": 15,
+        "tier": "core",
+        "starter": true,
+        "store": "pc",
+        "query": "The Last of Us Part I",
+        "storefront": "Steam",
+        "note": "Full remake (2022) of the 2013 original. The 2023 PC port launched badly and has since been patched into decent shape.",
+        "editions": [
+          {
+            "name": "The Last of Us",
+            "year": 2013,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "Original release; Left Behind sold separately later."
+          },
+          {
+            "name": "The Last of Us Remastered",
+            "year": 2014,
+            "platforms": "PS4",
+            "recommended": false,
+            "note": "1080p/60fps port bundling Left Behind."
+          },
+          {
+            "name": "The Last of Us Part I",
+            "year": 2022,
+            "platforms": "PS5 / PC",
+            "recommended": true,
+            "note": "Full remake including Left Behind; best way to play."
+          }
+        ]
+      },
+      {
+        "id": "tlou-the-last-of-us-left-behind",
+        "order": 2,
+        "title": "The Last of Us: Left Behind",
+        "year": 2014,
+        "version": "The Last of Us Part I",
+        "platform": "PC",
+        "msrp": "Included",
+        "hours": 2,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "The Last of Us Part I",
+        "storefront": "Steam",
+        "note": "Bundled with Part I. Two hours, and the strongest character writing in the first game.",
+        "editions": [
+          {
+            "name": "Left Behind (DLC)",
+            "year": 2014,
+            "platforms": "PS3",
+            "recommended": false,
+            "note": "Standalone story DLC for the original game."
+          },
+          {
+            "name": "The Last of Us Remastered",
+            "year": 2014,
+            "platforms": "PS4",
+            "recommended": false,
+            "note": "Includes Left Behind with the base campaign."
+          },
+          {
+            "name": "The Last of Us Part I",
+            "year": 2022,
+            "platforms": "PS5 / PC",
+            "recommended": true,
+            "note": "Left Behind fully remade and bundled in."
+          }
+        ]
+      },
+      {
+        "id": "tlou-the-last-of-us-part-ii",
+        "order": 3,
+        "title": "The Last of Us Part II",
+        "year": 2020,
+        "version": "The Last of Us Part II Remastered",
+        "platform": "PC",
+        "msrp": "$49.99",
+        "hours": 24,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "The Last of Us Part II Remastered",
+        "storefront": "Steam",
+        "note": "PC release in 2025, based on the 2024 Remastered edition — includes the No Return mode and the unfinished Lost Levels.",
+        "editions": [
+          {
+            "name": "The Last of Us Part II",
+            "year": 2020,
+            "platforms": "PS4",
+            "recommended": false,
+            "note": "Original release."
+          },
+          {
+            "name": "The Last of Us Part II Remastered",
+            "year": 2024,
+            "platforms": "PS5 / PC",
+            "recommended": true,
+            "note": "Adds No Return roguelike and cut Lost Levels."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "halo",
+    "name": "Halo",
+    "scope": "Mainline plus Reach and ODST. No Halo Wars, no Spartan Assault, no multiplayer-only releases.",
+    "caveat": "Reach is a prequel that sorts first and also works as an entry point — a rare case where chronology and a good first game agree. ODST runs concurrently with Halo 2’s Earth arc rather than after it. The real problem with this tab is Halo 5: it has never released on PC and is not in the Master Chief Collection, so a PC-only playthrough has a hole in it right before Infinite.",
+    "games": [
+      {
+        "id": "halo-halo-reach",
+        "order": 1,
+        "title": "Halo: Reach",
+        "year": 2010,
+        "version": "The Master Chief Collection",
+        "platform": "PC",
+        "msrp": "$39.99",
+        "hours": 10,
+        "tier": "core",
+        "starter": true,
+        "store": "pc",
+        "query": "Halo The Master Chief Collection",
+        "storefront": "Steam / Xbox",
+        "note": "August 2552, days before Combat Evolved. The $39.99 buys the whole Master Chief Collection (six campaigns); Reach is also sold on its own for much less.",
+        "editions": [
+          {
+            "name": "Halo: Reach",
+            "year": 2010,
+            "platforms": "Xbox 360",
+            "recommended": false,
+            "note": "Original release; online services shut down."
+          },
+          {
+            "name": "Halo: Reach Legendary Edition",
+            "year": 2010,
+            "platforms": "Xbox 360",
+            "recommended": false,
+            "note": "Noble Team statue bundle; same game."
+          },
+          {
+            "name": "The Master Chief Collection",
+            "year": 2019,
+            "platforms": "PC / Xbox Series",
+            "recommended": true,
+            "note": "Added to MCC in 2019 with Firefight and full multiplayer."
+          }
+        ]
+      },
+      {
+        "id": "halo-halo-combat-evolved",
+        "order": 2,
+        "title": "Halo: Combat Evolved",
+        "year": 2001,
+        "version": "The Master Chief Collection",
+        "platform": "PC",
+        "msrp": "$49.99",
+        "hours": 10,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Halo Campaign Evolved",
+        "storefront": "Steam / Xbox",
+        "note": "Campaign Evolved (28 July 2026) rebuilds the campaign in Unreal Engine 5 and adds three new missions and four-player co-op. If you want the original level design untouched, the Anniversary version inside MCC is still there.",
+        "editions": [
+          {
+            "name": "Halo: Combat Evolved",
+            "year": 2001,
+            "platforms": "Xbox",
+            "recommended": false,
+            "note": "Original Xbox release."
+          },
+          {
+            "name": "Halo: Combat Evolved",
+            "year": 2003,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "PC port adding new vehicles and weapons for multiplayer."
+          },
+          {
+            "name": "Halo: Combat Evolved Anniversary",
+            "year": 2011,
+            "platforms": "Xbox 360",
+            "recommended": false,
+            "note": "Remaster with toggleable new art and original audio."
+          },
+          {
+            "name": "The Master Chief Collection",
+            "year": 2014,
+            "platforms": "PC / Xbox Series",
+            "recommended": true,
+            "note": "Anniversary remaster, campaign and multiplayer; best modern way."
+          }
+        ]
+      },
+      {
+        "id": "halo-halo-2",
+        "order": 3,
+        "title": "Halo 2",
+        "year": 2004,
+        "version": "The Master Chief Collection",
+        "platform": "PC",
+        "msrp": "Included",
+        "hours": 9,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Halo The Master Chief Collection",
+        "storefront": "Steam / Xbox",
+        "note": "Anniversary edition in MCC. Graphics and cutscenes are remade and can be toggled back to the 2004 originals mid-mission.",
+        "editions": [
+          {
+            "name": "Halo 2",
+            "year": 2004,
+            "platforms": "Xbox",
+            "recommended": false,
+            "note": "Original Xbox release."
+          },
+          {
+            "name": "Halo 2 Limited Collector's Edition",
+            "year": 2004,
+            "platforms": "Xbox",
+            "recommended": false,
+            "note": "Steelbook with bonus disc; identical game."
+          },
+          {
+            "name": "Halo 2 for Windows Vista",
+            "year": 2007,
+            "platforms": "PC",
+            "recommended": false,
+            "note": "Vista-locked PC port with two extra maps."
+          },
+          {
+            "name": "The Master Chief Collection",
+            "year": 2014,
+            "platforms": "PC / Xbox Series",
+            "recommended": true,
+            "note": "Halo 2 Anniversary remaster with remade cutscenes."
+          }
+        ]
+      },
+      {
+        "id": "halo-halo-3-odst",
+        "order": 4,
+        "title": "Halo 3: ODST",
+        "year": 2009,
+        "version": "The Master Chief Collection",
+        "platform": "PC",
+        "msrp": "Included",
+        "hours": 6,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "Halo The Master Chief Collection",
+        "storefront": "Steam / Xbox",
+        "note": "Runs alongside Halo 2’s New Mombasa section, not after it. No Master Chief and a different tone — skippable, but the best-liked side entry.",
+        "editions": [
+          {
+            "name": "Halo 3: ODST",
+            "year": 2009,
+            "platforms": "Xbox 360",
+            "recommended": false,
+            "note": "Standalone expansion shipping with a Halo 3 multiplayer disc."
+          },
+          {
+            "name": "The Master Chief Collection",
+            "year": 2015,
+            "platforms": "PC / Xbox Series",
+            "recommended": true,
+            "note": "Added as campaign DLC in 2015; includes Firefight."
+          }
+        ]
+      },
+      {
+        "id": "halo-halo-3",
+        "order": 5,
+        "title": "Halo 3",
+        "year": 2007,
+        "version": "The Master Chief Collection",
+        "platform": "PC",
+        "msrp": "Included",
+        "hours": 9,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Halo The Master Chief Collection",
+        "storefront": "Steam / Xbox",
+        "note": "Closes the original trilogy. In MCC.",
+        "editions": [
+          {
+            "name": "Halo 3",
+            "year": 2007,
+            "platforms": "Xbox 360",
+            "recommended": false,
+            "note": "Original release; servers long since retired."
+          },
+          {
+            "name": "Halo 3 Legendary Edition",
+            "year": 2007,
+            "platforms": "Xbox 360",
+            "recommended": false,
+            "note": "Helmet case and bonus discs; same campaign."
+          },
+          {
+            "name": "The Master Chief Collection",
+            "year": 2014,
+            "platforms": "PC / Xbox Series",
+            "recommended": true,
+            "note": "60fps, live multiplayer, whole trilogy in one install."
+          }
+        ]
+      },
+      {
+        "id": "halo-halo-4",
+        "order": 6,
+        "title": "Halo 4",
+        "year": 2012,
+        "version": "The Master Chief Collection",
+        "platform": "PC",
+        "msrp": "Included",
+        "hours": 9,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Halo The Master Chief Collection",
+        "storefront": "Steam / Xbox",
+        "note": "2557. Start of the 343 era and of the Cortana thread that Halo 5 and Infinite continue. In MCC.",
+        "editions": [
+          {
+            "name": "Halo 4",
+            "year": 2012,
+            "platforms": "Xbox 360",
+            "recommended": false,
+            "note": "Original release with Spartan Ops episodic mode."
+          },
+          {
+            "name": "The Master Chief Collection",
+            "year": 2014,
+            "platforms": "PC / Xbox Series",
+            "recommended": true,
+            "note": "Remastered cutscenes plus Spartan Ops; best version."
+          }
+        ]
+      },
+      {
+        "id": "halo-halo-5-guardians",
+        "order": 7,
+        "title": "Halo 5: Guardians",
+        "year": 2015,
+        "version": "Halo 5: Guardians",
+        "platform": "Xbox One / Series",
+        "msrp": "—",
+        "hours": 9,
+        "tier": "core",
+        "starter": false,
+        "store": "xb",
+        "query": "Halo 5 Guardians",
+        "storefront": "Xbox Store",
+        "note": "2558. Never released on PC and not in MCC — the only gap in a PC run. Xbox One, backward compatible on Series X and S. Infinite assumes its ending.",
+        "editions": [
+          {
+            "name": "Halo 5: Guardians",
+            "year": 2015,
+            "platforms": "Xbox One",
+            "recommended": true,
+            "note": "Only release; never ported to PC or MCC."
+          },
+          {
+            "name": "Halo 5: Guardians Limited Collector's Edition",
+            "year": 2015,
+            "platforms": "Xbox One",
+            "recommended": false,
+            "note": "Statue and cosmetic packs; identical campaign."
+          }
+        ]
+      },
+      {
+        "id": "halo-halo-infinite",
+        "order": 8,
+        "title": "Halo Infinite",
+        "year": 2021,
+        "version": "Halo Infinite",
+        "platform": "PC",
+        "msrp": "—",
+        "hours": 12,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Halo Infinite",
+        "storefront": "Steam / Xbox",
+        "note": "2560. Multiplayer is free-to-play and the campaign is a separate paid purchase, so the base app carries no price — left blank rather than guessed. Opens after events Halo 5 set up.",
+        "editions": [
+          {
+            "name": "Halo Infinite",
+            "year": 2021,
+            "platforms": "PC / Xbox Series",
+            "recommended": true,
+            "note": "Single release; campaign paid, multiplayer free-to-play."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "arkham",
+    "name": "Batman: Arkham",
+    "scope": "The four mainline Rocksteady and WB Montréal games. No Blackgate, Arkham VR, Shadow, or Suicide Squad.",
+    "caveat": "Origins is a prequel released third, and it is the one entry where chronology and play order genuinely disagree. It leans on relationships that Asylum and City establish and lands flat as a first game. Recommended play order is Asylum → City → Origins → Knight, or simply Asylum → City → Knight with Origins dropped.",
+    "games": [
+      {
+        "id": "arkham-batman-arkham-origins",
+        "order": 1,
+        "title": "Batman: Arkham Origins",
+        "year": 2013,
+        "version": "Complete Edition",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 12,
+        "tier": "opt",
+        "starter": false,
+        "store": "pc",
+        "query": "Batman Arkham Origins",
+        "storefront": "Steam / Epic",
+        "note": "Different studio (WB Games Montréal). Chronologically first, but written for players who already know the others. Multiplayer servers are long dead and some save-corruption bugs were never fixed.",
+        "editions": [
+          {
+            "name": "Batman: Arkham Origins",
+            "year": 2013,
+            "platforms": "PC / PS3 / Xbox 360 / Wii U",
+            "recommended": false,
+            "note": "Base game; Cold, Cold Heart story DLC sold separately."
+          },
+          {
+            "name": "Complete Edition",
+            "year": 2014,
+            "platforms": "PC / PS3 / Xbox 360",
+            "recommended": true,
+            "note": "Adds the Cold, Cold Heart story DLC and all season pass content."
+          }
+        ]
+      },
+      {
+        "id": "arkham-batman-arkham-asylum",
+        "order": 2,
+        "title": "Batman: Arkham Asylum",
+        "year": 2009,
+        "version": "Game of the Year Edition",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 11,
+        "tier": "core",
+        "starter": true,
+        "store": "pc",
+        "query": "Batman Arkham Asylum",
+        "storefront": "Steam / Epic",
+        "note": "Game of the Year Edition on PC. The Return to Arkham remaster is console-only and generally considered a downgrade — the 2009 PC build is the better version.",
+        "editions": [
+          {
+            "name": "Batman: Arkham Asylum",
+            "year": 2009,
+            "platforms": "PC / PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Original release; PS3 added a playable Joker challenge exclusive."
+          },
+          {
+            "name": "Game of the Year Edition",
+            "year": 2010,
+            "platforms": "PC / PS3 / Xbox 360",
+            "recommended": true,
+            "note": "Adds all challenge maps and 3D mode; story was already complete."
+          },
+          {
+            "name": "Batman: Return to Arkham",
+            "year": 2016,
+            "platforms": "PS4 / Xbox One",
+            "recommended": false,
+            "note": "Unreal 4 remaster of Asylum and City with DLC; uneven performance."
+          }
+        ]
+      },
+      {
+        "id": "arkham-batman-arkham-city",
+        "order": 3,
+        "title": "Batman: Arkham City",
+        "year": 2011,
+        "version": "Game of the Year Edition",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 13,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Batman Arkham City",
+        "storefront": "Steam / Epic",
+        "note": "Game of the Year Edition. Direct sequel to Asylum and the peak of the series.",
+        "editions": [
+          {
+            "name": "Batman: Arkham City",
+            "year": 2011,
+            "platforms": "PC / PS3 / Xbox 360",
+            "recommended": false,
+            "note": "Original release; Harley Quinn's Revenge came later as paid DLC."
+          },
+          {
+            "name": "Game of the Year Edition",
+            "year": 2012,
+            "platforms": "PC / PS3 / Xbox 360",
+            "recommended": true,
+            "note": "Adds Harley Quinn's Revenge plus Catwoman, skins and challenge packs."
+          },
+          {
+            "name": "Armored Edition",
+            "year": 2012,
+            "platforms": "Wii U",
+            "recommended": false,
+            "note": "Wii U rework with GamePad gadgets and armored suits; weaker visuals."
+          },
+          {
+            "name": "Batman: Return to Arkham",
+            "year": 2016,
+            "platforms": "PS4 / Xbox One",
+            "recommended": false,
+            "note": "Remaster bundling Asylum and City with all DLC; performance is uneven."
+          }
+        ]
+      },
+      {
+        "id": "arkham-batman-arkham-knight",
+        "order": 4,
+        "title": "Batman: Arkham Knight",
+        "year": 2015,
+        "version": "Game of the Year Edition",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 16,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Batman Arkham Knight",
+        "storefront": "Steam / Epic",
+        "note": "Premium / GOTY Edition. The 2015 PC launch was pulled from sale and rebuilt — it runs fine now, but it is still a 4GB-VRAM-era build. Heavy on the Batmobile.",
+        "editions": [
+          {
+            "name": "Batman: Arkham Knight",
+            "year": 2015,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": false,
+            "note": "Base game only; the PC launch was pulled from sale for months."
+          },
+          {
+            "name": "Premium Edition",
+            "year": 2015,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": false,
+            "note": "Base game plus the season pass, bought before all DLC had shipped."
+          },
+          {
+            "name": "Game of the Year Edition",
+            "year": 2016,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": true,
+            "note": "Everything included: Season of Infamy, all story DLC and every pack."
+          },
+          {
+            "name": "Batman: Arkham Collection",
+            "year": 2018,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": false,
+            "note": "Trilogy bundle; console version uses the weaker Return to Arkham ports."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "middleearth",
+    "name": "Middle-earth",
+    "scope": "Shadow of Mordor and Shadow of War only. The wider Lord of the Rings games are excluded — see the note at the top of the page.",
+    "caveat": "Two games, in order, both set between The Hobbit and The Fellowship of the Ring. No divergence between chronology and play order.",
+    "games": [
+      {
+        "id": "middleearth-middle-earth-shadow-of-mordor",
+        "order": 1,
+        "title": "Middle-earth: Shadow of Mordor",
+        "year": 2014,
+        "version": "Game of the Year Edition",
+        "platform": "PC",
+        "msrp": "$19.99",
+        "hours": 15,
+        "tier": "core",
+        "starter": true,
+        "store": "pc",
+        "query": "Middle-earth Shadow of Mordor",
+        "storefront": "Steam / Epic",
+        "note": "Game of the Year Edition. Introduces the Nemesis system. Loose with Tolkien canon, and knowingly so.",
+        "editions": [
+          {
+            "name": "Middle-earth: Shadow of Mordor",
+            "year": 2014,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": false,
+            "note": "Original release; the PS3 and Xbox 360 versions cut the Nemesis system."
+          },
+          {
+            "name": "Game of the Year Edition",
+            "year": 2015,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": true,
+            "note": "Adds The Bright Lord and Lord of the Hunt story DLC and all extras."
+          }
+        ]
+      },
+      {
+        "id": "middleearth-middle-earth-shadow-of-war",
+        "order": 2,
+        "title": "Middle-earth: Shadow of War",
+        "year": 2017,
+        "version": "Definitive Edition",
+        "platform": "PC",
+        "msrp": "$49.99",
+        "hours": 25,
+        "tier": "core",
+        "starter": false,
+        "store": "pc",
+        "query": "Middle-earth Shadow of War Definitive Edition",
+        "storefront": "Steam / Epic",
+        "note": "Buy the Definitive Edition (2018), not the original release. It removed the loot boxes and real-money market and rebalanced the Act IV grind the 2017 launch was pilloried for. All DLC included.",
+        "editions": [
+          {
+            "name": "Middle-earth: Shadow of War",
+            "year": 2017,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": false,
+            "note": "Launched with loot boxes and a real-money market, patched out in 2018."
+          },
+          {
+            "name": "Gold Edition",
+            "year": 2017,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": false,
+            "note": "Base game plus the expansion pass; superseded by the Definitive Edition."
+          },
+          {
+            "name": "Definitive Edition",
+            "year": 2018,
+            "platforms": "PC / PS4 / Xbox One",
+            "recommended": true,
+            "note": "No loot boxes or market, and bundles both story expansions and all DLC."
+          }
+        ]
+      }
+    ]
+  }
+]

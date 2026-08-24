@@ -1,0 +1,25 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-tailwindcss"],
+  "ignoreFiles": ["node_modules/**", ".next/**"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "theme",
+          "custom-variant",
+          "utility",
+          "variant",
+          "source",
+          "plugin",
+          "config",
+          "reference"
+        ]
+      }
+    ],
+    "import-notation": null,
+    "no-descending-specificity": null
+  }
+}
