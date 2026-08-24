@@ -4,7 +4,7 @@ export const PRICE_TTL_MS = 30 * 60 * 1000;
 /**
  * Prices refresh when the site is opened, but only if the cache has actually
  * aged. Without this, every reload fires a burst of ITAD lookups and earns a
- * 429 — which costs you the prices you already had. The manual "Update prices"
+ * 429 — which costs you the prices you already had. The manual "Update data"
  * button bypasses this entirely.
  */
 export function shouldAutoRefresh(
