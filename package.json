@@ -15,11 +15,12 @@
     "lint:css:fix": "stylelint \"**/*.css\" --fix",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "check": "npm run format && npm run lint:js && npm run lint:css && npm run typecheck && npm run test",
+    "check": "npm run format && npm run lint:js && npm run lint:css && npm run typecheck && npm run data:check && npm run test",
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "data:enrich": "node --env-file=.env.local scripts/enrich-data.mjs"
+    "data:enrich": "node --env-file=.env.local scripts/enrich-data.mjs",
+    "data:check": "node scripts/check-data.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
