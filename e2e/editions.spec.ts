@@ -1,28 +1,33 @@
 import { expect, test } from "@playwright/test";
-import { gotoClean, rowFor } from "./helpers";
+import { gotoClean, openDetail, openFranchise } from "./helpers";
 
 const HALF_LIFE_EDITIONS = 4;
 
 test.beforeEach(async ({ page }) => {
   await gotoClean(page);
+  await openFranchise(page, /^Half-Life/);
 });
 
-test("a game with alternate editions expands its disclosure", async ({ page }) => {
-  const row = rowFor(page, "Half-Life");
-  const disclosure = row.locator("details");
+test("a game's detail drawer lists its alternate editions", async ({ page }) => {
+  const drawer = await openDetail(page, "Half-Life");
 
-  await expect(disclosure).toHaveCount(1);
-  await expect(disclosure).toHaveJSProperty("open", false);
-  await expect(row.getByRole("listitem")).toHaveCount(0);
-
-  await row.locator("summary").click();
-
-  await expect(disclosure).toHaveJSProperty("open", true);
-  await expect(row.getByRole("listitem")).toHaveCount(HALF_LIFE_EDITIONS);
-  await expect(row.getByRole("listitem").first()).toBeVisible();
+  await expect(drawer.getByRole("listitem")).toHaveCount(HALF_LIFE_EDITIONS);
+  await expect(drawer.getByRole("listitem").first()).toBeVisible();
+  await expect(drawer.getByText("Why here")).toBeVisible();
 });
 
-test("games without alternate editions render no disclosure", async ({ page }) => {
-  await expect(rowFor(page, "Half-Life: Alyx").locator("details")).toHaveCount(0);
-  await expect(rowFor(page, "Assassin’s Creed Unity").locator("details")).toHaveCount(0);
+test("the drawer closes on Escape and returns the table", async ({ page }) => {
+  const drawer = await openDetail(page, "Half-Life");
+
+  await page.keyboard.press("Escape");
+
+  await expect(drawer).toHaveCount(0);
+  await expect(page.getByRole("table")).toBeVisible();
+});
+
+test("a game with one release still opens a drawer, with no edition list", async ({ page }) => {
+  const drawer = await openDetail(page, "Half-Life: Alyx");
+
+  await expect(drawer.getByRole("listitem")).toHaveCount(0);
+  await expect(drawer.getByText("Released")).toBeVisible();
 });

@@ -1,36 +1,55 @@
 import { expect, test } from "@playwright/test";
-import { franchiseTab, gameRows, gotoClean } from "./helpers";
+import { gameRows, gotoClean, openFranchise, rowSummary, sidebarItem } from "./helpers";
 
-const TOTAL_GAMES = 72;
 const HALF_LIFE_GAMES = 7;
-// All-tab column order: Series, #, Game, Status, Device, Store, Year, …
-const GAME_CELL = 2;
-const YEAR_CELL = 6;
+// Franchise-tab column order: #, Game, Status, Device, Store, Year, …
+const GAME_CELL = 1;
+const YEAR_CELL = 5;
 
 test.beforeEach(async ({ page }) => {
   await gotoClean(page);
 });
 
-test("renders every game on the All tab", async ({ page }) => {
-  await expect(page.getByRole("navigation", { name: "Franchises" })).toBeVisible();
-  await expect(page.getByRole("columnheader", { name: "Game" })).toBeVisible();
-  await expect(gameRows(page)).toHaveCount(TOTAL_GAMES);
+test("the front door is a franchise grid, not a table", async ({ page }) => {
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("story order");
+  await expect(page.getByRole("table")).toHaveCount(0);
+  await expect(sidebarItem(page, /^All franchises/)).toBeVisible();
 });
 
-test("a franchise tab narrows the rows and marks itself pressed", async ({ page }) => {
-  const all = franchiseTab(page, /^All/);
-  const halfLife = franchiseTab(page, /^Half-Life/);
+test("opening a franchise from the sidebar shows only its games", async ({ page }) => {
+  await openFranchise(page, /^Half-Life/);
 
-  await expect(all).toHaveAttribute("aria-pressed", "true");
-
-  await halfLife.click();
-
-  await expect(halfLife).toHaveAttribute("aria-pressed", "true");
-  await expect(all).toHaveAttribute("aria-pressed", "false");
+  await expect(page.getByRole("columnheader", { name: "Game" })).toBeVisible();
   await expect(gameRows(page)).toHaveCount(HALF_LIFE_GAMES);
+  await expect(rowSummary(page)).toContainText(`${HALF_LIFE_GAMES} rows`);
+});
+
+test("a franchise with storylines breaks its table into sections", async ({ page }) => {
+  await openFranchise(page, /^Assassin/);
+
+  const table = page.getByRole("table");
+  await expect(table.getByText("The Desmond Saga")).toBeVisible();
+  await expect(table.getByText("The Kenway Line")).toBeVisible();
+  await expect(table.getByText("4 games").first()).toBeVisible();
+});
+
+test("a storyline chip narrows the table to that arc", async ({ page }) => {
+  await openFranchise(page, /^Assassin/);
+
+  const before = await gameRows(page).count();
+  await page.getByRole("button", { name: /^The Desmond Saga/ }).click();
+
+  const after = await gameRows(page).count();
+  expect(after).toBeLessThan(before);
+  await expect(page.getByRole("button", { name: /^The Desmond Saga/ })).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
 });
 
 test("the Year header sorts the rows and flips aria-sort", async ({ page }) => {
+  await openFranchise(page, /^Half-Life/);
+
   const header = page.getByRole("columnheader", { name: "Year" });
   const firstYear = gameRows(page).first().getByRole("cell").nth(YEAR_CELL);
 
@@ -38,14 +57,16 @@ test("the Year header sorts the rows and flips aria-sort", async ({ page }) => {
 
   await header.getByRole("button").click();
   await expect(header).toHaveAttribute("aria-sort", "ascending");
-  await expect(firstYear).toHaveText("1996");
+  await expect(firstYear).toHaveText("1998");
 
   await header.getByRole("button").click();
   await expect(header).toHaveAttribute("aria-sort", "descending");
-  await expect(firstYear).toHaveText("2026");
+  await expect(firstYear).toHaveText("2020");
 });
 
 test("the Game cell stays pinned when the table scrolls horizontally", async ({ page }) => {
+  await openFranchise(page, /^Half-Life/);
+
   const scroller = page.getByRole("table").locator("xpath=..");
   const firstRow = gameRows(page).first();
   const gameCell = firstRow.getByRole("cell").nth(GAME_CELL);
