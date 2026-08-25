@@ -15,9 +15,12 @@ export default defineConfig({
   },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
   webServer: {
-    command: "npm run dev",
+    // The production build, not `next dev`. The dev overlay renders a modal on
+    // any console error and that modal sits on top of the app, so a single
+    // warning anywhere turns every spec into a timeout.
+    command: "npm run build && npx next start -p 3001",
     url: BASE_URL,
     reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
+    timeout: 240_000,
   },
 });

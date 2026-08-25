@@ -2,9 +2,11 @@ import { expect, test } from "@playwright/test";
 import { gameRows, gotoClean, openFranchise, rowSummary, sidebarItem } from "./helpers";
 
 const HALF_LIFE_GAMES = 7;
-// Franchise-tab column order: #, Game, Status, Device, Store, Year, …
+// Franchise column order: #, Game, Status, Device, Store, Year, …
 const GAME_CELL = 1;
 const YEAR_CELL = 5;
+// The every-game table inserts a Series column ahead of all of them.
+const EVERY_GAME_OFFSET = 1;
 
 test.beforeEach(async ({ page }) => {
   await gotoClean(page);
@@ -65,12 +67,14 @@ test("the Year header sorts the rows and flips aria-sort", async ({ page }) => {
 });
 
 test("the Game cell stays pinned when the table scrolls horizontally", async ({ page }) => {
-  await openFranchise(page, /^Half-Life/);
+  // The every-game table carries the extra Series column, so it is reliably
+  // wider than the viewport whatever the window size.
+  await openFranchise(page, /^Every game/);
 
   const scroller = page.getByRole("table").locator("xpath=..");
   const firstRow = gameRows(page).first();
-  const gameCell = firstRow.getByRole("cell").nth(GAME_CELL);
-  const yearCell = firstRow.getByRole("cell").nth(YEAR_CELL);
+  const gameCell = firstRow.getByRole("cell").nth(GAME_CELL + EVERY_GAME_OFFSET);
+  const yearCell = firstRow.getByRole("cell").nth(YEAR_CELL + EVERY_GAME_OFFSET);
 
   const scrollTo = async (fraction: number) =>
     scroller.evaluate((element, value) => {

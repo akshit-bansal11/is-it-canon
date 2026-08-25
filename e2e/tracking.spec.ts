@@ -1,5 +1,5 @@
 import { expect, type Page, test } from "@playwright/test";
-import { gotoClean, readEntries } from "./helpers";
+import { gotoClean, openFranchise, readEntries } from "./helpers";
 
 const TITLE = "Half-Life: Alyx";
 const GAME_ID = "hl-half-life-alyx";
@@ -10,6 +10,7 @@ const storeSelect = (page: Page) => page.getByLabel(`Store — ${TITLE}`, { exac
 
 test.beforeEach(async ({ page }) => {
   await gotoClean(page);
+  await openFranchise(page, /^Half-Life/);
 });
 
 test("setting a status reveals the row's device and store selects", async ({ page }) => {

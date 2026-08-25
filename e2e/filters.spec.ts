@@ -9,10 +9,12 @@ test.beforeEach(async ({ page }) => {
 });
 
 test("the search box narrows the rows to a title match", async ({ page }) => {
-  await page.getByLabel("Search games").fill("Alyx");
+  // "Blue Shift" rather than "Alyx": the search also reads each row's notes, and
+  // Alyx Vance is named in more than one of them.
+  await page.getByLabel("Search games").fill("Blue Shift");
 
   await expect(gameRows(page)).toHaveCount(1);
-  await expect(page.getByLabel("Status — Half-Life: Alyx", { exact: true })).toBeVisible();
+  await expect(page.getByLabel("Status — Half-Life: Blue Shift", { exact: true })).toBeVisible();
 });
 
 test("the status filter separates tracked from untracked games", async ({ page }) => {
@@ -34,7 +36,7 @@ test("Reset filters is disabled until a filter is active", async ({ page }) => {
 
   await expect(reset).toBeDisabled();
 
-  await search.fill("Alyx");
+  await search.fill("Blue Shift");
   await expect(reset).toBeEnabled();
 
   await reset.click();

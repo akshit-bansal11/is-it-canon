@@ -12,6 +12,9 @@ interface Slice<T> {
  * mounted in a single commit stalls the first paint and makes every entrance
  * animation stutter; one chunk per task keeps the main thread free between them.
  * Returns the slice to render plus whether more is still arriving.
+ *
+ * `items` must be referentially stable between renders — the reset below keys on
+ * its identity, so an unmemoised array rebuilt every render loops forever.
  */
 export function useChunked<T>(items: readonly T[], step: number): [T[], boolean] {
   const [slice, setSlice] = useState<Slice<T>>({ items, count: step });

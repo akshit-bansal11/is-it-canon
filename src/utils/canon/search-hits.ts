@@ -34,8 +34,11 @@ export function searchHits(
   for (const franchise of franchises) {
     const own = score(franchise.name, needle);
     if (own > 0) {
+      // The bonus is larger than one whole score step on purpose: typing "zel"
+      // should offer The Legend of Zelda before Zelda II, even though the game
+      // title is the closer prefix match.
       ranked.push({
-        rank: own * 10 + 5,
+        rank: own * 10 + 15,
         hit: {
           kind: "franchise",
           id: franchise.id,

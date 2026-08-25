@@ -9,7 +9,7 @@
   --tone-edge: #cfcfcf;
   --tone-text: #171717;
   --tone-muted: #5b5b5b;
-  --tone-faint: #737373;
+  --tone-faint: #6b6b6b;
   --tone-invert: #fff;
   --tone-veil: rgb(23 23 23 / 32%);
   --tone-cast: 0 12px 40px rgb(23 23 23 / 12%);
@@ -40,7 +40,7 @@
     --tone-edge: #3a3a3a;
     --tone-text: #ededed;
     --tone-muted: #a0a0a0;
-    --tone-faint: #808080;
+    --tone-faint: #868686;
     --tone-invert: #0a0a0a;
     --tone-veil: rgb(0 0 0 / 62%);
     --tone-cast: 0 12px 40px rgb(0 0 0 / 55%);
@@ -55,7 +55,7 @@
   --tone-edge: #3a3a3a;
   --tone-text: #ededed;
   --tone-muted: #a0a0a0;
-  --tone-faint: #808080;
+  --tone-faint: #868686;
   --tone-invert: #0a0a0a;
   --tone-veil: rgb(0 0 0 / 62%);
   --tone-cast: 0 12px 40px rgb(0 0 0 / 55%);

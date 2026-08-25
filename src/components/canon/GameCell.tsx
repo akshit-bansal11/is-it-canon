@@ -11,12 +11,12 @@ interface GameCellProps {
 export default function GameCell({ game, onOpen }: GameCellProps) {
   return (
     <button
+      aria-label={`Open details for ${game.title}`}
       className={cn(
         "group/title flex w-full flex-col items-start gap-0.5 rounded-control py-0.5 text-left",
         "transition-colors duration-[160ms] ease-out motion-reduce:transition-none",
       )}
       onClick={onOpen}
-      title={`Open details for ${game.title}`}
       type="button"
     >
       <span className="flex items-baseline gap-1.5">

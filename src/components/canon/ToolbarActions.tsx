@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import ThemeToggle from "@/components/canon/ThemeToggle";
 import { CONTROL_CLASS } from "@/constants/canon/ui";
 import type { PriceStatus } from "@/types/canon/price";
 import { cn } from "@/utils/cn";
@@ -99,12 +98,12 @@ export default function ToolbarActions({
       </button>
 
       {/*
-        The toolbar scrolls horizontally, and `overflow-x: auto` forces
-        `overflow-y: auto` with it — an absolutely positioned tooltip gets
-        clipped by ~23px. `position: fixed` escapes that clip, but then the
-        coordinates have to be measured, which is why they are inline rather
-        than Tailwind classes. Rendered unconditionally so `aria-describedby`
-        always resolves for screen readers, whether or not it is on screen.
+        Positioned rather than absolute: the toolbar sits inside a column of
+        clipped, scrolling panes, and an absolutely positioned tip is cut off by
+        the nearest one. Fixed escapes that, at the cost of measuring the
+        coordinates — which is why they are inline and not Tailwind classes.
+        Rendered unconditionally so `aria-describedby` always resolves for
+        screen readers, whether or not the tip is on screen.
       */}
       <span
         className={cn(
@@ -157,8 +156,6 @@ export default function ToolbarActions({
       <span aria-live="polite" className="sr-only">
         {showArmed ? "Clear tracking armed. Activate again to wipe every tracked game." : ""}
       </span>
-
-      <ThemeToggle />
     </div>
   );
 }

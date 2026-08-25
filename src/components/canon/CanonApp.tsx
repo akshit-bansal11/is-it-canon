@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import AppHeader from "@/components/canon/AppHeader";
 import Backdrop from "@/components/canon/Backdrop";
 import CanonTable from "@/components/canon/CanonTable";
@@ -21,6 +21,7 @@ import { usePrices } from "@/hooks/canon/use-prices";
 import type { SearchHit } from "@/types/canon/search";
 import type { FilterState, SortKey, SortState } from "@/types/canon/table";
 import { filterEntries } from "@/utils/canon/filter-entries";
+import { formatHash, parseHash } from "@/utils/canon/hash-view";
 import { statsFor } from "@/utils/canon/franchise-stats";
 import { sortEntries } from "@/utils/canon/sort-entries";
 import { toCsv } from "@/utils/canon/to-csv";
@@ -67,13 +68,28 @@ export default function CanonApp() {
     [scoped, filter, userEntries, sort, prices],
   );
 
-  const openFranchise = useCallback((id: string) => {
+  const openFranchise = useCallback((id: string, arcId = "") => {
     setGridView(false);
     setActiveId(id);
-    setActiveArc("");
+    setActiveArc(arcId);
     setNavOpen(false);
     setSort({ key: id === ALL_FRANCHISES ? "franchise" : "order", direction: 1 });
   }, []);
+
+  // The address bar is the only place this view survives a reload, and the only
+  // way to hand someone a link to one series. Applied after mount rather than in
+  // the initial state so the server-rendered markup still matches.
+  useEffect(() => {
+    const view = parseHash(window.location.hash);
+    if (view === null || view.gridView) return;
+    if (view.franchiseId !== "" && !FRANCHISES.some((item) => item.id === view.franchiseId)) return;
+    Promise.resolve().then(() => openFranchise(view.franchiseId, view.arcId));
+  }, [openFranchise]);
+
+  useEffect(() => {
+    const next = formatHash({ gridView, franchiseId: activeId, arcId: activeArc });
+    if (window.location.hash !== next) window.history.replaceState(null, "", next);
+  }, [gridView, activeId, activeArc]);
 
   const showGrid = useCallback(() => {
     setGridView(true);
@@ -199,7 +215,7 @@ export default function CanonApp() {
           </div>
         ) : null}
 
-        <main className="flex min-h-0 flex-1 flex-col">
+        <main className="flex min-h-0 min-w-0 flex-1 flex-col">
           {gridView ? (
             <FranchiseGrid
               franchises={FRANCHISES}
@@ -220,7 +236,7 @@ export default function CanonApp() {
                 />
               )}
 
-              <div className="flex shrink-0 items-center gap-3 overflow-x-auto border-line border-b px-2 py-2">
+              <div className="flex shrink-0 flex-wrap items-center gap-x-3 gap-y-2 border-line border-b px-2 py-2">
                 <FilterControls filter={filter} onChange={onFilterChange} />
                 <ToolbarActions
                   filtersActive={filtersActive}

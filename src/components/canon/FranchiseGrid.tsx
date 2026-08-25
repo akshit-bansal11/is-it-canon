@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import FranchiseCard from "@/components/canon/FranchiseCard";
 import { CHUNK_SIZE, STAGGER_LIMIT } from "@/constants/canon/motion";
 import { useChunked } from "@/hooks/canon/use-chunked";
@@ -25,7 +26,14 @@ export default function FranchiseGrid({
   onSelect,
 }: FranchiseGridProps) {
   const needle = query.trim().toLowerCase();
-  const matched = franchises.filter((franchise) => matchesFranchise(franchise, needle));
+
+  // Memoised because useChunked resets on a new array identity: an unmemoised
+  // filter would hand it a fresh array every render and loop forever.
+  const matched = useMemo(
+    () => franchises.filter((franchise) => matchesFranchise(franchise, needle)),
+    [franchises, needle],
+  );
+
   const [shown, loading] = useChunked(matched, CHUNK_SIZE);
 
   const games = franchises.reduce((sum, franchise) => sum + franchise.games.length, 0);
