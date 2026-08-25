@@ -6,6 +6,7 @@ export const PLATFORM_FILTERS = [
   { id: "pc", label: "PC", match: "PC" },
   { id: "ps", label: "PlayStation", match: "PS" },
   { id: "xb", label: "Xbox", match: "Xbox" },
+  { id: "nin", label: "Nintendo", match: "Switch" },
 ] as const;
 
 export const UNSET_FILTER = "none";

@@ -1,6 +1,6 @@
 export type Tier = "core" | "opt" | "skip";
 
-export type StoreKind = "pc" | "ps" | "xb";
+export type StoreKind = "pc" | "ps" | "xb" | "nin";
 
 export interface Edition {
   name: string;
