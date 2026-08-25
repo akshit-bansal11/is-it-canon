@@ -53,6 +53,8 @@ export interface GameAuthored {
 export interface Game {
   id: string;
   order: number;
+  /** Matches an `Arc.id` on the parent franchise; set on every game when arcs exist. */
+  arc?: string;
   title: string;
   year: number;
   version: string;
@@ -72,11 +74,20 @@ export interface Game {
   authored?: GameAuthored;
 }
 
+/** A self-contained storyline inside a franchise (Ezio trilogy, Zelda's Child timeline). */
+export interface Arc {
+  id: string;
+  name: string;
+  blurb: string;
+}
+
 export interface Franchise {
   id: string;
   name: string;
   scope: string;
   caveat: string;
+  /** Present only when the franchise splits into storylines that stand alone. */
+  arcs?: Arc[];
   games: Game[];
 }
 
