@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import GameCell from "@/components/canon/GameCell";
 import type { Edition, Game } from "@/types/canon/canon";
 
@@ -25,65 +25,57 @@ function makeGame(overrides: Partial<Game> = {}): Game {
   };
 }
 
-const EDITIONS: Edition[] = [
-  {
-    name: "Base Edition",
-    year: 1998,
-    platforms: "PC",
-    recommended: false,
-    note: "original release",
-  },
-  {
-    name: "Gold Edition",
-    year: 2001,
-    platforms: "PC, Mac",
-    recommended: true,
-    note: "includes expansions",
-  },
-];
+const BASE_EDITION: Edition = {
+  name: "Base Edition",
+  year: 1998,
+  platforms: "PC",
+  recommended: false,
+  note: "original release",
+};
+
+const GOLD_EDITION: Edition = {
+  name: "Gold Edition",
+  year: 2001,
+  platforms: "PC, Mac",
+  recommended: true,
+  note: "includes expansions",
+};
+
+const EDITIONS: Edition[] = [BASE_EDITION, GOLD_EDITION];
 
 describe("GameCell", () => {
   it("renders the title", () => {
-    render(<GameCell game={makeGame()} />);
+    render(<GameCell game={makeGame()} onOpen={vi.fn()} />);
     expect(screen.getByText("Half-Life")).toBeTruthy();
   });
 
   it("hides the start marker for a non-starter game", () => {
-    render(<GameCell game={makeGame()} />);
+    render(<GameCell game={makeGame()} onOpen={vi.fn()} />);
     expect(screen.queryByText("start")).toBeNull();
   });
 
   it("shows the start marker for a starter game", () => {
-    render(<GameCell game={makeGame({ starter: true })} />);
+    render(<GameCell game={makeGame({ starter: true })} onOpen={vi.fn()} />);
     expect(screen.getByText("start")).toBeTruthy();
   });
 
-  it("renders no disclosure when there are no editions", () => {
-    const { container } = render(<GameCell game={makeGame()} />);
-    expect(container.querySelector("details")).toBeNull();
-    expect(screen.queryAllByRole("listitem")).toHaveLength(0);
+  it("stays quiet about editions when there is only one release", () => {
+    render(<GameCell game={makeGame({ editions: [BASE_EDITION] })} onOpen={vi.fn()} />);
+    expect(screen.queryByText(/editions/)).toBeNull();
   });
 
-  it("renders a disclosure when the game has editions", () => {
-    const { container } = render(<GameCell game={makeGame({ editions: EDITIONS })} />);
-    expect(container.querySelector("details")).not.toBeNull();
+  it("counts the editions when there is a choice to make", () => {
+    render(<GameCell game={makeGame({ editions: EDITIONS })} onOpen={vi.fn()} />);
+    expect(screen.getByText("2 editions")).toBeTruthy();
   });
 
-  it("lists every edition and marks the recommended one when expanded", async () => {
+  it("opens the detail panel when the title is activated", async () => {
+    const onOpen = vi.fn();
     const user = userEvent.setup();
-    const { container } = render(<GameCell game={makeGame({ editions: EDITIONS })} />);
+    render(<GameCell game={makeGame()} onOpen={onOpen} />);
 
-    const summary = container.querySelector("summary");
-    expect(summary).not.toBeNull();
-    if (summary !== null) await user.click(summary);
+    await user.click(screen.getByRole("button"));
 
-    expect(container.querySelector("details")?.open).toBe(true);
-
-    const items = screen.getAllByRole("listitem");
-    expect(items).toHaveLength(EDITIONS.length);
-    expect(items[0]?.textContent).toContain("· Base Edition");
-    expect(items[0]?.textContent).toContain("PC — original release");
-    expect(items[1]?.textContent).toContain("✓ Gold Edition");
-    expect(items[1]?.textContent).toContain("2001");
+    expect(onOpen).toHaveBeenCalledTimes(1);
   });
 });

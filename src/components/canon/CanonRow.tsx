@@ -1,11 +1,12 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import GameCell from "@/components/canon/GameCell";
 import OptionSelect from "@/components/canon/OptionSelect";
 import PriceCell from "@/components/canon/PriceCell";
 import { FIELD_LABEL, STATUSES } from "@/constants/canon/statuses";
 import { TIER_LABEL } from "@/constants/canon/tiers";
-import { CELL_CLASS } from "@/constants/canon/ui";
+import { CELL_CLASS, NUM_CLASS } from "@/constants/canon/ui";
 import type { Entry } from "@/types/canon/canon";
 import type { PriceQuote } from "@/types/canon/price";
 import type { UserEntry, UserField } from "@/types/canon/user";
@@ -17,7 +18,10 @@ interface CanonRowProps {
   user: UserEntry | undefined;
   quote: PriceQuote | undefined;
   showFranchise: boolean;
+  index: number;
+  flash: boolean;
   onFieldChange: (gameId: string, field: UserField, value: string) => void;
+  onOpen: (gameId: string) => void;
 }
 
 export default function CanonRow({
@@ -25,10 +29,20 @@ export default function CanonRow({
   user,
   quote,
   showFranchise,
+  index,
+  flash,
   onFieldChange,
+  onOpen,
 }: CanonRowProps) {
   const { game } = entry;
   const tracked = user?.status !== undefined;
+  const rowRef = useRef<HTMLTableRowElement>(null);
+
+  // Arriving from the palette: bring the row into view rather than leaving the
+  // reader to hunt for it in a table that can be nine hundred rows long.
+  useEffect(() => {
+    if (flash) rowRef.current?.scrollIntoView({ block: "center", behavior: "smooth" });
+  }, [flash]);
 
   const userSelect = (field: UserField, placeholder: string) => (
     <OptionSelect
@@ -42,12 +56,19 @@ export default function CanonRow({
   );
 
   return (
-    <tr className="group hover:bg-surface">
+    <tr
+      className={cn(
+        "group transition-colors duration-[90ms] hover:bg-surface",
+        flash && "anim-flash",
+      )}
+      ref={rowRef}
+      style={{ "--row-index": index }}
+    >
       {showFranchise ? (
         <td className={cn(CELL_CLASS, "text-[11px] text-faint")}>{entry.franchise.name}</td>
       ) : null}
 
-      <td className={cn(CELL_CLASS, "text-right text-faint tabular-nums")}>{game.order}</td>
+      <td className={cn(CELL_CLASS, NUM_CLASS, "text-right text-faint")}>{game.order}</td>
 
       <td
         className={cn(
@@ -56,7 +77,7 @@ export default function CanonRow({
           "border-edge border-r",
         )}
       >
-        <GameCell game={game} />
+        <GameCell game={game} onOpen={() => onOpen(game.id)} />
       </td>
 
       <td className={CELL_CLASS}>{userSelect("status", "—")}</td>
@@ -67,14 +88,14 @@ export default function CanonRow({
         {tracked ? userSelect("storefront", "—") : <span className="pl-2 text-faint">·</span>}
       </td>
 
-      <td className={cn(CELL_CLASS, "text-right text-muted tabular-nums")}>{game.year}</td>
+      <td className={cn(CELL_CLASS, NUM_CLASS, "text-right text-muted")}>{game.year}</td>
       <td className={cn(CELL_CLASS, "text-muted")}>{game.version}</td>
       <td className={cn(CELL_CLASS, "text-muted")}>{game.platform}</td>
-      <td className={cn(CELL_CLASS, "text-right text-muted tabular-nums")}>{game.msrp}</td>
-      <td className={cn(CELL_CLASS, "text-right tabular-nums")}>
+      <td className={cn(CELL_CLASS, NUM_CLASS, "text-right text-muted")}>{game.msrp}</td>
+      <td className={cn(CELL_CLASS, NUM_CLASS, "text-right")}>
         <PriceCell game={game} quote={quote} />
       </td>
-      <td className={cn(CELL_CLASS, "text-right text-muted tabular-nums")}>{game.hours ?? "—"}</td>
+      <td className={cn(CELL_CLASS, NUM_CLASS, "text-right text-muted")}>{game.hours ?? "—"}</td>
       <td className={cn(CELL_CLASS, "text-muted")}>{TIER_LABEL[game.tier]}</td>
       <td className={cn(CELL_CLASS, "text-[12px] text-muted leading-relaxed")}>{game.note}</td>
     </tr>
