@@ -1,43 +1,70 @@
 @import "tailwindcss";
 
+/* ── Tone spine — monochrome only. Light is the base; dark redefines. ───── */
 :root {
   --tone-canvas: #fff;
   --tone-surface: #fafafa;
+  --tone-raise: #f2f2f2;
   --tone-line: #e4e4e4;
   --tone-edge: #cfcfcf;
   --tone-text: #171717;
   --tone-muted: #5b5b5b;
   --tone-faint: #737373;
   --tone-invert: #fff;
+  --tone-veil: rgb(23 23 23 / 32%);
+  --tone-cast: 0 12px 40px rgb(23 23 23 / 12%);
+
+  /* Motion — one scale, no bounce. Every duration is multiplied by
+     --motion-scale, which the reduced-motion query drops to zero; that removes
+     the need for an !important reset later on. */
+  --motion-scale: 1;
+  --dur-1: calc(90ms * var(--motion-scale));
+  --dur-2: calc(160ms * var(--motion-scale));
+  --dur-3: calc(260ms * var(--motion-scale));
+  --dur-4: calc(420ms * var(--motion-scale));
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Radius hierarchy — controls read tighter than cards, cards than overlays. */
+  --radius-control: 3px;
+  --radius-card: 6px;
+  --radius-overlay: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --tone-canvas: #0a0a0a;
     --tone-surface: #111;
+    --tone-raise: #171717;
     --tone-line: #232323;
     --tone-edge: #3a3a3a;
     --tone-text: #ededed;
     --tone-muted: #a0a0a0;
     --tone-faint: #808080;
     --tone-invert: #0a0a0a;
+    --tone-veil: rgb(0 0 0 / 62%);
+    --tone-cast: 0 12px 40px rgb(0 0 0 / 55%);
   }
 }
 
 :root[data-theme="dark"] {
   --tone-canvas: #0a0a0a;
   --tone-surface: #111;
+  --tone-raise: #171717;
   --tone-line: #232323;
   --tone-edge: #3a3a3a;
   --tone-text: #ededed;
   --tone-muted: #a0a0a0;
   --tone-faint: #808080;
   --tone-invert: #0a0a0a;
+  --tone-veil: rgb(0 0 0 / 62%);
+  --tone-cast: 0 12px 40px rgb(0 0 0 / 55%);
 }
 
 @theme inline {
   --color-canvas: var(--tone-canvas);
   --color-surface: var(--tone-surface);
+  --color-raise: var(--tone-raise);
   --color-line: var(--tone-line);
   --color-edge: var(--tone-edge);
   --color-ink: var(--tone-text);
@@ -46,17 +73,13 @@
   --color-invert: var(--tone-invert);
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Segoe UI Mono", "Menlo", monospace;
+  --radius-control: 3px;
+  --radius-card: 6px;
+  --radius-overlay: 10px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-* {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-*::-webkit-scrollbar {
-  display: none;
-}
-
+/* ── Base ───────────────────────────────────────────────────────────────── */
 html,
 body {
   height: 100%;
@@ -66,13 +89,198 @@ body {
 body {
   background: var(--tone-canvas);
   color: var(--tone-text);
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: 13px;
-  line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
 }
 
 :focus-visible {
   outline: 1px solid var(--tone-text);
   outline-offset: 2px;
+  transition: outline-offset var(--dur-1) var(--ease-out);
+}
+
+/* Thin monochrome scrollbars. Hiding them entirely costs the reader any sense
+   of how far down a 700-row table they are. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--tone-edge) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--tone-edge);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--tone-faint);
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-corner,
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ── Keyframes ──────────────────────────────────────────────────────────── */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 6px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lift {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    opacity: 0;
+    transform: translate3d(16px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes sweep {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@keyframes flash-cell {
+  from {
+    background-color: var(--tone-raise);
+  }
+
+  to {
+    background-color: transparent;
+  }
+}
+
+/* ── Animation utilities ────────────────────────────────────────────────── */
+.anim-rise {
+  animation: rise var(--dur-3) var(--ease-out) both;
+}
+
+.anim-fade {
+  animation: fade var(--dur-3) var(--ease-out) both;
+}
+
+.anim-lift {
+  animation: lift var(--dur-4) var(--ease-out) both;
+}
+
+.anim-slide-right {
+  animation: slide-from-right var(--dur-3) var(--ease-out) both;
+}
+
+.anim-slide-left {
+  animation: slide-from-left var(--dur-3) var(--ease-out) both;
+}
+
+.anim-flash {
+  animation: flash-cell var(--dur-4) var(--ease-out) both;
+}
+
+.anim-pulse {
+  animation: pulse-soft 1.4s var(--ease-in-out) infinite;
+}
+
+/* Row entrance stagger. The delay is capped by only tagging the first screenful
+   of rows — a 700-row table would otherwise take 40 seconds to finish arriving. */
+.stagger > * {
+  animation: rise var(--dur-3) var(--ease-out) both;
+  animation-delay: calc(var(--row-index, 0) * 14ms * var(--motion-scale));
+}
+
+.skeleton {
+  background-image: linear-gradient(
+    90deg,
+    var(--tone-surface) 25%,
+    var(--tone-raise) 50%,
+    var(--tone-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: sweep 1.2s linear infinite;
+}
+
+/* ── Reduced motion ─────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-scale: 0;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  /* These two loop forever, so scaling their duration to zero would leave an
+     animation running at 0s rather than stopping it. Switch them off outright. */
+  .anim-pulse,
+  .skeleton {
+    animation: none;
+  }
 }
