@@ -97,6 +97,7 @@ describe("sortEntries", () => {
       entry({ id: "dropped", order: 3 }),
       entry({ id: "wishlist", order: 4 }),
       entry({ id: "backlogged", order: 5 }),
+      entry({ id: "own", order: 8 }),
       entry({ id: "completed", order: 6 }),
       entry({ id: "playing", order: 7 }),
     ];
@@ -105,12 +106,14 @@ describe("sortEntries", () => {
       dropped: { status: "dropped" },
       wishlist: { status: "wishlist" },
       backlogged: { status: "backlogged" },
+      own: { status: "own" },
       completed: { status: "completed" },
       playing: { status: "playing" },
     });
     expect(ids(entries, "status", 1, ctx)).toEqual([
       "playing",
       "completed",
+      "own",
       "backlogged",
       "wishlist",
       "dropped",

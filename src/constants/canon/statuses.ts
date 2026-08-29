@@ -3,6 +3,7 @@ import type { Status } from "@/types/canon/user";
 export const STATUSES = [
   { id: "playing", label: "Playing" },
   { id: "completed", label: "Completed" },
+  { id: "own", label: "Own" },
   { id: "backlogged", label: "Backlogged" },
   { id: "wishlist", label: "Wishlist" },
   { id: "dropped", label: "Dropped" },
@@ -12,6 +13,7 @@ export const STATUSES = [
 export const STATUS_LABEL: Record<Status, string> = {
   playing: "Playing",
   completed: "Completed",
+  own: "Own",
   backlogged: "Backlogged",
   wishlist: "Wishlist",
   dropped: "Dropped",

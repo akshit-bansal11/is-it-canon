@@ -1,7 +1,14 @@
 import type { DEVICES } from "@/constants/canon/devices";
 import type { STOREFRONTS } from "@/constants/canon/storefronts";
 
-export type Status = "completed" | "playing" | "backlogged" | "dropped" | "wishlist" | "trash";
+export type Status =
+  | "completed"
+  | "playing"
+  | "own"
+  | "backlogged"
+  | "dropped"
+  | "wishlist"
+  | "trash";
 
 export type Device = (typeof DEVICES)[number]["id"];
 

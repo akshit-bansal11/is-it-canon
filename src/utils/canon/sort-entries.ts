@@ -8,10 +8,11 @@ import { parsePrice } from "@/utils/canon/price";
 const STATUS_RANK: Record<Status, number> = {
   playing: 0,
   completed: 1,
-  backlogged: 2,
-  wishlist: 3,
-  dropped: 4,
-  trash: 5,
+  own: 2,
+  backlogged: 3,
+  wishlist: 4,
+  dropped: 5,
+  trash: 6,
 };
 
 export interface SortContext {
