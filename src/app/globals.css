@@ -80,12 +80,6 @@
 }
 
 /* ── Base ───────────────────────────────────────────────────────────────── */
-html,
-body {
-  height: 100%;
-  overflow: hidden;
-}
-
 body {
   background: var(--tone-canvas);
   color: var(--tone-text);
