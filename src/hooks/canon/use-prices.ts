@@ -59,7 +59,7 @@ export function usePrices(autoGames: readonly Game[]): UsePrices {
   const fetchedAt = useSyncExternalStore(subscribePrices, getFetchedAt, getServerFetchedAt);
   const [status, setStatus] = useState<PriceStatus>("idle");
   const [message, setMessage] = useState("");
-  const autoStarted = useRef(false);
+  const requested = useRef(new Set<string>());
 
   const settle = useCallback((next: PriceMap) => {
     mergePrices(next);
@@ -82,14 +82,29 @@ export function usePrices(autoGames: readonly Game[]): UsePrices {
     [settle, fail],
   );
 
+  // Prices are fetched for the rows actually on screen, every time that set
+  // changes. Firing once per page load instead meant opening a franchise never
+  // requested anything for it — and the one shot it did fire went on whichever
+  // sixty games happened to be first in the full list.
   useEffect(() => {
-    if (autoStarted.current || autoGames.length === 0) return;
-    if (!shouldAutoRefresh(getFetchedAt(), Date.now())) return;
-    autoStarted.current = true;
+    if (autoGames.length === 0) return;
+
+    // A stale cache re-prices everything in view; a fresh one only fills gaps.
+    // Either way `requested` keeps one page load from asking twice for a game,
+    // including the ones ITAD has no listing for.
+    const stale = shouldAutoRefresh(getFetchedAt(), Date.now());
+    const cached = getPricesSnapshot();
+    const wanted = autoGames.filter(
+      (game) => !requested.current.has(game.id) && (stale || cached[game.id] === undefined),
+    );
+    if (wanted.length === 0) return;
+
+    const ids = wanted.map((game) => game.id);
+    for (const id of ids) requested.current.add(id);
 
     // Kick the request off first so every state update lands in a promise
     // continuation — react-hooks/set-state-in-effect forbids synchronous ones.
-    const pending = fetchPrices(autoGames);
+    const pending = fetchPrices(wanted);
     Promise.resolve()
       .then(() => {
         setStatus("loading");
@@ -97,7 +112,13 @@ export function usePrices(autoGames: readonly Game[]): UsePrices {
         return pending;
       })
       .then(settle)
-      .catch(fail);
+      .catch((error: unknown) => {
+        // A rate limit is not an answer about these games. Forget that they were
+        // asked for, so opening the franchise again retries instead of showing
+        // an empty column for the rest of the session.
+        for (const id of ids) requested.current.delete(id);
+        fail(error);
+      });
   }, [autoGames, settle, fail]);
 
   return { prices, fetchedAt, status, message, refresh };

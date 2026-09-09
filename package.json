@@ -20,6 +20,7 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "data:enrich": "node --env-file=.env.local scripts/enrich-data.mjs",
+    "data:audit": "node --env-file=.env.local scripts/audit-coverage.mjs",
     "data:check": "node scripts/check-data.mjs"
   },
   "dependencies": {

@@ -56,9 +56,12 @@ export default function CanonApp() {
     return games.map((game) => ({ game, franchise }));
   }, [franchise, activeArc]);
 
+  // Nothing is priced while the grid is up: there is no table to put a price
+  // in, and pricing the first sixty of all 690 games burns the rate limit on
+  // rows nobody asked to see.
   const autoPriceGames = useMemo(
-    () => scoped.slice(0, PRICE_BATCH).map((entry) => entry.game),
-    [scoped],
+    () => (gridView ? [] : scoped.slice(0, PRICE_BATCH).map((entry) => entry.game)),
+    [gridView, scoped],
   );
 
   const { prices, status: priceStatus, message: priceMessage, refresh } = usePrices(autoPriceGames);
