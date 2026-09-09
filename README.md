@@ -12,6 +12,7 @@ The current view lives in the URL (`#/witcher`, `#/ac/desmond`), so a reload kee
 - React 19
 - TypeScript (strict, `noUncheckedIndexedAccess`)
 - Tailwind CSS v4
+- Convex (canon dataset + server functions)
 - Biome (format + lint), ESLint (flat config), Stylelint
 - Vitest
 
@@ -50,27 +51,52 @@ src/
 ├── constants/
 │   └── canon/           # columns, statuses, devices, storefronts, tiers, filters, motion
 ├── data/
-│   ├── franchises.json  # the dataset
-│   └── franchises.ts    # typed accessor over the JSON
+│   └── franchises.json  # authored snapshot; seeds Convex, not read at runtime
 ├── hooks/
 │   └── canon/           # tracked entries, theme, prices, hotkeys, chunked rendering
+├── lib/
+│   └── db/              # Convex server client for cached server-component reads
 ├── types/
 │   └── canon/           # franchise, game, arc, table, user, price, theme, view types
 └── utils/
     └── canon/           # pure helpers + the localStorage stores
+convex/                  # schema, the canon read query, seed and integrity checks
 e2e/                     # Playwright specs (table, tracking, filters, editions, a11y)
 scripts/                 # enrich-data.mjs, check-data.mjs, cache and report
 ```
 
 ## Data
 
-`src/data/franchises.json` is the dataset — franchises, their games in chronological order, and each game's known alternate editions. Add entries by editing that file; it is typed as `Franchise[]` through `src/data/franchises.ts`, so a shape mistake fails `typecheck`, and `npm run data:check` catches what types cannot: duplicate ids, an `order` that skips a number, a game naming an arc its franchise never declared, a storyline split into non-adjacent blocks.
+The dataset — 126 franchises, 690 games, 104 storylines — lives in **Convex**. `convex/schema.ts` defines its shape and is the validator; `convex/canon.ts` exposes the single read query the app uses.
 
-A franchise may declare `arcs` — named storylines that stand alone within it. Every game then carries an `arc` matching one of them, and the games of each arc sit together in the ordering. Franchises that tell one continuous story simply omit both fields. 104 storylines are declared across 126 franchises.
+`src/data/franchises.json` is the authored snapshot it was seeded from, and is still what `npm run data:check` and the enrichment scripts operate on. It is **not** what the app reads. To load it into a deployment:
 
-There is no backend and no database.
+```bash
+npx convex run seed:run          # dev
+npx convex run seed:run --prod   # production
+```
+
+That is an `internalMutation`, so only the deployer can call it — the deployment URL ships in the client bundle by design, and a public mutation that replaced the dataset would be an unauthenticated wipe. It replaces rather than merges, because the JSON is a complete snapshot.
+
+`npm run data:check` validates the JSON for what types cannot catch: duplicate ids, an `order` that skips a number, a game naming an arc its franchise never declared, a storyline split into non-adjacent blocks. `npx convex run data:counts` asserts the same totals against the database, plus orphaned franchise and arc references. The two agreeing is what proves a seed landed intact.
+
+A franchise may declare `arcs` — named storylines that stand alone within it. Every game then carries an `arc` matching one of them, and the games of each arc sit together in the ordering. Franchises that tell one continuous story simply omit both fields.
+
+The home page is a server component that reads Convex at build time and revalidates hourly, so the dataset is editable without a redeploy while the page stays statically generated. Filtering, sorting and search all still run on the client against the full dataset — that is what keeps the table instant, and it is why the read query returns everything rather than paginating.
 
 Three things are written to `localStorage`: your input (status, device and store per game, under `isitcanon/entries/v1`), the fetched price cache (`isitcanon/prices/v1`), and the theme choice (`isitcanon/theme/v1`). All are exposed through `useSyncExternalStore`, so two open tabs stay in sync. Clearing a game's status clears its device and store with it.
+
+## Deployment
+
+Vercel, building through Convex so that the schema and functions deploy alongside the app:
+
+```
+buildCommand: npx convex deploy --cmd 'npm run build'
+```
+
+That is set in `vercel.json`. It requires **`CONVEX_DEPLOY_KEY`** in the Vercel project's environment variables, generated from the Convex dashboard under the production deployment. `npx convex deploy` sets `NEXT_PUBLIC_CONVEX_URL` for the build itself, so that one does not need setting by hand.
+
+`ITAD_API_KEY` is needed at runtime for the price route.
 
 ## Keyboard
 
