@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SectionCard from "@/components/site/SectionCard";
 import { CONTROL_CLASS } from "@/constants/canon/ui";
-import { convexServerClient } from "@/lib/db/convex";
+import { listScreen } from "@/lib/db/queries";
 import { cn } from "@/utils/cn";
-import { api } from "../../../convex/_generated/api";
 
 export const revalidate = 3600;
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const franchises = await convexServerClient(revalidate).query(api.canon.listScreen);
+  const franchises = await listScreen();
 
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-col gap-6 px-5 py-12">

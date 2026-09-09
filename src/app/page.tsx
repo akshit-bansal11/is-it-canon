@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import SectionCard from "@/components/site/SectionCard";
-import { convexServerClient } from "@/lib/db/convex";
-import { api } from "../../convex/_generated/api";
+import { sectionCounts } from "@/lib/db/queries";
 
 export const revalidate = 3600;
 
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
 const plural = (count: number, one: string, many: string) => `${count} ${count === 1 ? one : many}`;
 
 export default async function Page() {
-  const counts = await convexServerClient(revalidate).query(api.canon.sectionCounts);
+  const counts = await sectionCounts();
 
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col justify-center gap-8 px-5 py-16">

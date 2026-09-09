@@ -22,12 +22,14 @@
     "data:enrich": "node --env-file=.env.local scripts/enrich-data.mjs",
     "data:audit": "node --env-file=.env.local scripts/audit-coverage.mjs",
     "data:check": "node scripts/check-data.mjs",
-    "check:ci": "biome ci . && eslint . --max-warnings=0 && npm run lint:css && npm run typecheck && npm run data:check && npm run test"
+    "check:ci": "biome ci . && eslint . --max-warnings=0 && npm run lint:css && npm run typecheck && npm run data:check && npm run test",
+    "data:seed": "node --env-file=.env.local scripts/seed-db.mjs"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "@sentry/nextjs": "^10.73.0",
     "clsx": "^2.1.1",
-    "convex": "^1.45.0",
+    "drizzle-orm": "^0.45.2",
     "next": "^16.2.12",
     "posthog-js": "^1.428.11",
     "react": "^19.2.8",
@@ -46,6 +48,7 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
     "@vitejs/plugin-react": "^6.1.0",
+    "drizzle-kit": "^0.31.10",
     "eslint": "^10.8.1",
     "eslint-plugin-react-hooks": "^7.1.1",
     "happy-dom": "^20.11.6",

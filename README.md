@@ -24,7 +24,7 @@ The current view lives in the URL (`/games#/witcher`, `/games#/ac/desmond`), so 
 - React 19
 - TypeScript (strict, `noUncheckedIndexedAccess`)
 - Tailwind CSS v4
-- Convex (canon dataset + server functions)
+- Neon (serverless Postgres) + Drizzle ORM
 - Biome (format + lint), ESLint (flat config), Stylelint
 - Vitest
 
@@ -46,7 +46,8 @@ The current view lives in the URL (`/games#/witcher`, `/games#/ac/desmond`), so 
 | `npm run test:e2e` | Playwright end-to-end suite (builds and serves production) |
 | `npm run test:e2e:ui` | Playwright in UI mode |
 | `npm run data:enrich` | Repopulate the dataset from ITAD + IGDB |
-| `npm run data:check` | Structural checks over the dataset (ids, ordering, arcs) |
+| `npm run data:check` | Structural checks over the games JSON (ids, ordering, arcs) |
+| `npm run data:seed` | Create the Neon tables and load both snapshots, then verify |
 | `npm run check` | format, lint:js, lint:css, typecheck, data:check, test in sequence |
 | `npm run check:ci` | same checks, non-mutating — what CI runs |
 
@@ -69,18 +70,17 @@ src/
 ├── constants/
 │   └── canon/           # columns, statuses, devices, storefronts, tiers, filters, motion
 ├── data/
-│   ├── franchises.json  # games snapshot; seeds Convex, not read at runtime
+│   ├── franchises.json  # games snapshot; seeds Neon, not read at runtime
 │   └── screen.json      # movies and series snapshot, same role
 ├── hooks/
 │   └── canon/           # tracked entries, theme, prices, hotkeys, chunked rendering
 ├── lib/
-│   ├── db/              # Convex server client for cached server-component reads
+│   ├── db/              # Neon client, Drizzle schema, and the app's three reads
 │   └── observability/   # Sentry and PostHog key presence
 ├── types/
 │   └── canon/           # franchise, game, arc, table, user, price, theme, view types
 └── utils/
     └── canon/           # pure helpers + the localStorage stores
-convex/                  # schema, the canon read query, seed and integrity checks
 e2e/                     # Playwright specs (table, tracking, filters, editions, a11y)
 scripts/                 # enrich-data.mjs, check-data.mjs, cache and report
 ```
@@ -100,36 +100,31 @@ scripts/                 # enrich-data.mjs, check-data.mjs, cache and report
 
 ## Data
 
-The dataset — 126 franchises, 690 games, 104 storylines — lives in **Convex**. `convex/schema.ts` defines its shape and is the validator; `convex/canon.ts` exposes the single read query the app uses.
+The dataset — 126 franchises, 690 games, 104 storylines — lives in **Neon** (serverless Postgres). `src/lib/db/schema.ts` defines the tables through Drizzle; `src/lib/db/queries.ts` holds the three reads the app makes.
 
-`src/data/screen.json` holds the movies and series chronologies, normalised from two sources that disagreed in shape. It carries two deliberate decisions. Entries with `kind: "marker"` are not watchable — they place a run of episodes against the films around them ("AoS S1 Ep 1–7 · Before Thor: The Dark World") — and are excluded from title counts. `type: null` means the source never said whether something was a film or a series; it means unknown, not "other".
-
-`src/data/franchises.json` is the authored snapshot it was seeded from, and is still what `npm run data:check` and the enrichment scripts operate on. It is **not** what the app reads. To load it into a deployment:
+`src/data/franchises.json` and `src/data/screen.json` are the authored snapshots the database is seeded from, and are still what `npm run data:check` and the enrichment scripts operate on. They are **not** what the app reads at runtime.
 
 ```bash
-npx convex run seed:run          # dev
-npx convex run seed:run --prod   # production
+npm run data:seed    # creates the tables and loads both snapshots
 ```
 
-That is an `internalMutation`, so only the deployer can call it — the deployment URL ships in the client bundle by design, and a public mutation that replaced the dataset would be an unauthenticated wipe. It replaces rather than merges, because the JSON is a complete snapshot.
+That script replaces rather than merges, because the JSON files are complete snapshots and a partial update would strand rows deleted upstream. It reads back afterwards and asserts every count against the authored files, plus orphaned franchise and arc references — an import exiting zero is not evidence it moved everything. Orphans matter because they are silent: a game whose `franchise_id` or `arc` matches nothing simply stops appearing, with no error anywhere.
 
-`npm run data:check` validates the JSON for what types cannot catch: duplicate ids, an `order` that skips a number, a game naming an arc its franchise never declared, a storyline split into non-adjacent blocks. `npx convex run data:counts` asserts the same totals against the database, plus orphaned franchise and arc references. The two agreeing is what proves a seed landed intact.
+The schema is created by that script rather than by drizzle-kit migrations. The dataset is a snapshot that is always reseeded whole, so there is no state to migrate between versions. If this ever grows per-user rows that must survive a schema change, that stops being true and drizzle-kit earns its place.
+
+`src/data/screen.json` carries two deliberate decisions. Entries with `kind: "marker"` are not watchable — they place a run of episodes against the films around them ("AoS S1 Ep 1–7 · Before Thor: The Dark World") — and are excluded from title counts. `type: null` means the source never said whether something was a film or a series; it means unknown, not "other".
+
+`npm run data:check` validates the games JSON for what types cannot catch: duplicate ids, an `order` that skips a number, a game naming an arc its franchise never declared, a storyline split into non-adjacent blocks.
 
 A franchise may declare `arcs` — named storylines that stand alone within it. Every game then carries an `arc` matching one of them, and the games of each arc sit together in the ordering. Franchises that tell one continuous story simply omit both fields.
 
-The home page is a server component that reads Convex at build time and revalidates hourly, so the dataset is editable without a redeploy while the page stays statically generated. Filtering, sorting and search all still run on the client against the full dataset — that is what keeps the table instant, and it is why the read query returns everything rather than paginating.
+The content pages are server components that read the database at build time and revalidate hourly, so the dataset is editable without a redeploy while the page stays statically generated. Filtering, sorting and search all still run on the client against the full dataset — that is what keeps the table instant, and it is why the read query returns everything rather than paginating.
 
 Three things are written to `localStorage`: your input (status, device and store per game, under `isitcanon/entries/v1`), the fetched price cache (`isitcanon/prices/v1`), and the theme choice (`isitcanon/theme/v1`). All are exposed through `useSyncExternalStore`, so two open tabs stay in sync. Clearing a game's status clears its device and store with it.
 
 ## Deployment
 
-Vercel, building through Convex so that the schema and functions deploy alongside the app:
-
-```
-buildCommand: npx convex deploy --cmd 'npm run build'
-```
-
-That is set in `vercel.json`. It requires **`CONVEX_DEPLOY_KEY`** in the Vercel project's environment variables, generated from the Convex dashboard under the production deployment. `npx convex deploy` sets `NEXT_PUBLIC_CONVEX_URL` for the build itself, so that one does not need setting by hand.
+Vercel, with the default Next build. The only variable the build needs is **`DATABASE_URL`**, because the home, games and screen pages read the database at build time — a build without it fails by design rather than producing an empty site.
 
 `ITAD_API_KEY` is needed at runtime for the price route.
 
@@ -151,7 +146,9 @@ Neither service has received an event yet, so neither is verified.
 
 ## CI
 
-`.github/workflows/ci.yml`. The `check` job runs lint, types, data validation and unit tests with no secrets. The `build` job runs only when the `NEXT_PUBLIC_CONVEX_URL` repository variable is set, because the content pages read Convex at build time, and it asserts that `/`, `/games` and `/screen` are still statically generated.
+`.github/workflows/ci.yml`. The `check` job runs lint, types, data validation and unit tests with no secrets. The `build` job runs on pushes only, using the `DATABASE_URL` secret, because the content pages read the database at build time. It asserts that `/`, `/games` and `/screen` are still statically generated.
+
+`drizzle-kit` carries four moderate advisories through deprecated `@esbuild-kit/*` packages. The latest stable release is inside the affected range and only `1.0.0-rc.*` escapes it, so it is accepted rather than pinned to a release candidate: `npm ls --omit=dev` confirms none of it is reachable from the production tree.
 
 ## Keyboard
 

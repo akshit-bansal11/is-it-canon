@@ -14,7 +14,8 @@ import { posthogEnabled } from "@/lib/observability/env";
  *
  * Rendered inside Suspense by the layout, because useSearchParams opts its
  * whole subtree into client rendering otherwise, which would have quietly made
- * every static page dynamic — the same failure the Convex read path hit.
+ * every static page dynamic, which is the failure this app has already had
+ * once from a data helper that opted out of caching.
  */
 export default function Analytics() {
   const pathname = usePathname();

@@ -3,21 +3,20 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ScreenTimeline from "@/components/screen/ScreenTimeline";
 import { CONTROL_CLASS, NUM_CLASS } from "@/constants/canon/ui";
-import { convexServerClient } from "@/lib/db/convex";
+import { listScreen } from "@/lib/db/queries";
 import { cn } from "@/utils/cn";
-import { api } from "../../../../convex/_generated/api";
 
 export const revalidate = 3600;
 
 /** Prerendered per chronology, so every one is static rather than rendered on
  *  demand. Six routes, all known at build time. */
 export async function generateStaticParams() {
-  const franchises = await convexServerClient(revalidate).query(api.canon.listScreen);
+  const franchises = await listScreen();
   return franchises.map((franchise) => ({ slug: franchise.id }));
 }
 
 async function findFranchise(slug: string) {
-  const franchises = await convexServerClient(revalidate).query(api.canon.listScreen);
+  const franchises = await listScreen();
   return franchises.find((franchise) => franchise.id === slug) ?? null;
 }
 

@@ -29,9 +29,9 @@ import { toCsv } from "@/utils/canon/to-csv";
 const PRICE_BATCH = 60;
 
 interface CanonAppProps {
-  /** The whole dataset, fetched from Convex by the server component above and
-   *  handed down once. Filtering, sorting and search stay on the client so the
-   *  table keeps responding without a round trip. */
+  /** The whole dataset, read from Neon by the server component above and handed
+   *  down once. Filtering, sorting and search stay on the client so the table
+   *  keeps responding without a round trip. */
   franchises: readonly Franchise[];
 }
 
