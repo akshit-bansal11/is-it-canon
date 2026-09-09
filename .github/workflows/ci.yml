@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# A second push to the same branch cancels the first: the only run that matters
+# is the one for the newest commit.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Lint, types, data and unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      # `biome ci` rather than the local `format --write`, which would pass by
+      # rewriting the file instead of reporting it.
+      - run: npm run check:ci
+
+  build:
+    name: Production build
+    runs-on: ubuntu-latest
+    # The home, games and screen pages read Convex at build time, so a build
+    # without a deployment URL fails by design rather than silently producing
+    # an empty site. Skipped rather than faked when the secret is absent, so a
+    # fork's pull request still gets the check job above.
+    if: ${{ vars.NEXT_PUBLIC_CONVEX_URL != '' }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        run: npm run build | tee build.log
+        env:
+          NEXT_PUBLIC_CONVEX_URL: ${{ vars.NEXT_PUBLIC_CONVEX_URL }}
+
+      - name: Assert the content routes are still statically generated
+        # The whole point of reading Convex at build time is that visitors do
+        # not pay for it, and nothing in the source says whether that still
+        # holds — only the build output does. This regressed once already:
+        # convex/nextjs hardcodes cache "no-store", which silently turned /
+        # into a per-request render. Without this assertion that comes back
+        # unnoticed the next time someone reaches for a convenience helper.
+        run: |
+          fail=0
+          for route in "/" "/games" "/screen"; do
+            if ! grep -qE "[○●][[:space:]]+${route}([[:space:]]|$)" build.log; then
+              echo "::error::${route} is no longer statically generated"
+              fail=1
+            fi
+          done
+          if grep -qE "ƒ[[:space:]]+/(games|screen)?([[:space:]]|$)" build.log; then
+            echo "::error::a content route is being server-rendered on demand"
+            fail=1
+          fi
+          exit $fail
