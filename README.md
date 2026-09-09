@@ -1,10 +1,22 @@
 # isitcanon
 
-A canon-order tracker for game franchises. It lists 126 franchises and 690 games, each franchise sorted by in-universe chronology rather than release order. Every franchise here has at least two games sharing one storyline; the ones that split into separate storylines — Assassin's Creed, Zelda's branching timeline, Mega Man's far-future chain — declare those splits and the table breaks into sections for them.
+Story order for connected franchises — what to play, watch and read in in-universe chronology rather than release order.
 
-The front door is a grid of every franchise. Pick one and you get its table: one row per game, in story order, with three fields you set yourself — play status, the device you play it on, and the store you own it from — all held in the browser. A searchable sidebar switches franchises, `Cmd/Ctrl K` jumps straight to any series or game, and clicking a game title opens a detail panel with its editions and notes.
+Three sections:
 
-The current view lives in the URL (`#/witcher`, `#/ac/desmond`), so a reload keeps your place and a link points at one series.
+| Section | Route | Holds |
+| --- | --- | --- |
+| **Games** | `/games` | 126 franchises, 690 games, 104 storylines |
+| **Movies & Series** | `/screen` | 6 chronologies, 322 titles, 29 blocks |
+| **Books** | `/books` | nothing yet — no dataset has been written |
+
+**Games.** Every franchise here has at least two games sharing one storyline; the ones that split into separate storylines — Assassin's Creed, Zelda's branching timeline, Mega Man's far-future chain — declare those splits and the table breaks into sections for them. The front door is a grid of every franchise. Pick one and you get its table: one row per game, in story order, with three fields you set yourself — play status, the device you play it on, and the store you own it from — all held in the browser. A searchable sidebar switches franchises, `Cmd/Ctrl K` jumps straight to any series or game, and clicking a game title opens a detail panel with its editions and notes.
+
+The current view lives in the URL (`/games#/witcher`, `/games#/ac/desmond`), so a reload keeps your place and a link points at one series.
+
+**Movies & Series.** Watch orders across films and series. Where a chronology interleaves a series with the films around it, that placement is its own line rather than being folded into a title — those markers carry the ordering's reasoning and are counted separately from things you actually watch.
+
+**Books** is listed but empty. No dataset exists, and rather than show invented titles the section says so.
 
 ## Stack
 
@@ -36,6 +48,7 @@ The current view lives in the URL (`#/witcher`, `#/ac/desmond`), so a reload kee
 | `npm run data:enrich` | Repopulate the dataset from ITAD + IGDB |
 | `npm run data:check` | Structural checks over the dataset (ids, ordering, arcs) |
 | `npm run check` | format, lint:js, lint:css, typecheck, data:check, test in sequence |
+| `npm run check:ci` | same checks, non-mutating — what CI runs |
 
 ## Layout
 
@@ -43,19 +56,26 @@ The current view lives in the URL (`#/witcher`, `#/ac/desmond`), so a reload kee
 src/
 ├── app/
 │   ├── api/prices/      # ITAD price lookup route handler
+│   ├── books/           # honest empty state
+│   ├── games/           # the canon tracker
+│   ├── screen/          # chronology index and one page per chronology
 │   ├── globals.css      # monochrome token spine, motion scale, both themes
 │   ├── layout.tsx
 │   └── page.tsx
 ├── components/
-│   └── canon/           # shell, sidebar, grid, table, drawer, palette, cells
+│   ├── canon/           # shell, sidebar, grid, table, drawer, palette, cells
+│   ├── screen/          # chronology timeline
+│   └── site/            # landing section cards, analytics provider
 ├── constants/
 │   └── canon/           # columns, statuses, devices, storefronts, tiers, filters, motion
 ├── data/
-│   └── franchises.json  # authored snapshot; seeds Convex, not read at runtime
+│   ├── franchises.json  # games snapshot; seeds Convex, not read at runtime
+│   └── screen.json      # movies and series snapshot, same role
 ├── hooks/
 │   └── canon/           # tracked entries, theme, prices, hotkeys, chunked rendering
 ├── lib/
-│   └── db/              # Convex server client for cached server-component reads
+│   ├── db/              # Convex server client for cached server-component reads
+│   └── observability/   # Sentry and PostHog key presence
 ├── types/
 │   └── canon/           # franchise, game, arc, table, user, price, theme, view types
 └── utils/
@@ -65,9 +85,24 @@ e2e/                     # Playwright specs (table, tracking, filters, editions,
 scripts/                 # enrich-data.mjs, check-data.mjs, cache and report
 ```
 
+## Routes
+
+| Route | Rendering |
+| --- | --- |
+| `/` | static, revalidated hourly — section cards with counts read from the database |
+| `/games` | static, revalidated hourly |
+| `/screen` | static, revalidated hourly |
+| `/screen/[slug]` | SSG, one prerendered page per chronology |
+| `/books` | static |
+| `/api/prices` | dynamic — the only route rendered on demand, by design |
+
+`npm run build` prints this table. It is worth reading rather than skimming: a content route showing as `ƒ` means it has silently started hitting the database per visitor. CI asserts against exactly that.
+
 ## Data
 
 The dataset — 126 franchises, 690 games, 104 storylines — lives in **Convex**. `convex/schema.ts` defines its shape and is the validator; `convex/canon.ts` exposes the single read query the app uses.
+
+`src/data/screen.json` holds the movies and series chronologies, normalised from two sources that disagreed in shape. It carries two deliberate decisions. Entries with `kind: "marker"` are not watchable — they place a run of episodes against the films around them ("AoS S1 Ep 1–7 · Before Thor: The Dark World") — and are excluded from title counts. `type: null` means the source never said whether something was a film or a series; it means unknown, not "other".
 
 `src/data/franchises.json` is the authored snapshot it was seeded from, and is still what `npm run data:check` and the enrichment scripts operate on. It is **not** what the app reads. To load it into a deployment:
 
@@ -97,6 +132,26 @@ buildCommand: npx convex deploy --cmd 'npm run build'
 That is set in `vercel.json`. It requires **`CONVEX_DEPLOY_KEY`** in the Vercel project's environment variables, generated from the Convex dashboard under the production deployment. `npx convex deploy` sets `NEXT_PUBLIC_CONVEX_URL` for the build itself, so that one does not need setting by hand.
 
 `ITAD_API_KEY` is needed at runtime for the price route.
+
+## Observability
+
+Sentry and PostHog are wired and **inert until their keys are set** — a missing key means "not reporting", never a crash or a stream of failed calls from a visitor's browser.
+
+| Variable | For |
+| --- | --- |
+| `NEXT_PUBLIC_SENTRY_DSN` | error and performance monitoring |
+| `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST` | product analytics |
+| `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, `SENTRY_PROJECT` | build-time source map upload |
+
+Without the Sentry build variables every stack trace is minified noise, so the integration reports nothing actionable even when the DSN is set.
+
+PostHog's automatic pageview capture is switched off deliberately: the App Router does no full page load between routes, so autocapture records the first visit and nothing after. `src/components/site/Analytics.tsx` sends one per navigation instead. `sendDefaultPii` is off, `person_profiles` is `never` and `respect_dnt` is on — there are no accounts and nothing to attribute.
+
+Neither service has received an event yet, so neither is verified.
+
+## CI
+
+`.github/workflows/ci.yml`. The `check` job runs lint, types, data validation and unit tests with no secrets. The `build` job runs only when the `NEXT_PUBLIC_CONVEX_URL` repository variable is set, because the content pages read Convex at build time, and it asserts that `/`, `/games` and `/screen` are still statically generated.
 
 ## Keyboard
 
