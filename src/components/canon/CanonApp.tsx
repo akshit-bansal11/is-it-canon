@@ -21,8 +21,8 @@ import type { Entry, Franchise } from "@/types/canon/canon";
 import type { SearchHit } from "@/types/canon/search";
 import type { FilterState, SortKey, SortState } from "@/types/canon/table";
 import { filterEntries } from "@/utils/canon/filter-entries";
-import { formatHash, parseHash } from "@/utils/canon/hash-view";
 import { statsFor } from "@/utils/canon/franchise-stats";
+import { formatHash, parseHash } from "@/utils/canon/hash-view";
 import { sortEntries } from "@/utils/canon/sort-entries";
 import { toCsv } from "@/utils/canon/to-csv";
 

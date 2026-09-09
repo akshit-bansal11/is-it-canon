@@ -71,6 +71,38 @@ const authored = v.object({
   version: v.string(),
 });
 
+/** A block within a screen chronology: a phase, an era, a saga. */
+const screenGroup = v.object({
+  id: v.string(),
+  name: v.string(),
+  blurb: v.string(),
+});
+
+const screenEntry = v.object({
+  id: v.string(),
+  order: v.number(),
+  group: v.union(v.string(), v.null()),
+  /** "title" is watchable; "marker" places a run of episodes against the films
+   *  around it and carries the chronology's reasoning. */
+  kind: v.union(v.literal("title"), v.literal("marker")),
+  name: v.string(),
+  /** Null where the source never distinguished film from series — unknown, not "other". */
+  type: v.union(
+    v.literal("tv"),
+    v.literal("movie"),
+    v.literal("animated"),
+    v.literal("special"),
+    v.literal("ova"),
+    v.null(),
+  ),
+  year: v.union(v.number(), v.null()),
+  chronologicalYear: v.union(v.string(), v.null()),
+  seasons: v.union(v.number(), v.null()),
+  episodes: v.union(v.number(), v.null()),
+  tag: v.union(v.string(), v.null()),
+  note: v.string(),
+});
+
 export default defineSchema({
   franchises: defineTable({
     id: v.string(),
@@ -120,4 +152,28 @@ export default defineSchema({
     // Compound so a franchise page reads its games already in story order,
     // rather than sorting 690 rows to find the dozen it wants.
     .index("by_franchise", ["franchiseId", "order"]),
+
+  /**
+   * Movies and series chronologies. Six franchises, 339 entries.
+   *
+   * Entries are nested inside the franchise document rather than split into
+   * their own table, which is the opposite of how games are modelled. The
+   * reason is size: the largest of these documents is 40 KB against Convex's
+   * 1 MB limit, and a chronology is only ever read whole, so a second table
+   * and a join would buy nothing. Games earned a split at 690 rows; these do
+   * not at 339 across six documents.
+   */
+  screenFranchises: defineTable({
+    id: v.string(),
+    order: v.number(),
+    title: v.string(),
+    description: v.string(),
+    /** Which merge source it came from. The two disagree about scope, and a
+     *  reader deserves to know which chronology they are looking at. */
+    source: v.string(),
+    groups: v.array(screenGroup),
+    entries: v.array(screenEntry),
+  })
+    .index("by_public_id", ["id"])
+    .index("by_order", ["order"]),
 });

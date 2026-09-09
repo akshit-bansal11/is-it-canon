@@ -74,3 +74,56 @@ export const list = query({
     }));
   },
 });
+
+/**
+ * Every screen chronology, in authored order, with Convex's internals removed.
+ *
+ * Entries live inside the franchise document, so this is six reads rather than
+ * a join — see the note on `screenFranchises` in the schema for why they are
+ * modelled differently from games.
+ */
+export const listScreen = query({
+  args: {},
+  handler: async (ctx) => {
+    const franchises = await ctx.db.query("screenFranchises").withIndex("by_order").collect();
+
+    return franchises.map((franchise) => ({
+      id: franchise.id,
+      order: franchise.order,
+      title: franchise.title,
+      description: franchise.description,
+      source: franchise.source,
+      groups: franchise.groups,
+      entries: franchise.entries,
+    }));
+  },
+});
+
+/**
+ * Counts for the landing page, so the section cards state what is actually in
+ * the database rather than a number typed into the markup and left to rot.
+ * Books has no dataset yet and reports zero, which is the honest answer.
+ */
+export const sectionCounts = query({
+  args: {},
+  handler: async (ctx) => {
+    const franchises = await ctx.db.query("franchises").collect();
+    const games = await ctx.db.query("games").collect();
+    const screen = await ctx.db.query("screenFranchises").collect();
+
+    return {
+      games: { franchises: franchises.length, entries: games.length },
+      screen: {
+        franchises: screen.length,
+        // Markers are chronology annotations, not things to watch, so they are
+        // not counted as entries a reader could sit down to.
+        entries: screen.reduce(
+          (total, franchise) =>
+            total + franchise.entries.filter((entry) => entry.kind === "title").length,
+          0,
+        ),
+      },
+      books: { franchises: 0, entries: 0 },
+    };
+  },
+});

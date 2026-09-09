@@ -1,5 +1,7 @@
 import data from "../src/data/franchises.json";
+import screenData from "../src/data/screen.json";
 import type { Franchise } from "../src/types/canon/canon";
+import type { ScreenFranchise } from "../src/types/canon/screen";
 import { internalMutation } from "./_generated/server";
 
 /**
@@ -15,9 +17,10 @@ import { internalMutation } from "./_generated/server";
  * snapshot, so a partial update would leave behind any row deleted upstream.
  * Running it twice leaves the same state as running it once.
  *
- * The dataset is imported straight from `src/data/franchises.json` and typed as
- * the same `Franchise` the app uses, so there is one authored copy, and a shape
- * the schema disagrees with fails to compile here rather than at insert time.
+ * The datasets are imported straight from `src/data/franchises.json` and
+ * `src/data/screen.json` and typed as the same interfaces the app uses, so
+ * there is one authored copy of each, and a shape the schema disagrees with
+ * fails to compile here rather than at insert time.
  */
 export const run = internalMutation({
   args: {},
@@ -26,6 +29,9 @@ export const run = internalMutation({
       await ctx.db.delete(existing._id);
     }
     for (const existing of await ctx.db.query("franchises").collect()) {
+      await ctx.db.delete(existing._id);
+    }
+    for (const existing of await ctx.db.query("screenFranchises").collect()) {
       await ctx.db.delete(existing._id);
     }
 
@@ -44,6 +50,16 @@ export const run = internalMutation({
       }
     }
 
-    return { franchises: franchises.length, games };
+    const screen = screenData as unknown as readonly ScreenFranchise[];
+    for (const franchise of screen) {
+      await ctx.db.insert("screenFranchises", franchise);
+    }
+
+    return {
+      franchises: franchises.length,
+      games,
+      screenFranchises: screen.length,
+      screenEntries: screen.reduce((total, franchise) => total + franchise.entries.length, 0),
+    };
   },
 });

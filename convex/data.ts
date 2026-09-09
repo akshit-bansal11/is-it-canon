@@ -19,6 +19,7 @@ export const counts = query({
   handler: async (ctx) => {
     const franchises = await ctx.db.query("franchises").collect();
     const games = await ctx.db.query("games").collect();
+    const screen = await ctx.db.query("screenFranchises").collect();
 
     const arcIdsByFranchise = new Map(
       franchises.map((franchise) => [
@@ -47,6 +48,22 @@ export const counts = query({
       duplicateGameIds: games.length - new Set(games.map((game) => game.id)).size,
       duplicateFranchiseIds:
         franchises.length - new Set(franchises.map((franchise) => franchise.id)).size,
+      screenFranchises: screen.length,
+      screenEntries: screen.reduce((total, franchise) => total + franchise.entries.length, 0),
+      screenTitles: screen.reduce(
+        (total, franchise) =>
+          total + franchise.entries.filter((entry) => entry.kind === "title").length,
+        0,
+      ),
+      // An entry pointing at a group its own franchise never declared silently
+      // vanishes from the rendered chronology, so it is worth a number.
+      orphanedScreenGroups: screen.reduce((total, franchise) => {
+        const ids = new Set(franchise.groups.map((group) => group.id));
+        return (
+          total +
+          franchise.entries.filter((entry) => entry.group !== null && !ids.has(entry.group)).length
+        );
+      }, 0),
     };
   },
 });
