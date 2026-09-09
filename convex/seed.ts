@@ -35,8 +35,8 @@ export const run = internalMutation({
     const franchises = data as unknown as readonly Franchise[];
     let games = 0;
 
-    for (const { games: franchiseGames, ...franchise } of franchises) {
-      await ctx.db.insert("franchises", franchise);
+    for (const [order, { games: franchiseGames, ...franchise }] of franchises.entries()) {
+      await ctx.db.insert("franchises", { ...franchise, order });
 
       for (const game of franchiseGames) {
         await ctx.db.insert("games", { ...game, franchiseId: franchise.id });

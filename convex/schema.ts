@@ -74,6 +74,10 @@ const authored = v.object({
 export default defineSchema({
   franchises: defineTable({
     id: v.string(),
+    /** Authored position in the dataset. Carried explicitly rather than relying
+     *  on `_creationTime` matching seed order — that happens to be true today
+     *  and would break silently the first time a single franchise was re-inserted. */
+    order: v.number(),
     name: v.string(),
     scope: v.string(),
     caveat: v.string(),
@@ -81,7 +85,9 @@ export default defineSchema({
     arcs: v.optional(v.array(arc)),
     // Convex reserves the index names "by_id" and "by_creation_time", so the
     // slug lookup is "by_public_id" — `id` here is the human slug, not `_id`.
-  }).index("by_public_id", ["id"]),
+  })
+    .index("by_public_id", ["id"])
+    .index("by_order", ["order"]),
 
   games: defineTable({
     id: v.string(),

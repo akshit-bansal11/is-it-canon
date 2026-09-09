@@ -14,10 +14,10 @@ import ShortcutsDialog from "@/components/canon/ShortcutsDialog";
 import ToolbarActions from "@/components/canon/ToolbarActions";
 import { EMPTY_FILTER } from "@/constants/canon/filters";
 import { ALL_FRANCHISES } from "@/constants/canon/views";
-import { ALL_ENTRIES, ENTRY_BY_ID, FRANCHISES } from "@/data/franchises";
 import { useEntries } from "@/hooks/canon/use-entries";
 import { useHotkeys } from "@/hooks/canon/use-hotkeys";
 import { usePrices } from "@/hooks/canon/use-prices";
+import type { Entry, Franchise } from "@/types/canon/canon";
 import type { SearchHit } from "@/types/canon/search";
 import type { FilterState, SortKey, SortState } from "@/types/canon/table";
 import { filterEntries } from "@/utils/canon/filter-entries";
@@ -28,7 +28,28 @@ import { toCsv } from "@/utils/canon/to-csv";
 
 const PRICE_BATCH = 60;
 
-export default function CanonApp() {
+interface CanonAppProps {
+  /** The whole dataset, fetched from Convex by the server component above and
+   *  handed down once. Filtering, sorting and search stay on the client so the
+   *  table keeps responding without a round trip. */
+  franchises: readonly Franchise[];
+}
+
+export default function CanonApp({ franchises: FRANCHISES }: CanonAppProps) {
+  // Derived from the prop rather than computed at module scope, which is where
+  // they lived while the dataset was a static JSON import. Both are O(n) over
+  // 690 games and the input only changes on revalidation, so memoising on the
+  // array identity keeps the old cost profile.
+  const ALL_ENTRIES = useMemo<readonly Entry[]>(
+    () => FRANCHISES.flatMap((item) => item.games.map((game) => ({ game, franchise: item }))),
+    [FRANCHISES],
+  );
+
+  const ENTRY_BY_ID = useMemo(
+    () => new Map(ALL_ENTRIES.map((entry) => [entry.game.id, entry])),
+    [ALL_ENTRIES],
+  );
+
   const [gridView, setGridView] = useState(true);
   const [activeId, setActiveId] = useState(ALL_FRANCHISES);
   const [activeArc, setActiveArc] = useState("");
@@ -46,7 +67,7 @@ export default function CanonApp() {
 
   const franchise = useMemo(
     () => FRANCHISES.find((item) => item.id === activeId) ?? null,
-    [activeId],
+    [FRANCHISES, activeId],
   );
 
   const scoped = useMemo(() => {
@@ -54,7 +75,7 @@ export default function CanonApp() {
     const games =
       activeArc === "" ? franchise.games : franchise.games.filter((game) => game.arc === activeArc);
     return games.map((game) => ({ game, franchise }));
-  }, [franchise, activeArc]);
+  }, [franchise, activeArc, ALL_ENTRIES]);
 
   // Nothing is priced while the grid is up: there is no table to put a price
   // in, and pricing the first sixty of all 690 games burns the rate limit on
@@ -87,7 +108,7 @@ export default function CanonApp() {
     if (view === null || view.gridView) return;
     if (view.franchiseId !== "" && !FRANCHISES.some((item) => item.id === view.franchiseId)) return;
     Promise.resolve().then(() => openFranchise(view.franchiseId, view.arcId));
-  }, [openFranchise]);
+  }, [FRANCHISES, openFranchise]);
 
   useEffect(() => {
     const next = formatHash({ gridView, franchiseId: activeId, arcId: activeArc });
@@ -140,7 +161,7 @@ export default function CanonApp() {
       const next = FRANCHISES[(at + delta + FRANCHISES.length) % FRANCHISES.length];
       if (next !== undefined) openFranchise(next.id);
     },
-    [activeId, openFranchise],
+    [FRANCHISES, activeId, openFranchise],
   );
 
   const closeTop = useCallback(() => {
