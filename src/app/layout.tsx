@@ -1,11 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import type { ReactNode } from "react";
+import { type ReactNode, Suspense } from "react";
+import Analytics from "@/components/site/Analytics";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
   title: "isitcanon",
-  description: "Story-order tracker for connected game franchises.",
+  description:
+    "Story order for connected franchises — games, movies and series, in in-universe chronology.",
 };
 
 export const viewport: Viewport = {
@@ -20,6 +22,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <Script src="/theme.js" strategy="beforeInteractive" />
         {children}
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   );
