@@ -25,6 +25,7 @@ The current view lives in the URL (`/games#/witcher`, `/games#/ac/desmond`), so 
 - TypeScript (strict, `noUncheckedIndexedAccess`)
 - Tailwind CSS v4
 - Neon (serverless Postgres) + Drizzle ORM
+- Better Stack (errors, logs, uptime) + Vercel Web Analytics
 - Biome (format + lint), ESLint (flat config), Stylelint
 - Vitest
 
@@ -76,7 +77,7 @@ src/
 │   └── canon/           # tracked entries, theme, prices, hotkeys, chunked rendering
 ├── lib/
 │   ├── db/              # Neon client, Drizzle schema, and the app's three reads
-│   └── observability/   # Sentry and PostHog key presence
+│   └── observability/   # Better Stack token presence
 ├── types/
 │   └── canon/           # franchise, game, arc, table, user, price, theme, view types
 └── utils/
@@ -130,19 +131,20 @@ Vercel, with the default Next build. The only variable the build needs is **`DAT
 
 ## Observability
 
-Sentry and PostHog are wired and **inert until their keys are set** — a missing key means "not reporting", never a crash or a stream of failed calls from a visitor's browser.
+Errors and logs go to **Better Stack**; traffic goes to **Vercel Web Analytics**.
 
 | Variable | For |
 | --- | --- |
-| `NEXT_PUBLIC_SENTRY_DSN` | error and performance monitoring |
-| `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST` | product analytics |
-| `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, `SENTRY_PROJECT` | build-time source map upload |
+| `NEXT_PUBLIC_BETTER_STACK_ERRORS_TOKEN` | error reporting (a public application token) |
+| `NEXT_PUBLIC_BETTER_STACK_SOURCE_TOKEN`, `NEXT_PUBLIC_BETTER_STACK_INGESTING_URL` | logs, via `@logtail/next` |
 
-Without the Sentry build variables every stack trace is minified noise, so the integration reports nothing actionable even when the DSN is set.
+Both are **inert until set** — a missing token means "not reporting", never a crash or a stream of failed calls from a visitor's browser, so local runs and CI stay silent without production credentials.
 
-PostHog's automatic pageview capture is switched off deliberately: the App Router does no full page load between routes, so autocapture records the first visit and nothing after. `src/components/site/Analytics.tsx` sends one per navigation instead. `sendDefaultPii` is off, `person_profiles` is `never` and `respect_dnt` is on — there are no accounts and nothing to attribute.
+Errors arrive through a remote script rather than an npm package. That is Better Stack's own design: `b.js` is generated per application and always carries current configuration, so the snippet never needs updating. It loads `afterInteractive` — error reporting is not needed to render, and blocking first paint on it would make the monitoring worse than the problems it reports. The snippet queues anything thrown before the script lands, so early errors are not lost.
 
-Neither service has received an event yet, so neither is verified.
+Web analytics needs no variable and no account: Vercel Web Analytics is enabled by the platform and is a no-op off Vercel. It replaced PostHog because it can be read back through the Vercel API, where a dashboard-minted analytics key cannot, and because most projects here have no product-analytics question that justifies a third-party script.
+
+Uptime monitoring and a deploy heartbeat live in Better Stack rather than in this repo — they need no code, and they check the thing a build cannot: that the site is still answering a week after it shipped.
 
 ## CI
 
