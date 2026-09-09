@@ -53,3 +53,39 @@ jobs:
 
       - name: Assert the content routes are still prerendered
         run: npm run check:static
+
+  e2e:
+    name: Browser tests
+    runs-on: ubuntu-latest
+    # Playwright builds and starts the app itself (see playwright.config.ts), and
+    # the content pages read the database at build time, so this job needs the
+    # same connection string the build job does. Gated identically: skipped
+    # rather than faked when the secret is absent.
+    if: ${{ github.event_name == 'push' }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      # Chromium only. playwright.config.ts declares one project, so installing
+      # the other two engines would download ~300 MB nothing runs.
+      - run: npx playwright install --with-deps chromium
+
+      - run: npm run test:e2e
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+      # `reporter: "list"` prints one line per failure and nothing else, which is
+      # not enough to diagnose a failure that only reproduces on the runner. The
+      # config traces on first retry; without this the trace is thrown away.
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-traces
+          path: test-results/
+          retention-days: 7

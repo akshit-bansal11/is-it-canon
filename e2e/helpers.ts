@@ -2,9 +2,14 @@ import { expect, type Locator, type Page } from "@playwright/test";
 
 export const ENTRIES_KEY = "isitcanon/entries/v1";
 
-/** Loads the app with an empty localStorage so no test inherits another's tracking state. */
+/**
+ * Loads the games app with an empty localStorage so no test inherits another's tracking state.
+ *
+ * `/games`, not `/`: the games app moved off the root when the site grew its three sections and
+ * `/` became the landing page. Every spec in this suite is a games-app spec and reaches it here.
+ */
 export async function gotoClean(page: Page): Promise<void> {
-  await page.goto("/");
+  await page.goto("/games");
   await page.evaluate((key) => {
     localStorage.removeItem(key);
   }, ENTRIES_KEY);
