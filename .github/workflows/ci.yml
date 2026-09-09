@@ -72,9 +72,15 @@ jobs:
 
       - run: npm ci
 
-      # Chromium only. playwright.config.ts declares one project, so installing
-      # the other two engines would download ~300 MB nothing runs.
-      - run: npx playwright install --with-deps chromium
+      # Chromium only: playwright.config.ts declares one project, so the other
+      # two engines would be ~300 MB nothing runs.
+      #
+      # No `--with-deps`. It runs `apt-get update`, and the runner image ships a
+      # Google Chrome apt source that failed the first run of this job with
+      # `Hash Sum mismatch` on dl.google.com — a third-party mirror on the
+      # critical path of every build. The image already carries Chrome and Edge,
+      # so the shared libraries Chromium needs are present without it.
+      - run: npx playwright install chromium
 
       - run: npm run test:e2e
         env:
