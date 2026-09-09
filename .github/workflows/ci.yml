@@ -47,28 +47,9 @@ jobs:
 
       - run: npm ci
 
-      - name: Build
-        run: npm run build | tee build.log
+      - run: npm run build
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
-      - name: Assert the content routes are still statically generated
-        # The whole point of reading the database at build time is that
-        # visitors do not pay for it, and nothing in the source says whether
-        # that still holds — only the build output does. This regressed once
-        # already, from a data helper that opted the route out of caching.
-        # Without this assertion it comes back unnoticed the next time someone
-        # reaches for a convenience wrapper.
-        run: |
-          fail=0
-          for route in "/" "/games" "/screen"; do
-            if ! grep -qE "[○●][[:space:]]+${route}([[:space:]]|$)" build.log; then
-              echo "::error::${route} is no longer statically generated"
-              fail=1
-            fi
-          done
-          if grep -qE "ƒ[[:space:]]+/(games|screen)?([[:space:]]|$)" build.log; then
-            echo "::error::a content route is being server-rendered on demand"
-            fail=1
-          fi
-          exit $fail
+      - name: Assert the content routes are still prerendered
+        run: npm run check:static
